@@ -19,7 +19,7 @@ let lastName  = "B"
 let email     = "info@thecb4.io"
 
 
-let tester = Tester(email: testerInfo.email, firstName: testerInfo.firstName, lastName: testerInfo.lastName)
+let tester = Tester(email: email, firstName: firstName, lastName: lastName)
 
 let testFlight = TestFlight()
 
