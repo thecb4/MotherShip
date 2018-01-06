@@ -12,5 +12,15 @@ I wrote MotherShip for two reasons.
 3. Get list of Groups
 4. Invite someone to test an app
 
+```swift
 
+let tester = Tester(email: testerInfo.email, firstName: testerInfo.firstName, lastName: testerInfo.lastName)
+
+let testFlight = TestFlight()
+
+testFlight.login(with: creds)
+
+let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: appInfo.teamIdentifier)
+
+```
 

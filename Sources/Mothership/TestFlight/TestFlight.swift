@@ -81,12 +81,12 @@ public class TestFlight {
   }
   
 //  func add(tester: Tester, appID: AppIdentifier, teamID: TeamIdentifier, groupID:String = "") -> String {
-//    
+//
 //    let _ = testflightService.add(tester: tester, appID: appID, teamID: teamID, with: mothership.authenticationKey)
-//    
-//    
+//
+//
 //    return testflightService.add(to: groupID, tester: tester, appID: appID, teamID: teamID, with: mothership.authenticationKey)
-//    
+//
 //  }
   
 }
