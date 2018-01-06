@@ -42,6 +42,7 @@ public class MotherShip {
     
   }
   
+  /// No parameter init for MotherShip
   public init() {
     
     olympusServiceKeyInfo = OlympusServiceKeyInfo()

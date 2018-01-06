@@ -11,13 +11,11 @@ import HyperSpace
 public class TestFlight {
   
   let mothership: MotherShip
-//  let testflightService: TestFlightService
   var devSession: DeveloperSession
   
   public init() {
     mothership        = MotherShip()
     devSession        = DeveloperSession()
-//    testflightService = TestFlightService()
   }
   
   public func login(with credentials: LoginCredentials) {
@@ -79,14 +77,5 @@ public class TestFlight {
     return bStatusCode
     
   }
-  
-//  func add(tester: Tester, appID: AppIdentifier, teamID: TeamIdentifier, groupID:String = "") -> String {
-//
-//    let _ = testflightService.add(tester: tester, appID: appID, teamID: teamID, with: mothership.authenticationKey)
-//
-//
-//    return testflightService.add(to: groupID, tester: tester, appID: appID, teamID: teamID, with: mothership.authenticationKey)
-//
-//  }
   
 }

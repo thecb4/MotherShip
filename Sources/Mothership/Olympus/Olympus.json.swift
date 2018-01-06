@@ -6,8 +6,6 @@
 //
 
 import Foundation
-//import Moya
-//import Result
 
 
 // typesafe service response
@@ -20,18 +18,5 @@ struct OlympusServiceKeyInfo: Codable {
     authServiceKey = ""
   }
 }
-
-//enum OlympusServiceError: Error {
-//  case couldNotParse
-//}
-
-//typealias OlympusServiceResult = Result<OlympusServiceKeyInfo, OlympusServiceError>
-//
-//enum OlympusService {
-//  case config(hostName: String)
-//}
-
-
-//typealias OlympusProvider = MoyaProvider<OlympusService>
 
 
