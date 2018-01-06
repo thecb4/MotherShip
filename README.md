@@ -14,6 +14,8 @@ I wrote MotherShip for two reasons.
 
 ```swift
 
+import MotherShip
+
 let firstName = "C"
 let lastName  = "B"
 let email     = "info@thecb4.io"
