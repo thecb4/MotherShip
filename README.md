@@ -33,6 +33,7 @@ let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: app
 ```
 ### To Do
 
+- [ ] Documentation
 - [ ] Ability to update app info
 - [ ] Upload build
 - [ ] Code signing? Or just leave it up to Apple

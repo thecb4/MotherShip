@@ -62,7 +62,7 @@ public class TestFlight {
     
     let group = self.groups(for: appID, in: teamID).filter {$0.isDefaultExternalGroup == true }.first!
     
-    let aStatusCode = appAddEndPoint.statusCodeOnly()
+    let _ = appAddEndPoint.statusCodeOnly()
  
     let groupAddEndPoint = Router<TestFlightEndPoint>(at:
       .addTesterToTestGroup(

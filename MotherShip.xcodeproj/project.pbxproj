@@ -260,9 +260,9 @@
 		OBJ_8 /* MotherShip */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_13 /* Mothership.swift */,
 				OBJ_9 /* Developer.swift */,
 				OBJ_10 /* IDMS */,
-				OBJ_13 /* Mothership.swift */,
 				OBJ_14 /* Olympus */,
 				OBJ_18 /* TestFlight */,
 			);
