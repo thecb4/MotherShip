@@ -14,6 +14,11 @@ I wrote MotherShip for two reasons.
 
 ```swift
 
+let firstName = "C"
+let lastName  = "B"
+let email     = "info@thecb4.io"
+
+
 let tester = Tester(email: testerInfo.email, firstName: testerInfo.firstName, lastName: testerInfo.lastName)
 
 let testFlight = TestFlight()
