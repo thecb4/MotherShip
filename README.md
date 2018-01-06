@@ -22,7 +22,6 @@ let firstName = "C"
 let lastName  = "B"
 let email     = "info@thecb4.io"
 
-
 let tester = Tester(email: email, firstName: firstName, lastName: lastName)
 
 let testFlight = TestFlight()
