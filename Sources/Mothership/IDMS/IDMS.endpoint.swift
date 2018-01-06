@@ -8,11 +8,15 @@
 import Foundation
 import HyperSpace
 
+/// Identity Management System end point.
+/// End point for signing in to iTunes Connect
 struct IDMSEndPoint: EndpointType {
   
   enum Route: RouteType {
     
     // https://idmsa.apple.com/appleauth/auth/signin
+    /// Route case for sign in. Must include Service Key information
+    /// Credentials are passed as JSON body to URL
     case signIn(credentials: LoginCredentials, serviceKey: OlympusServiceKeyInfo)
     
     var route: URL.Route {
