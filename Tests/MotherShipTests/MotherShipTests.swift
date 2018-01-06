@@ -205,13 +205,13 @@ class MotherShipTests: XCTestCase {
       return
     }
     
-    let _tester = Tester(email: testerInfo.email, firstName: testerInfo.firstName, lastName: testerInfo.lastName)
+    let tester = Tester(email: testerInfo.email, firstName: testerInfo.firstName, lastName: testerInfo.lastName)
     
     let testFlight = TestFlight()
     
     testFlight.login(with: creds)
     
-    let code = testFlight.invite(tester: _tester, to: appInfo.appIdentifier, for: appInfo.teamIdentifier)
+    let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: appInfo.teamIdentifier)
     
     XCTAssertEqual(code,200, "tester not added to default group")
     
