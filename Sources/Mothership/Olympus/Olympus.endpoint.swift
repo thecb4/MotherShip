@@ -8,14 +8,20 @@
 import Foundation
 import HyperSpace
 
+/// Apple Olympus end points
+/// 1. End ooint for obtaining the service key
+/// 2. End point for obtaining session info
 struct OlympusEndPoint: EndpointType {
   
   enum Route: RouteType {
     
     // https://olympus.itunes.apple.com/v1/app/config?hostname=itunesconnect.apple.com
+    /// Route for obtaining service key information from Apple
     case serviceKey
     
     // https://olympus.itunes.apple.com/v1/session
+    /// Route for obtaining session information from Apple.
+    /// URLSession.default stores all session information
     case session
     
     var route: URL.Route {
