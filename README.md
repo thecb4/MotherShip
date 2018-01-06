@@ -12,6 +12,8 @@ I wrote MotherShip for two reasons.
 3. Get list of Groups
 4. Invite someone to test an app
 
+
+
 ```swift
 
 import MotherShip
@@ -30,4 +32,9 @@ testFlight.login(with: creds)
 let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: appInfo.teamIdentifier)
 
 ```
+### To Do
 
+- [ ] Ability to update app info
+- [ ] Upload build
+- [ ] Code signing? Or just leave it up to Apple
+- [ ] Two-Factor Authentication?
