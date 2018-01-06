@@ -22,12 +22,10 @@
 
 /* Begin PBXBuildFile section */
 		E93C39C520002C8700EC0A26 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
-		OBJ_100 /* Request.extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Request.extensions.swift */; };
 		OBJ_101 /* TestFlight.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* TestFlight.endpoint.swift */; };
 		OBJ_102 /* TestFlight.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* TestFlight.json.swift */; };
 		OBJ_103 /* TestFlight.service.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* TestFlight.service.swift */; };
 		OBJ_104 /* TestFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* TestFlight.swift */; };
-		OBJ_105 /* URLSession.extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* URLSession.extensions.swift */; };
 		OBJ_53 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_59 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Package.swift */; };
 		OBJ_65 /* MotherShipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* MotherShipTests.swift */; };
@@ -86,12 +84,10 @@
 		OBJ_13 /* Mothership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mothership.swift; sourceTree = "<group>"; };
 		OBJ_15 /* Olympus.endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympus.endpoint.swift; sourceTree = "<group>"; };
 		OBJ_16 /* Olympus.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympus.json.swift; sourceTree = "<group>"; };
-		OBJ_17 /* Request.extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.extensions.swift; sourceTree = "<group>"; };
 		OBJ_19 /* TestFlight.endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.endpoint.swift; sourceTree = "<group>"; };
 		OBJ_20 /* TestFlight.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.json.swift; sourceTree = "<group>"; };
 		OBJ_21 /* TestFlight.service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.service.swift; sourceTree = "<group>"; };
 		OBJ_22 /* TestFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.swift; sourceTree = "<group>"; };
-		OBJ_23 /* URLSession.extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.extensions.swift; sourceTree = "<group>"; };
 		OBJ_26 /* MotherShipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherShipTests.swift; sourceTree = "<group>"; };
 		OBJ_27 /* DerivedData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DerivedData; sourceTree = SOURCE_ROOT; };
 		OBJ_31 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -268,9 +264,7 @@
 				OBJ_10 /* IDMS */,
 				OBJ_13 /* Mothership.swift */,
 				OBJ_14 /* Olympus */,
-				OBJ_17 /* Request.extensions.swift */,
 				OBJ_18 /* TestFlight */,
-				OBJ_23 /* URLSession.extensions.swift */,
 			);
 			name = MotherShip;
 			path = Sources/MotherShip;
@@ -441,12 +435,10 @@
 				OBJ_97 /* Mothership.swift in Sources */,
 				OBJ_98 /* Olympus.endpoint.swift in Sources */,
 				OBJ_99 /* Olympus.json.swift in Sources */,
-				OBJ_100 /* Request.extensions.swift in Sources */,
 				OBJ_101 /* TestFlight.endpoint.swift in Sources */,
 				OBJ_102 /* TestFlight.json.swift in Sources */,
 				OBJ_103 /* TestFlight.service.swift in Sources */,
 				OBJ_104 /* TestFlight.swift in Sources */,
-				OBJ_105 /* URLSession.extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
