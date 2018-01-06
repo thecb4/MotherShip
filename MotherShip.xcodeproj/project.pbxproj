@@ -76,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		E93C39C6200177AD00EC0A26 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E93C39C7200198E300EC0A26 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		"HyperSpace::HyperSpace::Product" /* HyperSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HyperSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShip::Product" /* MotherShip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MotherShip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = MotherShipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				E93C39C6200177AD00EC0A26 /* README.md */,
+				E93C39C7200198E300EC0A26 /* LICENSE */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_24 /* Tests */,
