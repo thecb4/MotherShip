@@ -64,7 +64,7 @@ extension Tester: CustomStringConvertible {
   }
 }
 
-struct InstallInfo: Codable {
+public struct InstallInfo: Codable {
   let latestInstalledAppAdamId: String?
   let latestInstalledBuildId: String?
   let latestInstalledDate: String?
@@ -72,7 +72,7 @@ struct InstallInfo: Codable {
   let latestInstalledVersion: String?
 }
 
-struct Testers: Codable {
+public struct Testers: Codable {
   let data: [Tester]
   
   init(with data:[Tester] = []) {
@@ -92,7 +92,7 @@ struct Testers: Codable {
  "isDefaultExternalGroup" : false
  */
 
-struct Group: Codable {
+public struct Group: Codable {
   let id: String
   let teamID: TeamIdentifier
   let appID:  AppIdentifier
@@ -132,7 +132,7 @@ struct Group: Codable {
   
 }
 
-struct Groups: Codable {
+public struct Groups: Codable {
   let data: [Group]
   
   init(data: [Group] = [Group]()){

@@ -23,7 +23,7 @@ public class TestFlight {
     self.devSession = self.mothership.devSession
   }
   
-  func groups(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier) -> [Group] {
+  public func groups(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier) -> [Group] {
     
     let endPoint = Router<TestFlightEndPoint>(at:
       .groups(serviceKey: self.mothership.olympusServiceKeyInfo, appID: appID, teamID: teamID)
@@ -35,7 +35,7 @@ public class TestFlight {
     
   }
   
-  func testers(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier) -> [Tester] {
+  public func testers(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier) -> [Tester] {
     
     let endPoint = Router<TestFlightEndPoint>(at:
       .testers(serviceKey: self.mothership.olympusServiceKeyInfo, appID: appID, teamID: teamID)
@@ -47,7 +47,7 @@ public class TestFlight {
     
   }
   
-  func invite(tester: Tester, to appID: AppIdentifier, `for` teamID: TeamIdentifier) -> Int {
+  public func invite(tester: Tester, to appID: AppIdentifier, `for` teamID: TeamIdentifier) -> Int {
     
     let appAddEndPoint = Router<TestFlightEndPoint>(at:
       .addTesterToApp(
