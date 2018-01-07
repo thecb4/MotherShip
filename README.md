@@ -2,6 +2,9 @@
 
 iTunes Connect Library inspired by [FastLane](https://github.com/fastlane/fastlane)
 
+![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
+[![Build Status](https://travis-ci.org/thecb4/HyperSpace.svg?branch=master)](https://travis-ci.org/thecb4/HyperSpace)
+
 I wrote MotherShip for two reasons.
 1.  love FastLane, but I am not proficient in [Ruby](https://www.ruby-lang.org/en/).
 2. I wanted to see how difficult it would be to write a port.
