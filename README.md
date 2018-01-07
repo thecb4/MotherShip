@@ -38,3 +38,13 @@ let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: app
 - [ ] Upload build
 - [ ] Code signing? Or just leave it up to Apple
 - [ ] Two-Factor Authentication?
+
+
+### There is a Command Line Interface for MotherShip.
+
+[MotherShip-CLI](https://github.com/thecb4/MotherShip-CLI)
+
+```zsh
+$ mothership login <user> <password>
+$ mothership testflight invite <email> <first-name> <last-name> <app-id> <team-id>
+```
