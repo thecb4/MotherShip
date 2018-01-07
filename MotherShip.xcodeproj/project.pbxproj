@@ -1,963 +1,750 @@
 // !$*UTF8*$!
 {
-   archiveVersion = "1";
-   objectVersion = "46";
-   objects = {
-      "HyperSpace::HyperSpace" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_86";
-         buildPhases = (
-            "OBJ_89",
-            "OBJ_102",
-         );
-         dependencies = (
-         );
-         name = "HyperSpace";
-         productName = "HyperSpace";
-         productReference = "HyperSpace::HyperSpace::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "HyperSpace::HyperSpace::Product" = {
-         isa = "PBXFileReference";
-         path = "HyperSpace.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "HyperSpace::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_52";
-         buildPhases = (
-            "OBJ_55",
-         );
-         dependencies = (
-         );
-         name = "HyperSpacePackageDescription";
-         productName = "HyperSpacePackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "MotherShip::MotherShip" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_70";
-         buildPhases = (
-            "OBJ_73",
-            "OBJ_83",
-         );
-         dependencies = (
-            "OBJ_85",
-         );
-         name = "MotherShip";
-         productName = "MotherShip";
-         productReference = "MotherShip::MotherShip::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "MotherShip::MotherShip::Product" = {
-         isa = "PBXFileReference";
-         path = "MotherShip.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "MotherShip::MotherShipPackageTests::ProductTarget" = {
-         isa = "PBXAggregateTarget";
-         buildConfigurationList = "OBJ_104";
-         buildPhases = (
-         );
-         dependencies = (
-            "OBJ_107",
-         );
-         name = "MotherShipPackageTests";
-         productName = "MotherShipPackageTests";
-      };
-      "MotherShip::MotherShipTests" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_58";
-         buildPhases = (
-            "OBJ_61",
-            "OBJ_63",
-         );
-         dependencies = (
-            "OBJ_66",
-            "OBJ_68",
-         );
-         name = "MotherShipTests";
-         productName = "MotherShipTests";
-         productReference = "MotherShip::MotherShipTests::Product";
-         productType = "com.apple.product-type.bundle.unit-test";
-      };
-      "MotherShip::MotherShipTests::Product" = {
-         isa = "PBXFileReference";
-         path = "MotherShipTests.xctest";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "MotherShip::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_46";
-         buildPhases = (
-            "OBJ_49",
-         );
-         dependencies = (
-         );
-         name = "MotherShipPackageDescription";
-         productName = "MotherShipPackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "OBJ_1" = {
-         isa = "PBXProject";
-         attributes = {
-            LastUpgradeCheck = "9999";
-         };
-         buildConfigurationList = "OBJ_2";
-         compatibilityVersion = "Xcode 3.2";
-         developmentRegion = "English";
-         hasScannedForEncodings = "0";
-         knownRegions = (
-            "en",
-         );
-         mainGroup = "OBJ_5";
-         productRefGroup = "OBJ_41";
-         projectDirPath = ".";
-         targets = (
-            "MotherShip::SwiftPMPackageDescription",
-            "HyperSpace::SwiftPMPackageDescription",
-            "MotherShip::MotherShipTests",
-            "MotherShip::MotherShip",
-            "HyperSpace::HyperSpace",
-            "MotherShip::MotherShipPackageTests::ProductTarget",
-         );
-      };
-      "OBJ_10" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_11",
-            "OBJ_12",
-         );
-         name = "IDMS";
-         path = "IDMS";
-         sourceTree = "<group>";
-      };
-      "OBJ_100" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_38";
-      };
-      "OBJ_101" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_39";
-      };
-      "OBJ_102" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
-      };
-      "OBJ_104" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_105",
-            "OBJ_106",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_105" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-         };
-         name = "Debug";
-      };
-      "OBJ_106" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-         };
-         name = "Release";
-      };
-      "OBJ_107" = {
-         isa = "PBXTargetDependency";
-         target = "MotherShip::MotherShipTests";
-      };
-      "OBJ_11" = {
-         isa = "PBXFileReference";
-         path = "IDMS.endpoint.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_12" = {
-         isa = "PBXFileReference";
-         path = "IDMS.json.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_13" = {
-         isa = "PBXFileReference";
-         path = "Mothership.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_14" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_15",
-            "OBJ_16",
-         );
-         name = "Olympus";
-         path = "Olympus";
-         sourceTree = "<group>";
-      };
-      "OBJ_15" = {
-         isa = "PBXFileReference";
-         path = "Olympus.endpoint.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_16" = {
-         isa = "PBXFileReference";
-         path = "Olympus.json.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_17" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_18",
-            "OBJ_19",
-            "OBJ_20",
-         );
-         name = "TestFlight";
-         path = "TestFlight";
-         sourceTree = "<group>";
-      };
-      "OBJ_18" = {
-         isa = "PBXFileReference";
-         path = "TestFlight.endpoint.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_19" = {
-         isa = "PBXFileReference";
-         path = "TestFlight.json.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_2" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_3",
-            "OBJ_4",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_20" = {
-         isa = "PBXFileReference";
-         path = "TestFlight.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_21" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_22",
-         );
-         name = "Tests";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_22" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_23",
-         );
-         name = "MotherShipTests";
-         path = "Tests/MotherShipTests";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_23" = {
-         isa = "PBXFileReference";
-         path = "MotherShipTests.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_24" = {
-         isa = "PBXFileReference";
-         path = "DerivedData";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_25" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_26",
-         );
-         name = "Dependencies";
-         path = "";
-         sourceTree = "<group>";
-      };
-      "OBJ_26" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_27",
-            "OBJ_40",
-         );
-         name = "HyperSpace";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_27" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_28",
-            "OBJ_29",
-            "OBJ_30",
-            "OBJ_31",
-            "OBJ_32",
-            "OBJ_33",
-            "OBJ_34",
-            "OBJ_35",
-            "OBJ_36",
-            "OBJ_37",
-            "OBJ_38",
-            "OBJ_39",
-         );
-         name = "HyperSpace";
-         path = ".build/checkouts/HyperSpace.git-8350491166860109504/Sources/HyperSpace";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_28" = {
-         isa = "PBXFileReference";
-         path = "Environment.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_29" = {
-         isa = "PBXFileReference";
-         path = "Host.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_3" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_OBJC_ARC = "YES";
-            COMBINE_HIDPI_IMAGES = "YES";
-            COPY_PHASE_STRIP = "NO";
-            DEBUG_INFORMATION_FORMAT = "dwarf";
-            DYLIB_INSTALL_NAME_BASE = "@rpath";
-            ENABLE_NS_ASSERTIONS = "YES";
-            GCC_OPTIMIZATION_LEVEL = "0";
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            ONLY_ACTIVE_ARCH = "YES";
-            OTHER_SWIFT_FLAGS = (
-               "-DXcode",
-            );
-            PRODUCT_NAME = "$(TARGET_NAME)";
-            SDKROOT = "macosx";
-            SUPPORTED_PLATFORMS = (
-               "macosx",
-               "iphoneos",
-               "iphonesimulator",
-               "appletvos",
-               "appletvsimulator",
-               "watchos",
-               "watchsimulator",
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE";
-            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            USE_HEADERMAP = "NO";
-         };
-         name = "Debug";
-      };
-      "OBJ_30" = {
-         isa = "PBXFileReference";
-         path = "HyperSpace.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_31" = {
-         isa = "PBXFileReference";
-         path = "IP.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_32" = {
-         isa = "PBXFileReference";
-         path = "IPv6.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_33" = {
-         isa = "PBXFileReference";
-         path = "Method.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_34" = {
-         isa = "PBXFileReference";
-         path = "Path.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_35" = {
-         isa = "PBXFileReference";
-         path = "Query.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_36" = {
-         isa = "PBXFileReference";
-         path = "Route.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_37" = {
-         isa = "PBXFileReference";
-         path = "Router.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_38" = {
-         isa = "PBXFileReference";
-         path = "Scheme.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_39" = {
-         isa = "PBXFileReference";
-         path = "URLSession.extension.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_4" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_OBJC_ARC = "YES";
-            COMBINE_HIDPI_IMAGES = "YES";
-            COPY_PHASE_STRIP = "YES";
-            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-            DYLIB_INSTALL_NAME_BASE = "@rpath";
-            GCC_OPTIMIZATION_LEVEL = "s";
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_SWIFT_FLAGS = (
-               "-DXcode",
-            );
-            PRODUCT_NAME = "$(TARGET_NAME)";
-            SDKROOT = "macosx";
-            SUPPORTED_PLATFORMS = (
-               "macosx",
-               "iphoneos",
-               "iphonesimulator",
-               "appletvos",
-               "appletvsimulator",
-               "watchos",
-               "watchsimulator",
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE";
-            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-            USE_HEADERMAP = "NO";
-         };
-         name = "Release";
-      };
-      "OBJ_40" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         name = "Package.swift";
-         path = "/Users/cavellebenjamin/Development/apps/MothershipSolution/MotherShip/.build/checkouts/HyperSpace.git-8350491166860109504/Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_41" = {
-         isa = "PBXGroup";
-         children = (
-            "MotherShip::MotherShipTests::Product",
-            "MotherShip::MotherShip::Product",
-            "HyperSpace::HyperSpace::Product",
-         );
-         name = "Products";
-         path = "";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "OBJ_46" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_47",
-            "OBJ_48",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_47" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4",
-               "-I",
-               "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk",
-            );
-            SWIFT_VERSION = "4.0";
-         };
-         name = "Debug";
-      };
-      "OBJ_48" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4",
-               "-I",
-               "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk",
-            );
-            SWIFT_VERSION = "4.0";
-         };
-         name = "Release";
-      };
-      "OBJ_49" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_50",
-         );
-      };
-      "OBJ_5" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_6",
-            "OBJ_7",
-            "OBJ_21",
-            "OBJ_24",
-            "OBJ_25",
-            "OBJ_41",
-         );
-         path = "";
-         sourceTree = "<group>";
-      };
-      "OBJ_50" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_6";
-      };
-      "OBJ_52" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_53",
-            "OBJ_54",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_53" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4",
-               "-I",
-               "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk",
-            );
-            SWIFT_VERSION = "4.0";
-         };
-         name = "Debug";
-      };
-      "OBJ_54" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4",
-               "-I",
-               "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk",
-            );
-            SWIFT_VERSION = "4.0";
-         };
-         name = "Release";
-      };
-      "OBJ_55" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_56",
-         );
-      };
-      "OBJ_56" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_40";
-      };
-      "OBJ_58" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_59",
-            "OBJ_60",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_59" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-            );
-            INFOPLIST_FILE = "MotherShip.xcodeproj/MotherShipTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks",
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)",
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)",
-            );
-            SWIFT_VERSION = "4.0";
-            TARGET_NAME = "MotherShipTests";
-         };
-         name = "Debug";
-      };
-      "OBJ_6" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         path = "Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_60" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-            );
-            INFOPLIST_FILE = "MotherShip.xcodeproj/MotherShipTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks",
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)",
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)",
-            );
-            SWIFT_VERSION = "4.0";
-            TARGET_NAME = "MotherShipTests";
-         };
-         name = "Release";
-      };
-      "OBJ_61" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_62",
-         );
-      };
-      "OBJ_62" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_23";
-      };
-      "OBJ_63" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_64",
-            "OBJ_65",
-         );
-      };
-      "OBJ_64" = {
-         isa = "PBXBuildFile";
-         fileRef = "MotherShip::MotherShip::Product";
-      };
-      "OBJ_65" = {
-         isa = "PBXBuildFile";
-         fileRef = "HyperSpace::HyperSpace::Product";
-      };
-      "OBJ_66" = {
-         isa = "PBXTargetDependency";
-         target = "MotherShip::MotherShip";
-      };
-      "OBJ_68" = {
-         isa = "PBXTargetDependency";
-         target = "HyperSpace::HyperSpace";
-      };
-      "OBJ_7" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_8",
-         );
-         name = "Sources";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_70" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_71",
-            "OBJ_72",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_71" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-            );
-            INFOPLIST_FILE = "MotherShip.xcodeproj/MotherShip_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)",
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)",
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "MotherShip";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_VERSION = "4.0";
-            TARGET_NAME = "MotherShip";
-         };
-         name = "Debug";
-      };
-      "OBJ_72" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-            );
-            INFOPLIST_FILE = "MotherShip.xcodeproj/MotherShip_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)",
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)",
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "MotherShip";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_VERSION = "4.0";
-            TARGET_NAME = "MotherShip";
-         };
-         name = "Release";
-      };
-      "OBJ_73" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_74",
-            "OBJ_75",
-            "OBJ_76",
-            "OBJ_77",
-            "OBJ_78",
-            "OBJ_79",
-            "OBJ_80",
-            "OBJ_81",
-            "OBJ_82",
-         );
-      };
-      "OBJ_74" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_9";
-      };
-      "OBJ_75" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_11";
-      };
-      "OBJ_76" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_12";
-      };
-      "OBJ_77" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_13";
-      };
-      "OBJ_78" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_15";
-      };
-      "OBJ_79" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_16";
-      };
-      "OBJ_8" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_9",
-            "OBJ_10",
-            "OBJ_13",
-            "OBJ_14",
-            "OBJ_17",
-         );
-         name = "MotherShip";
-         path = "Sources/MotherShip";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_80" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_18";
-      };
-      "OBJ_81" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_19";
-      };
-      "OBJ_82" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_20";
-      };
-      "OBJ_83" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_84",
-         );
-      };
-      "OBJ_84" = {
-         isa = "PBXBuildFile";
-         fileRef = "HyperSpace::HyperSpace::Product";
-      };
-      "OBJ_85" = {
-         isa = "PBXTargetDependency";
-         target = "HyperSpace::HyperSpace";
-      };
-      "OBJ_86" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_87",
-            "OBJ_88",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_87" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-            );
-            INFOPLIST_FILE = "MotherShip.xcodeproj/HyperSpace_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)",
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)",
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "HyperSpace";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_VERSION = "4.0";
-            TARGET_NAME = "HyperSpace";
-         };
-         name = "Debug";
-      };
-      "OBJ_88" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-            );
-            INFOPLIST_FILE = "MotherShip.xcodeproj/HyperSpace_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)",
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)",
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "HyperSpace";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_VERSION = "4.0";
-            TARGET_NAME = "HyperSpace";
-         };
-         name = "Release";
-      };
-      "OBJ_89" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_90",
-            "OBJ_91",
-            "OBJ_92",
-            "OBJ_93",
-            "OBJ_94",
-            "OBJ_95",
-            "OBJ_96",
-            "OBJ_97",
-            "OBJ_98",
-            "OBJ_99",
-            "OBJ_100",
-            "OBJ_101",
-         );
-      };
-      "OBJ_9" = {
-         isa = "PBXFileReference";
-         path = "Developer.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_90" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_28";
-      };
-      "OBJ_91" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_29";
-      };
-      "OBJ_92" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_30";
-      };
-      "OBJ_93" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_31";
-      };
-      "OBJ_94" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_32";
-      };
-      "OBJ_95" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_33";
-      };
-      "OBJ_96" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_34";
-      };
-      "OBJ_97" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_35";
-      };
-      "OBJ_98" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_36";
-      };
-      "OBJ_99" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_37";
-      };
-   };
-   rootObject = "OBJ_1";
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"MotherShip::MotherShipPackageTests::ProductTarget" /* MotherShipPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_104 /* Build configuration list for PBXAggregateTarget "MotherShipPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_107 /* PBXTargetDependency */,
+			);
+			name = MotherShipPackageTests;
+			productName = MotherShipPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_100 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Scheme.swift */; };
+		OBJ_101 /* URLSession.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* URLSession.extension.swift */; };
+		OBJ_50 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_56 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Package.swift */; };
+		OBJ_62 /* MotherShipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* MotherShipTests.swift */; };
+		OBJ_64 /* MotherShip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MotherShip::MotherShip::Product" /* MotherShip.framework */; };
+		OBJ_65 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
+		OBJ_74 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Developer.swift */; };
+		OBJ_75 /* IDMS.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* IDMS.endpoint.swift */; };
+		OBJ_76 /* IDMS.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* IDMS.json.swift */; };
+		OBJ_77 /* Mothership.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Mothership.swift */; };
+		OBJ_78 /* Olympus.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Olympus.endpoint.swift */; };
+		OBJ_79 /* Olympus.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Olympus.json.swift */; };
+		OBJ_80 /* TestFlight.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* TestFlight.endpoint.swift */; };
+		OBJ_81 /* TestFlight.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* TestFlight.json.swift */; };
+		OBJ_82 /* TestFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* TestFlight.swift */; };
+		OBJ_84 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
+		OBJ_90 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Environment.swift */; };
+		OBJ_91 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Host.swift */; };
+		OBJ_92 /* HyperSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* HyperSpace.swift */; };
+		OBJ_93 /* IP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* IP.swift */; };
+		OBJ_94 /* IPv6.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* IPv6.swift */; };
+		OBJ_95 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Method.swift */; };
+		OBJ_96 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Path.swift */; };
+		OBJ_97 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Query.swift */; };
+		OBJ_98 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Route.swift */; };
+		OBJ_99 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Router.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E93684032001F9B4009B768F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "HyperSpace::HyperSpace";
+			remoteInfo = HyperSpace;
+		};
+		E93684042001F9B4009B768F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "MotherShip::MotherShip";
+			remoteInfo = MotherShip;
+		};
+		E93684052001F9B4009B768F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "HyperSpace::HyperSpace";
+			remoteInfo = HyperSpace;
+		};
+		E93684062001F9B4009B768F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "MotherShip::MotherShipTests";
+			remoteInfo = MotherShipTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"HyperSpace::HyperSpace::Product" /* HyperSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HyperSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"MotherShip::MotherShip::Product" /* MotherShip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MotherShip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = MotherShipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_11 /* IDMS.endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDMS.endpoint.swift; sourceTree = "<group>"; };
+		OBJ_12 /* IDMS.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDMS.json.swift; sourceTree = "<group>"; };
+		OBJ_13 /* Mothership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mothership.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Olympus.endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympus.endpoint.swift; sourceTree = "<group>"; };
+		OBJ_16 /* Olympus.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympus.json.swift; sourceTree = "<group>"; };
+		OBJ_18 /* TestFlight.endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.endpoint.swift; sourceTree = "<group>"; };
+		OBJ_19 /* TestFlight.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.json.swift; sourceTree = "<group>"; };
+		OBJ_20 /* TestFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.swift; sourceTree = "<group>"; };
+		OBJ_23 /* MotherShipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherShipTests.swift; sourceTree = "<group>"; };
+		OBJ_24 /* DerivedData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DerivedData; sourceTree = SOURCE_ROOT; };
+		OBJ_28 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		OBJ_29 /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		OBJ_30 /* HyperSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperSpace.swift; sourceTree = "<group>"; };
+		OBJ_31 /* IP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP.swift; sourceTree = "<group>"; };
+		OBJ_32 /* IPv6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPv6.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		OBJ_34 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		OBJ_35 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		OBJ_36 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		OBJ_37 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		OBJ_38 /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
+		OBJ_39 /* URLSession.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.extension.swift; sourceTree = "<group>"; };
+		OBJ_40 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/cavellebenjamin/Development/apps/MothershipSolution/MotherShip/.build/checkouts/HyperSpace.git-8350491166860109504/Package.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_64 /* MotherShip.framework in Frameworks */,
+				OBJ_65 /* HyperSpace.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_84 /* HyperSpace.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_10 /* IDMS */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* IDMS.endpoint.swift */,
+				OBJ_12 /* IDMS.json.swift */,
+			);
+			path = IDMS;
+			sourceTree = "<group>";
+		};
+		OBJ_14 /* Olympus */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* Olympus.endpoint.swift */,
+				OBJ_16 /* Olympus.json.swift */,
+			);
+			path = Olympus;
+			sourceTree = "<group>";
+		};
+		OBJ_17 /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* TestFlight.endpoint.swift */,
+				OBJ_19 /* TestFlight.json.swift */,
+				OBJ_20 /* TestFlight.swift */,
+			);
+			path = TestFlight;
+			sourceTree = "<group>";
+		};
+		OBJ_21 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* MotherShipTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_22 /* MotherShipTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* MotherShipTests.swift */,
+			);
+			name = MotherShipTests;
+			path = Tests/MotherShipTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_25 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* HyperSpace */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_26 /* HyperSpace */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* HyperSpace */,
+				OBJ_40 /* Package.swift */,
+			);
+			name = HyperSpace;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_27 /* HyperSpace */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_28 /* Environment.swift */,
+				OBJ_29 /* Host.swift */,
+				OBJ_30 /* HyperSpace.swift */,
+				OBJ_31 /* IP.swift */,
+				OBJ_32 /* IPv6.swift */,
+				OBJ_33 /* Method.swift */,
+				OBJ_34 /* Path.swift */,
+				OBJ_35 /* Query.swift */,
+				OBJ_36 /* Route.swift */,
+				OBJ_37 /* Router.swift */,
+				OBJ_38 /* Scheme.swift */,
+				OBJ_39 /* URLSession.extension.swift */,
+			);
+			name = HyperSpace;
+			path = ".build/checkouts/HyperSpace.git-8350491166860109504/Sources/HyperSpace";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */,
+				"MotherShip::MotherShip::Product" /* MotherShip.framework */,
+				"HyperSpace::HyperSpace::Product" /* HyperSpace.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_21 /* Tests */,
+				OBJ_24 /* DerivedData */,
+				OBJ_25 /* Dependencies */,
+				OBJ_41 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* MotherShip */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* MotherShip */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Developer.swift */,
+				OBJ_10 /* IDMS */,
+				OBJ_13 /* Mothership.swift */,
+				OBJ_14 /* Olympus */,
+				OBJ_17 /* TestFlight */,
+			);
+			name = MotherShip;
+			path = Sources/MotherShip;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"HyperSpace::HyperSpace" /* HyperSpace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_86 /* Build configuration list for PBXNativeTarget "HyperSpace" */;
+			buildPhases = (
+				OBJ_89 /* Sources */,
+				OBJ_102 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HyperSpace;
+			productName = HyperSpace;
+			productReference = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"HyperSpace::SwiftPMPackageDescription" /* HyperSpacePackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_52 /* Build configuration list for PBXNativeTarget "HyperSpacePackageDescription" */;
+			buildPhases = (
+				OBJ_55 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HyperSpacePackageDescription;
+			productName = HyperSpacePackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"MotherShip::MotherShip" /* MotherShip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_70 /* Build configuration list for PBXNativeTarget "MotherShip" */;
+			buildPhases = (
+				OBJ_73 /* Sources */,
+				OBJ_83 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_85 /* PBXTargetDependency */,
+			);
+			name = MotherShip;
+			productName = MotherShip;
+			productReference = "MotherShip::MotherShip::Product" /* MotherShip.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"MotherShip::MotherShipTests" /* MotherShipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_58 /* Build configuration list for PBXNativeTarget "MotherShipTests" */;
+			buildPhases = (
+				OBJ_61 /* Sources */,
+				OBJ_63 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_66 /* PBXTargetDependency */,
+				OBJ_68 /* PBXTargetDependency */,
+			);
+			name = MotherShipTests;
+			productName = MotherShipTests;
+			productReference = "MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"MotherShip::SwiftPMPackageDescription" /* MotherShipPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_46 /* Build configuration list for PBXNativeTarget "MotherShipPackageDescription" */;
+			buildPhases = (
+				OBJ_49 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MotherShipPackageDescription;
+			productName = MotherShipPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "MotherShip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"MotherShip::SwiftPMPackageDescription" /* MotherShipPackageDescription */,
+				"HyperSpace::SwiftPMPackageDescription" /* HyperSpacePackageDescription */,
+				"MotherShip::MotherShipTests" /* MotherShipTests */,
+				"MotherShip::MotherShip" /* MotherShip */,
+				"HyperSpace::HyperSpace" /* HyperSpace */,
+				"MotherShip::MotherShipPackageTests::ProductTarget" /* MotherShipPackageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_50 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_56 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_62 /* MotherShipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_74 /* Developer.swift in Sources */,
+				OBJ_75 /* IDMS.endpoint.swift in Sources */,
+				OBJ_76 /* IDMS.json.swift in Sources */,
+				OBJ_77 /* Mothership.swift in Sources */,
+				OBJ_78 /* Olympus.endpoint.swift in Sources */,
+				OBJ_79 /* Olympus.json.swift in Sources */,
+				OBJ_80 /* TestFlight.endpoint.swift in Sources */,
+				OBJ_81 /* TestFlight.json.swift in Sources */,
+				OBJ_82 /* TestFlight.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_90 /* Environment.swift in Sources */,
+				OBJ_91 /* Host.swift in Sources */,
+				OBJ_92 /* HyperSpace.swift in Sources */,
+				OBJ_93 /* IP.swift in Sources */,
+				OBJ_94 /* IPv6.swift in Sources */,
+				OBJ_95 /* Method.swift in Sources */,
+				OBJ_96 /* Path.swift in Sources */,
+				OBJ_97 /* Query.swift in Sources */,
+				OBJ_98 /* Route.swift in Sources */,
+				OBJ_99 /* Router.swift in Sources */,
+				OBJ_100 /* Scheme.swift in Sources */,
+				OBJ_101 /* URLSession.extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_107 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "MotherShip::MotherShipTests" /* MotherShipTests */;
+			targetProxy = E93684062001F9B4009B768F /* PBXContainerItemProxy */;
+		};
+		OBJ_66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "MotherShip::MotherShip" /* MotherShip */;
+			targetProxy = E93684042001F9B4009B768F /* PBXContainerItemProxy */;
+		};
+		OBJ_68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "HyperSpace::HyperSpace" /* HyperSpace */;
+			targetProxy = E93684052001F9B4009B768F /* PBXContainerItemProxy */;
+		};
+		OBJ_85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "HyperSpace::HyperSpace" /* HyperSpace */;
+			targetProxy = E93684032001F9B4009B768F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShipTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = MotherShipTests;
+			};
+			name = Debug;
+		};
+		OBJ_60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShipTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = MotherShipTests;
+			};
+			name = Release;
+		};
+		OBJ_71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShip_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = MotherShip;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = MotherShip;
+			};
+			name = Debug;
+		};
+		OBJ_72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShip_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = MotherShip;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = MotherShip;
+			};
+			name = Release;
+		};
+		OBJ_87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/HyperSpace_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = HyperSpace;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = HyperSpace;
+			};
+			name = Debug;
+		};
+		OBJ_88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/HyperSpace_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = HyperSpace;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = HyperSpace;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_104 /* Build configuration list for PBXAggregateTarget "MotherShipPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_105 /* Debug */,
+				OBJ_106 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "MotherShip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_46 /* Build configuration list for PBXNativeTarget "MotherShipPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_47 /* Debug */,
+				OBJ_48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_52 /* Build configuration list for PBXNativeTarget "HyperSpacePackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_53 /* Debug */,
+				OBJ_54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_58 /* Build configuration list for PBXNativeTarget "MotherShipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_59 /* Debug */,
+				OBJ_60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_70 /* Build configuration list for PBXNativeTarget "MotherShip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_71 /* Debug */,
+				OBJ_72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_86 /* Build configuration list for PBXNativeTarget "HyperSpace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_87 /* Debug */,
+				OBJ_88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
 }
