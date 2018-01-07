@@ -10,7 +10,7 @@ matrix:
       - ACTION=build PLATFORM=watchOS DESTINATION='platform=watchOS Simulator,name=Apple Watch - 38mm'
       - ACTION=build  PLATFORM=tvOS    DESTINATION='platform=tvOS Simulator,name=Apple TV'
     script:
-      - xcodebuild clean $ACTION -project MotherShip.xcodeproj -scheme MotherShip-Package -destination "$DESTINATION"
+      - xcodebuild clean $ACTION -project MotherShip.xcodeproj -scheme Mothership-Package -destination "$DESTINATION"
 
   - os: osx
     osx_image: xcode9.2
