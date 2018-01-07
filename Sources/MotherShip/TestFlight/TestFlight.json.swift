@@ -139,3 +139,13 @@ public struct Groups: Codable {
     self.data = data
   }
 }
+
+public struct Trains: Codable {
+  public let data: [Train]
+  
+  public init(data: [Train] = [Train]()){
+    self.data = data
+  }
+}
+
+public typealias Train = String

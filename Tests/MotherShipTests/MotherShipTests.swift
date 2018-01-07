@@ -216,6 +216,30 @@ class MotherShipTests: XCTestCase {
     XCTAssertEqual(code,200, "tester not added to default group")
     
   }
+  
+  func testTestFlightTrains() {
+    
+    guard  let creds = MotherShipTests.credentials else {
+      XCTAssertNil(nil, "cannot read credentials file")
+      return
+    }
+    
+    guard let appInfo = MotherShipTests.appInfo else {
+      XCTAssertNil(nil, "cannot read app info file")
+      return
+    }
+    
+    let testFlight = TestFlight()
+    
+    testFlight.login(with: creds)
+    
+    let trains = testFlight.trains(for: appInfo.appIdentifier, in: appInfo.teamIdentifier, on: .ios)
+    
+    print(trains)
+    
+    XCTAssertEqual(trains.count,1, "did not return correct number of build trains")
+    
+  }
     
 }
 

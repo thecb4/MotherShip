@@ -22,6 +22,10 @@ struct TestFlightEndPoint: EndpointType {
     
     // add tester to test group
     case addTesterToTestGroup(serviceKey:OlympusServiceKeyInfo, tester: Tester, groupID: String, appID: AppIdentifier, teamID: TeamIdentifier)
+    
+    // get build trains
+    // "providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains"
+    case trains(serviceKey: OlympusServiceKeyInfo, appID: AppIdentifier, teamID: TeamIdentifier, platform: Platform)
 
     var route: URL.Route {
       switch self {
@@ -40,12 +44,16 @@ struct TestFlightEndPoint: EndpointType {
           // providers/\(teamID)/apps/\(appID)/testers"
           let route = URL.Route(path: ["providers",teamID,"apps",appID,"groups",groupID,"testers"])
           return route
+          // providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains
+        case .trains(_, let appID, let teamID, let platform):
+          let route = URL.Route(path: ["providers",teamID,"apps",appID,"platforms",platform,"trains"])
+          return route
       }
     }
     
     var method: URL.Method {
       switch self {
-        case .groups, .testers:
+        case .groups, .testers, .trains:
           return .get
         case .addTesterToApp, .addTesterToTestGroup:
           return .post
@@ -57,7 +65,8 @@ struct TestFlightEndPoint: EndpointType {
         case .groups(let serviceKey, _, _),
              .testers(let serviceKey, _, _),
              .addTesterToApp(let serviceKey, _, _, _),
-             .addTesterToTestGroup(let serviceKey, _, _, _, _):
+             .addTesterToTestGroup(let serviceKey, _, _, _, _),
+             .trains(let serviceKey, _, _, _):
           let headers =
             [
               HTTPHeader(field:"Content-Type", value:"application/json"),
@@ -71,7 +80,7 @@ struct TestFlightEndPoint: EndpointType {
     
     var body: Data? {
       switch self {
-      case .groups,.testers:
+      case .groups,.testers, .trains:
         return nil
       case .addTesterToApp(_, let tester, _, _):
         return try? JSONEncoder().encode(tester)
@@ -89,6 +98,8 @@ struct TestFlightEndPoint: EndpointType {
       case .addTesterToApp:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       case .addTesterToTestGroup:
+        return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
+      case .trains:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       }
     }
