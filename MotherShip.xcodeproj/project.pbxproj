@@ -82,6 +82,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E93C3A032001EAC400EC0A26 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E93C3A042001EAC500EC0A26 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		E93C3A052001EAC500EC0A26 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		E93C3A062001EAC500EC0A26 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E93C3A082001EBFB00EC0A26 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		"HyperSpace::HyperSpace::Product" /* HyperSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HyperSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShip::Product" /* MotherShip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MotherShip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = MotherShipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,7 +239,12 @@
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
+				E93C3A052001EAC500EC0A26 /* Cartfile */,
+				E93C3A062001EAC500EC0A26 /* LICENSE */,
+				E93C3A042001EAC500EC0A26 /* Makefile */,
+				E93C3A032001EAC400EC0A26 /* README.md */,
 				OBJ_6 /* Package.swift */,
+				E93C3A082001EBFB00EC0A26 /* .travis.yml */,
 				OBJ_7 /* Sources */,
 				OBJ_21 /* Tests */,
 				OBJ_24 /* Dependencies */,
