@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/cavellebenjamin/Development/apps/MothershipSolution/MotherShip/MotherShip.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
