@@ -9,19 +9,19 @@ import Foundation
 
 public struct Tester: Codable {
   
-  let id: String
-  let email: String
-  let firstName: String
-  let lastName: String
-  let groups: [String]
-  let latestInstallInfo: InstallInfo?
-  let latestInstalledTrain: String?
-  let latestInstalledVersion: String?
-  let installCount: Int?
-  let sessionCount: Int?
-  let crashCount: Int?
+  public let id: String
+  public let email: String
+  public let firstName: String
+  public let lastName: String
+  public let groups: [String]
+  public let latestInstallInfo: InstallInfo?
+  public let latestInstalledTrain: String?
+  public let latestInstalledVersion: String?
+  public let installCount: Int?
+  public let sessionCount: Int?
+  public let crashCount: Int?
   
-  init(
+ public  init(
     id: String = "",
     email:String = "",
     firstName: String = "",
@@ -65,17 +65,17 @@ extension Tester: CustomStringConvertible {
 }
 
 public struct InstallInfo: Codable {
-  let latestInstalledAppAdamId: String?
-  let latestInstalledBuildId: String?
-  let latestInstalledDate: String?
-  let latestInstalledShortVersion: String?
-  let latestInstalledVersion: String?
+  public let latestInstalledAppAdamId: String?
+  public let latestInstalledBuildId: String?
+  public let latestInstalledDate: String?
+  public let latestInstalledShortVersion: String?
+  public let latestInstalledVersion: String?
 }
 
 public struct Testers: Codable {
-  let data: [Tester]
+  public let data: [Tester]
   
-  init(with data:[Tester] = []) {
+  public init(with data:[Tester] = []) {
     self.data = data
   }
   
@@ -93,13 +93,13 @@ public struct Testers: Codable {
  */
 
 public struct Group: Codable {
-  let id: String
-  let teamID: TeamIdentifier
-  let appID:  AppIdentifier
-  let name: String
-  let active: Bool
-  let isInternalGroup: Bool
-  let isDefaultExternalGroup: Bool
+  public let id: String
+  public let teamID: TeamIdentifier
+  public let appID:  AppIdentifier
+  public let name: String
+  public let active: Bool
+  public let isInternalGroup: Bool
+  public let isDefaultExternalGroup: Bool
   
   public init(
     id: String = "",
@@ -133,9 +133,9 @@ public struct Group: Codable {
 }
 
 public struct Groups: Codable {
-  let data: [Group]
+  public let data: [Group]
   
-  init(data: [Group] = [Group]()){
+  public init(data: [Group] = [Group]()){
     self.data = data
   }
 }
