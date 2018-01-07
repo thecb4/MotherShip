@@ -1,0 +1,37 @@
+matrix:
+  include:
+  - os: osx
+    osx_image: xcode9.2
+    language: objective-c
+    env:
+      - JOB="macOS + Xcode"
+      - ACTION=build  PLATFORM=Mac     DESTINATION='platform=OS X'
+      - ACTION=build  PLATFORM=iOS     DESTINATION='platform=iOS Simulator,name=iPhone 8'
+      - ACTION=build PLATFORM=watchOS DESTINATION='platform=watchOS Simulator,name=Apple Watch - 38mm'
+      - ACTION=build  PLATFORM=tvOS    DESTINATION='platform=tvOS Simulator,name=Apple TV'
+    script:
+      - xcodebuild clean $ACTION -project HyperSpace.xcodeproj -scheme HyperSpace-Package -destination "$DESTINATION"
+
+  - os: osx
+    osx_image: xcode9.2
+    language: objective-c
+    env:
+      - JOB="macOS + Swift Package Manager"
+    script:
+      - swift build
+
+  - os: linux
+    dist: trusty
+    env:
+      - JOB="Linux + Swift Package Manager"
+    script:
+      - "export SWIFT_VERSION=4.0"
+      - "eval \"$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)\""
+      - swift build
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+  email: true
+
