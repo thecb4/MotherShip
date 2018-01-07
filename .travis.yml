@@ -23,12 +23,13 @@ matrix:
   - os: linux
     dist: trusty
     sudo: required
-    language: cpp
+    language: generic
     env:
       - JOB="Linux + Swift Package Manager"
     script:
-      - "export SWIFT_VERSION=4.0"
+      - "export SWIFT_VERSION=4.0.3"
       - "eval \"$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)\""
+      - export LD_LIBRARY_PATH=$HOME/.swiftenv/versions/$SWIFT_VERSION/usr/lib/swift/linux:$LD_LIBRARY_PATH
       - swift build
 
 after_success:
