@@ -15,9 +15,9 @@ I wrote MotherShip for two reasons.
 1. Login to iTunesConnect
 2. Get list of Testers
 3. Get list of Groups
-4. Invite someone to test an app
-
-
+4. Get list of Versions
+5. Get list of Builds
+6. Invite someone to test an app
 
 ```swift
 
@@ -43,7 +43,6 @@ let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: app
 - [ ] Upload build
 - [ ] Code signing? Or just leave it up to Apple
 - [ ] Two-Factor Authentication?
-
 
 ### There is a Command Line Interface for MotherShip.
 
