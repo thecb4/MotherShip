@@ -140,12 +140,12 @@ public struct Groups: Codable {
   }
 }
 
-public struct Trains: Codable {
-  public let data: [Train]
+public struct Versions: Codable {
+  public let data: [Version]
   
-  public init(data: [Train] = [Train]()){
+  public init(data: [Version] = [Version]()){
     self.data = data
   }
 }
 
-public typealias Train = String
+public typealias Version = String

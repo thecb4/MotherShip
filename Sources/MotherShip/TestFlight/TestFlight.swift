@@ -78,10 +78,10 @@ public class TestFlight {
     
   }
   
-  public func trains(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> [Train] {
+  public func versions(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> [Version] {
     
     let ep = Router<TestFlightEndPoint>(at:
-      .trains(
+      .versions(
         serviceKey: self.mothership.olympusServiceKeyInfo,
         appID: appID,
         teamID: teamID,
@@ -89,9 +89,9 @@ public class TestFlight {
       )
     )
     
-    let trains: Trains = ep.decodeJSON()!
+    let versions: Versions = ep.decodeJSON()!
     
-    return trains.data
+    return versions.data
     
   }
   

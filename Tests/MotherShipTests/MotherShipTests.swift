@@ -21,6 +21,22 @@ class MotherShipTests: XCTestCase {
 //      XCTAssertEqual(Mothership().text, "Hello, World!")
 //  }
   
+  let mothership = MotherShip()
+  let testFlight = TestFlight()
+  
+  override func setUp() {
+    
+    print("logging in")
+    
+    guard  let creds = MotherShipTests.credentials else {
+      XCTAssertNil(nil, "cannot read credentials file")
+      return
+    }
+    
+    testFlight.login(with: creds)
+    
+  }
+  
   private static var credentials: LoginCredentials? {
     
     let relativePath = "~/Development/apps/MothershipSolution/MotherShip/.private/credentials.json"
@@ -140,19 +156,19 @@ class MotherShipTests: XCTestCase {
   
   func testTestFlightGroups() {
     
-    guard  let creds = MotherShipTests.credentials else {
-      XCTAssertNil(nil, "cannot read credentials file")
-      return
-    }
+//    guard  let creds = MotherShipTests.credentials else {
+//      XCTAssertNil(nil, "cannot read credentials file")
+//      return
+//    }
     
     guard let appInfo = MotherShipTests.appInfo else {
       XCTAssertNil(nil, "cannot read app info file")
       return
     }
     
-    let testFlight = TestFlight()
+//    let testFlight = TestFlight()
     
-    testFlight.login(with: creds)
+//    testFlight.login(with: creds)
     
     let groups = testFlight.groups(for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
     
@@ -166,19 +182,19 @@ class MotherShipTests: XCTestCase {
   
   func testTestFlightTesters() {
     
-    guard  let creds = MotherShipTests.credentials else {
-      XCTAssertNil(nil, "cannot read credentials file")
-      return
-    }
+//    guard  let creds = MotherShipTests.credentials else {
+//      XCTAssertNil(nil, "cannot read credentials file")
+//      return
+//    }
     
     guard let appInfo = MotherShipTests.appInfo else {
       XCTAssertNil(nil, "cannot read app info file")
       return
     }
     
-    let testFlight = TestFlight()
+//    let testFlight = TestFlight()
     
-    testFlight.login(with: creds)
+//    testFlight.login(with: creds)
     
     let testers = testFlight.testers(for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
     
@@ -190,10 +206,10 @@ class MotherShipTests: XCTestCase {
 
   func testInviteTesterToTestFlight() {
     
-    guard  let creds = MotherShipTests.credentials else {
-      XCTAssertNil(nil, "cannot read credentials file")
-      return
-    }
+//    guard  let creds = MotherShipTests.credentials else {
+//      XCTAssertNil(nil, "cannot read credentials file")
+//      return
+//    }
     
     guard let appInfo = MotherShipTests.appInfo else {
       XCTAssertNil(nil, "cannot read app info file")
@@ -207,9 +223,9 @@ class MotherShipTests: XCTestCase {
     
     let tester = Tester(email: testerInfo.email, firstName: testerInfo.firstName, lastName: testerInfo.lastName)
     
-    let testFlight = TestFlight()
-    
-    testFlight.login(with: creds)
+//    let testFlight = TestFlight()
+//
+//    testFlight.login(with: creds)
     
     let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: appInfo.teamIdentifier)
     
@@ -217,27 +233,38 @@ class MotherShipTests: XCTestCase {
     
   }
   
-  func testTestFlightTrains() {
+  func testTestFlightVersions() {
     
-    guard  let creds = MotherShipTests.credentials else {
-      XCTAssertNil(nil, "cannot read credentials file")
-      return
-    }
+//    guard  let creds = MotherShipTests.credentials else {
+//      XCTAssertNil(nil, "cannot read credentials file")
+//      return
+//    }
     
     guard let appInfo = MotherShipTests.appInfo else {
       XCTAssertNil(nil, "cannot read app info file")
       return
     }
     
-    let testFlight = TestFlight()
+//    let testFlight = TestFlight()
+//
+//    testFlight.login(with: creds)
     
-    testFlight.login(with: creds)
-    
-    let trains = testFlight.trains(for: appInfo.appIdentifier, in: appInfo.teamIdentifier, on: .ios)
+    let trains = testFlight.versions(for: appInfo.appIdentifier, in: appInfo.teamIdentifier, on: .ios)
     
     print(trains)
     
     XCTAssertEqual(trains.count,1, "did not return correct number of build trains")
+    
+  }
+  
+  func testBuildsForVersion() {
+    
+    guard let appInfo = MotherShipTests.appInfo else {
+      XCTAssertNil(nil, "cannot read app info file")
+      return
+    }
+    
+//    let builds = testFlight.builds(version: Version)
     
   }
     

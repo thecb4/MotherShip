@@ -25,35 +25,43 @@ struct TestFlightEndPoint: EndpointType {
     
     // get build trains
     // "providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains"
-    case trains(serviceKey: OlympusServiceKeyInfo, appID: AppIdentifier, teamID: TeamIdentifier, platform: Platform)
+    case versions(serviceKey: OlympusServiceKeyInfo, appID: AppIdentifier, teamID: TeamIdentifier, platform: Platform)
+    
+    // get buids for train
+    // "providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains/#{train_version}/builds"
+    case builds(serviceKey: OlympusServiceKeyInfo, version: Version, appID: AppIdentifier, teamID: TeamIdentifier, platform: Platform)
 
     var route: URL.Route {
       switch self {
         case .groups( _, let appID, let teamID):
           // "https://itunesconnect.apple.com/testflight/v2/providers/\(teamID)/apps/\(appID)/groups"
           return URL.Route(path: ["providers",teamID,"apps",appID,"groups"])
+        // "https://itunesconnect.apple.com/testflight/v2/providers/\(teamID)/apps/\(appID)/testers"
         case .testers( _, let appID, let teamID):
-          // "https://itunesconnect.apple.com/testflight/v2/providers/\(teamID)/apps/\(appID)/testers"
           return URL.Route(path: ["providers",teamID,"apps",appID,"testers"])
+        // providers/\(teamID)/apps/\(appID)/testers"
         case  .addTesterToApp(_, _, let appID, let teamID):
-          // providers/\(teamID)/apps/\(appID)/testers"
           let route = URL.Route(path: ["providers",teamID,"apps",appID,"testers"])
           return route
-          // providers/\(teamID)/apps/\(appID)/groups/\(groupID)/testers
+        // providers/\(teamID)/apps/\(appID)/groups/\(groupID)/testers
         case .addTesterToTestGroup(_, _, let groupID, let appID, let teamID):
           // providers/\(teamID)/apps/\(appID)/testers"
           let route = URL.Route(path: ["providers",teamID,"apps",appID,"groups",groupID,"testers"])
           return route
-          // providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains
-        case .trains(_, let appID, let teamID, let platform):
+        // providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains
+        case .versions(_, let appID, let teamID, let platform):
           let route = URL.Route(path: ["providers",teamID,"apps",appID,"platforms",platform,"trains"])
+          return route
+        // "providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains/#{train_version}/builds"
+        case .builds(_, let version, let appID, let teamID, let platform):
+          let route = URL.Route(path: ["providers",teamID,"apps",appID,"platforms",platform,"trains",version,"builds"])
           return route
       }
     }
     
     var method: URL.Method {
       switch self {
-        case .groups, .testers, .trains:
+        case .groups, .testers, .versions, .builds:
           return .get
         case .addTesterToApp, .addTesterToTestGroup:
           return .post
@@ -66,7 +74,8 @@ struct TestFlightEndPoint: EndpointType {
              .testers(let serviceKey, _, _),
              .addTesterToApp(let serviceKey, _, _, _),
              .addTesterToTestGroup(let serviceKey, _, _, _, _),
-             .trains(let serviceKey, _, _, _):
+             .versions(let serviceKey, _, _, _),
+             .builds(let serviceKey, _, _, _, _):
           let headers =
             [
               HTTPHeader(field:"Content-Type", value:"application/json"),
@@ -80,7 +89,7 @@ struct TestFlightEndPoint: EndpointType {
     
     var body: Data? {
       switch self {
-      case .groups,.testers, .trains:
+      case .groups,.testers, .versions, .builds:
         return nil
       case .addTesterToApp(_, let tester, _, _):
         return try? JSONEncoder().encode(tester)
@@ -99,7 +108,9 @@ struct TestFlightEndPoint: EndpointType {
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       case .addTesterToTestGroup:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
-      case .trains:
+      case .versions:
+        return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
+      case .builds:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       }
     }
