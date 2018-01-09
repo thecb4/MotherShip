@@ -5,6 +5,7 @@ iTunes Connect Library inspired by [FastLane](https://github.com/fastlane/fastla
 ![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
 [![Build Status](https://travis-ci.org/thecb4/HyperSpace.svg?branch=master)](https://travis-ci.org/thecb4/HyperSpace)
 ![Platforms](https://img.shields.io/badge/platform-%20Linux%20|%20macOS%20-red.svg)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 I wrote MotherShip for two reasons.
