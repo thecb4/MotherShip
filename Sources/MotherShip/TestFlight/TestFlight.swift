@@ -95,4 +95,22 @@ public class TestFlight {
     
   }
   
+  public func builds(version: Version, for appID: AppIdentifier, in teamID: TeamIdentifier, on platform: Platform) -> [Build] {
+    
+    let ep = Router<TestFlightEndPoint>(at:
+      .builds(
+        serviceKey: self.mothership.olympusServiceKeyInfo,
+        version: version,
+        appID: appID,
+        teamID: teamID,
+        platform: platform
+      )
+    )
+    
+    let builds: Builds = ep.decodeJSON()!
+    
+    return builds.data
+    
+  }
+  
 }

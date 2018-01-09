@@ -149,3 +149,71 @@ public struct Versions: Codable {
 }
 
 public typealias Version = String
+
+//"id" : 26481817,
+//"bundleId" : "com.seedsofcode.PrettyRandom",
+//"trainVersion" : "2.1.0",
+//"buildVersion" : "140",
+//"uploadDate" : "2017-12-22T04:42:38.000+0000",
+//"appAdamId" : 581766803,
+//"providerId" : 118223480,
+//"providerName" : "Cavelle Benjamin|10227019790",
+//"developerName" : "Cavelle Benjamin",
+//"sizeInBytes" : 0,
+//"internalExpireTime" : "2018-03-22T03:42:38.000+0000",
+//"externalExpireTime" : "2018-03-22T03:42:38.000+0000",
+//"platform" : "ios",
+//"minOsVersion" : "10.2",
+//"iconAssetToken" : "Newsstand128/v4/57/a7/8a/57a78aaa-ee1a-250f-7561-5c63eecf0d55/Icon-60@2x.png.png",
+//"inviteCount" : 8,
+//"installCount" : 1,
+//"activeTesterCount" : 0,
+//"crashCount" : 0,
+//"internalState" : "testflight.build.state.testing.active",
+//"externalState" : "testflight.build.state.testing.active",
+//"binaryState" : "Validated",
+//"autoNotifyEnabled" : true,
+//"didNotify" : false,
+//"cfBundleShortVersion" : "2.1.0",
+//"cfBundleVersion" : "140"
+
+public struct Builds: Codable {
+  
+  let data: [Build]
+  
+}
+
+public struct Build: Codable {
+  
+  public let id : BuildIdentifier
+  public let bundleId : String
+  public let trainVersion : Version
+  public let buildVersion : BuildNumber
+  public let uploadDate : String
+  public let appAdamId : AppIdentifier
+  public let providerId : TeamIdentifier
+  public let providerName : String
+  public let developerName : String
+  public let sizeInBytes : Int64
+  public let internalExpireTime : String
+  public let externalExpireTime : String
+  public let platform : Platform
+  public let minOsVersion : String
+  public let iconAssetToken : String
+  public let inviteCount : Int
+  public let installCount : Int
+  public let activeTesterCount : Int
+  public let crashCount : Int
+  public let internalState : String
+  public let externalState : String
+  public let binaryState : String
+  public let autoNotifyEnabled : Bool
+  public let didNotify : Bool
+  public let cfBundleShortVersion : Version
+  public let cfBundleVersion : BuildNumber
+  
+}
+
+public typealias BuildIdentifier = Int64
+public typealias BuildNumber     = String
+

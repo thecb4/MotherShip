@@ -8,7 +8,7 @@
 import Foundation
 import HyperSpace
 
-public enum Platform: String {
+public enum Platform: String, Codable {
   
   case ios
   

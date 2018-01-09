@@ -5,6 +5,7 @@ import HyperSpace
 struct AppInfo: Codable {
   let appIdentifier: Int64
   let teamIdentifier: Int64
+  let version: String
 }
 
 struct TesterInfo: Codable {
@@ -253,7 +254,7 @@ class MotherShipTests: XCTestCase {
     
     print(trains)
     
-    XCTAssertEqual(trains.count,1, "did not return correct number of build trains")
+    XCTAssertEqual(trains.count,1, "did not return correct number of versions")
     
   }
   
@@ -264,7 +265,11 @@ class MotherShipTests: XCTestCase {
       return
     }
     
-//    let builds = testFlight.builds(version: Version)
+    let builds = testFlight.builds(version: appInfo.version, for: appInfo.appIdentifier, in: appInfo.teamIdentifier, on: .ios)
+    
+    print(builds)
+    
+    XCTAssertEqual(builds.count,1, "did not return correct number of builds for version")
     
   }
     
