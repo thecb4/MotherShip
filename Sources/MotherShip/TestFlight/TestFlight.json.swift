@@ -244,6 +244,10 @@ public typealias BuildNumber     = String
 
 public enum Locale: String, Codable {
   case enUS = "en-US"
+  case frFR = "fr-FR"
+  case deDE = "de-DE"
+  case itIT = "it-IT"
+  case zh   = "zh"
 }
 
 public struct TestInfos: Codable {
