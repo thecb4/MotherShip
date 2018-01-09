@@ -113,4 +113,20 @@ public class TestFlight {
     
   }
   
+  public func testInfo(for appID: AppIdentifier, in teamID: TeamIdentifier) -> TestInfo {
+    
+    let ep = Router<TestFlightEndPoint>(at:
+      .testInfo(
+        serviceKey: self.mothership.olympusServiceKeyInfo,
+        appID: appID,
+        teamID: teamID
+      )
+    )
+    
+    let info: TestInfos = ep.decodeJSON()!
+    
+    return info.data
+    
+  }
+  
 }

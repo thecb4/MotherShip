@@ -155,16 +155,16 @@ public typealias Version = String
 //"trainVersion" : "2.1.0",
 //"buildVersion" : "140",
 //"uploadDate" : "2017-12-22T04:42:38.000+0000",
-//"appAdamId" : 581766803,
-//"providerId" : 118223480,
-//"providerName" : "Cavelle Benjamin|10227019790",
-//"developerName" : "Cavelle Benjamin",
+//"appAdamId" : 1234567890,
+//"providerId" : 1234567890,
+//"providerName" : "xxx,
+//"developerName" : "xxxx",
 //"sizeInBytes" : 0,
 //"internalExpireTime" : "2018-03-22T03:42:38.000+0000",
 //"externalExpireTime" : "2018-03-22T03:42:38.000+0000",
 //"platform" : "ios",
 //"minOsVersion" : "10.2",
-//"iconAssetToken" : "Newsstand128/v4/57/a7/8a/57a78aaa-ee1a-250f-7561-5c63eecf0d55/Icon-60@2x.png.png",
+//"iconAssetToken" : "xxx",
 //"inviteCount" : 8,
 //"installCount" : 1,
 //"activeTesterCount" : 0,
@@ -216,4 +216,68 @@ public struct Build: Codable {
 
 public typealias BuildIdentifier = Int64
 public typealias BuildNumber     = String
+
+//"data" :
+//{
+//  "primaryLocale" : "en-US",
+//  "details" : [ {
+//  "locale" : "en-US",
+//  "feedbackEmail" : "cavelle@thecb4.io",
+//  "marketingUrl" : "http://prettyrandom.thecb4.io",
+//  "privacyPolicyUrl" : "http://prettyrandom.thecb4.io/PRIVACY.html",
+//  "privacyPolicy" : null,
+//  "description" : "Please test the following\n- Random app failures\n- lag\n- Non-responsiveness"
+//  } ],
+//  "eula" : null,
+//  "betaReviewInfo" : {
+//    "contactFirstName" : "Cavelle",
+//    "contactLastName" : "Benjamin",
+//    "contactPhone" : "6782241645",
+//    "contactEmail" : "cavelle@thecb4.io",
+//    "demoAccountName" : null,
+//    "demoAccountPassword" : null,
+//    "demoAccountRequired" : false,
+//    "notes" : null
+//  }
+//},
+
+
+public enum Locale: String, Codable {
+  case enUS = "en-US"
+}
+
+public struct TestInfos: Codable {
+  public let data: TestInfo
+}
+
+public struct TestInfo: Codable {
+  public let primaryLocale: Locale
+  public let details: [TestInfoDetail]
+  public let eula: String?
+  public let betaReviewInfo: BetaReviewInfo
+}
+
+public struct TestInfoDetail: Codable {
+  
+  public let locale: Locale
+  public let feedbackEmail: String
+  public let marketingUrl: String
+  public let privacyPolicyUrl: String
+  public let privacyPolicy: String?
+  public let description: String
+  
+}
+
+public struct BetaReviewInfo: Codable {
+  
+  public let contactFirstName: String
+  public let contactLastName: String
+  public let contactPhone: String
+  public let contactEmail: String
+  public let demoAccountName: String?
+  public let demoAccountPassword: String?
+  public let demoAccountRequired: Bool
+  public let notes: String?
+  
+}
 

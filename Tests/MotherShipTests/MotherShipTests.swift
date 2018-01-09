@@ -272,6 +272,21 @@ class MotherShipTests: XCTestCase {
     XCTAssertEqual(builds.count,1, "did not return correct number of builds for version")
     
   }
+  
+  func testGetTestInfo() {
+    
+    guard let appInfo = MotherShipTests.appInfo else {
+      XCTAssertNil(nil, "cannot read app info file")
+      return
+    }
+    
+    let info = testFlight.testInfo(for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
+    
+    print(info)
+    
+    XCTAssertEqual(info.details.count,1, "did not return correct number of builds for version")
+    
+  }
     
 }
 

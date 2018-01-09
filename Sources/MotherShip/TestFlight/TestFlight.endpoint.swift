@@ -30,6 +30,10 @@ struct TestFlightEndPoint: EndpointType {
     // get buids for train
     // "providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains/#{train_version}/builds"
     case builds(serviceKey: OlympusServiceKeyInfo, version: Version, appID: AppIdentifier, teamID: TeamIdentifier, platform: Platform)
+    
+    // get test info
+    // "providers/#{team_id}/apps/#{app_id}/testInfo"
+    case testInfo(serviceKey: OlympusServiceKeyInfo, appID: AppIdentifier, teamID: TeamIdentifier)
 
     var route: URL.Route {
       switch self {
@@ -56,12 +60,16 @@ struct TestFlightEndPoint: EndpointType {
         case .builds(_, let version, let appID, let teamID, let platform):
           let route = URL.Route(path: ["providers",teamID,"apps",appID,"platforms",platform,"trains",version,"builds"])
           return route
+        // "providers/#{team_id}/apps/#{app_id}/testInfo"
+        case .testInfo(_, let appID, let teamID):
+          let route = URL.Route(path: ["providers", teamID, "apps", appID, "testInfo"])
+          return route
       }
     }
     
     var method: URL.Method {
       switch self {
-        case .groups, .testers, .versions, .builds:
+        case .groups, .testers, .versions, .builds, .testInfo:
           return .get
         case .addTesterToApp, .addTesterToTestGroup:
           return .post
@@ -75,7 +83,8 @@ struct TestFlightEndPoint: EndpointType {
              .addTesterToApp(let serviceKey, _, _, _),
              .addTesterToTestGroup(let serviceKey, _, _, _, _),
              .versions(let serviceKey, _, _, _),
-             .builds(let serviceKey, _, _, _, _):
+             .builds(let serviceKey, _, _, _, _),
+             .testInfo(let serviceKey, _, _):
           let headers =
             [
               HTTPHeader(field:"Content-Type", value:"application/json"),
@@ -89,7 +98,7 @@ struct TestFlightEndPoint: EndpointType {
     
     var body: Data? {
       switch self {
-      case .groups,.testers, .versions, .builds:
+      case .groups,.testers, .versions, .builds, .testInfo:
         return nil
       case .addTesterToApp(_, let tester, _, _):
         return try? JSONEncoder().encode(tester)
@@ -111,6 +120,8 @@ struct TestFlightEndPoint: EndpointType {
       case .versions:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       case .builds:
+        return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
+      case .testInfo:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       }
     }
