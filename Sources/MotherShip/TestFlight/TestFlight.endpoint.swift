@@ -27,15 +27,16 @@ struct TestFlightEndPoint: EndpointType {
     // "providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains"
     case versions(serviceKey: OlympusServiceKeyInfo, appID: AppIdentifier, teamID: TeamIdentifier, platform: Platform)
     
-    // get buids for train
+    // get builds for train
     // "providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains/#{train_version}/builds"
     case builds(serviceKey: OlympusServiceKeyInfo, version: Version, appID: AppIdentifier, teamID: TeamIdentifier, platform: Platform)
     
     // get test info
     // "providers/#{team_id}/apps/#{app_id}/testInfo"
-    case testInfo(serviceKey: OlympusServiceKeyInfo, appID: AppIdentifier, teamID: TeamIdentifier)
+    case appTestInfo(serviceKey: OlympusServiceKeyInfo, appID: AppIdentifier, teamID: TeamIdentifier)
     
-    case updateTestInfo(serviceKey: OlympusServiceKeyInfo, info: TestInfo, appID: AppIdentifier, teamID: TeamIdentifier)
+    case updateAppTestInfo(serviceKey: OlympusServiceKeyInfo, info: TestInfo, appID: AppIdentifier, teamID: TeamIdentifier)
+    
 
     var route: URL.Route {
       switch self {
@@ -63,11 +64,11 @@ struct TestFlightEndPoint: EndpointType {
           let route = URL.Route(path: ["providers",teamID,"apps",appID,"platforms",platform,"trains",version,"builds"])
           return route
         // "providers/#{team_id}/apps/#{app_id}/testInfo"
-        case .testInfo(_, let appID, let teamID):
+        case .appTestInfo(_, let appID, let teamID):
           let route = URL.Route(path: ["providers", teamID, "apps", appID, "testInfo"])
           return route
         // "providers/#{team_id}/apps/#{app_id}/testInfo"
-        case .updateTestInfo(_, _, let appID, let teamID):
+        case .updateAppTestInfo(_, _, let appID, let teamID):
           let route = URL.Route(path: ["providers", teamID, "apps", appID, "testInfo"])
           return route
       }
@@ -75,9 +76,9 @@ struct TestFlightEndPoint: EndpointType {
     
     var method: URL.Method {
       switch self {
-        case .groups, .testers, .versions, .builds, .testInfo:
+        case .groups, .testers, .versions, .builds, .appTestInfo:
           return .get
-        case .updateTestInfo:
+        case .updateAppTestInfo:
           return .put
         case .addTesterToApp, .addTesterToTestGroup:
           return .post
@@ -92,8 +93,8 @@ struct TestFlightEndPoint: EndpointType {
              .addTesterToTestGroup(let serviceKey, _, _, _, _),
              .versions(let serviceKey, _, _, _),
              .builds(let serviceKey, _, _, _, _),
-             .testInfo(let serviceKey, _, _),
-             .updateTestInfo(let serviceKey, _, _, _):
+             .appTestInfo(let serviceKey, _, _),
+             .updateAppTestInfo(let serviceKey, _, _, _):
           let headers =
             [
               HTTPHeader(field:"Content-Type", value:"application/json"),
@@ -107,13 +108,13 @@ struct TestFlightEndPoint: EndpointType {
     
     var body: Data? {
       switch self {
-      case .groups,.testers, .versions, .builds, .testInfo:
+      case .groups,.testers, .versions, .builds, .appTestInfo:
         return nil
       case .addTesterToApp(_, let tester, _, _):
         return try? JSONEncoder().encode(tester)
       case .addTesterToTestGroup(_, let tester, _, _, _):
         return try? JSONEncoder().encode([tester])
-      case .updateTestInfo(_, let info, _, _):
+      case .updateAppTestInfo(_, let info, _, _):
         return try? JSONEncoder().encode(info)
       }
     }
@@ -132,9 +133,9 @@ struct TestFlightEndPoint: EndpointType {
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       case .builds:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
-      case .testInfo:
+      case .appTestInfo:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
-      case .updateTestInfo:
+      case .updateAppTestInfo:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       }
     }

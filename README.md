@@ -18,8 +18,9 @@ I wrote MotherShip for two reasons.
 3. Get list of Groups
 4. Get list of Versions
 5. Get list of Builds
-6. Get Test Info
+6. Get App level Test Info
 7. Invite someone to test an app
+8. Update App level Test Information!
 
 ```swift
 

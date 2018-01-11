@@ -25,6 +25,8 @@ class MotherShipTests: XCTestCase {
   let mothership = MotherShip()
   let testFlight = TestFlight()
   
+  static let infoPath = "~/Development/apps/MothershipSolution/MotherShip/.private/"
+  
   override func setUp() {
     
     print("logging in")
@@ -38,87 +40,137 @@ class MotherShipTests: XCTestCase {
     
   }
   
-  private static var credentials: LoginCredentials? {
+  private static func json<T: Codable>(from file:String) -> T? {
     
-    let relativePath = "~/Development/apps/MothershipSolution/MotherShip/.private/credentials.json"
+    let relativePath = infoPath + file
     
     let fullPath = NSString(string: relativePath).expandingTildeInPath
     
-    guard let credentialsString = try? String(contentsOfFile: fullPath, encoding: .utf8) else {
-      XCTAssertNotNil(nil, "bad path for credentials")
-      return nil
-    }
-
-    guard let data = credentialsString.data(using: .utf8) else {
-      XCTAssertNotNil(nil, "can't convert json string to data")
+    guard let string = try? String(contentsOfFile: fullPath, encoding: .utf8) else {
+      XCTAssertNotNil(nil, "could not read contents of file \(file)")
       return nil
     }
     
-    guard let credentials = try? JSONDecoder().decode(LoginCredentials.self, from: data) else {
-      XCTAssertNotNil(nil, "can't decode json data to swift struct")
+    guard let data = string.data(using: .utf8) else {
+      XCTAssertNotNil(nil, "cannot convert contents of file '\(file)' to utf8 data")
       return nil
     }
     
-    print(credentials)
+    guard let json = try? JSONDecoder().decode(T.self, from: data) else {
+      XCTAssertNotNil(nil, "can't decode json from file '\(file)'")
+      return nil
+    }
     
-    return credentials
+    return json
+    
+  }
+  
+  private static var credentials: LoginCredentials? {
+    
+//    let relativePath = infoPath + "credentials.json"
+//
+//    let fullPath = NSString(string: relativePath).expandingTildeInPath
+//
+//    guard let credentialsString = try? String(contentsOfFile: fullPath, encoding: .utf8) else {
+//      XCTAssertNotNil(nil, "bad path for credentials")
+//      return nil
+//    }
+//
+//    guard let data = credentialsString.data(using: .utf8) else {
+//      XCTAssertNotNil(nil, "can't convert json string to data")
+//      return nil
+//    }
+    
+    guard let info: LoginCredentials = json(from: "credentials.json") else {
+      XCTAssertNotNil(nil, "could not create credentials")
+      return nil
+    }
+    
+    print(info)
+    
+    return info
     
   }
   
   private static var appInfo: AppInfo? {
     
-    let relativePath = "~/Development/apps/MothershipSolution/MotherShip/.private/app.json"
+//    let relativePath = infoPath + "app.json"
+//
+//    let fullPath = NSString(string: relativePath).expandingTildeInPath
+//
+//    guard let credentialsString = try? String(contentsOfFile: fullPath, encoding: .utf8) else {
+//      XCTAssertNotNil(nil, "bad path for credentials")
+//      return nil
+//    }
+//
+//    guard let data = credentialsString.data(using: .utf8) else {
+//      XCTAssertNotNil(nil, "can't convert json string to data")
+//      return nil
+//    }
+//
+//    guard let appInfo = try? JSONDecoder().decode(AppInfo.self, from: data) else {
+//      XCTAssertNotNil(nil, "can't decode json data to swift struct")
+//      return nil
+//    }
+//
+//    print(appInfo)
+//
+//    return appInfo
     
-    let fullPath = NSString(string: relativePath).expandingTildeInPath
-    
-    guard let credentialsString = try? String(contentsOfFile: fullPath, encoding: .utf8) else {
-      XCTAssertNotNil(nil, "bad path for credentials")
+    guard let info: AppInfo = json(from: "app.json") else {
+      XCTAssertNotNil(nil, "could not create app info")
       return nil
     }
     
-    guard let data = credentialsString.data(using: .utf8) else {
-      XCTAssertNotNil(nil, "can't convert json string to data")
-      return nil
-    }
+    print(info)
     
-    guard let appInfo = try? JSONDecoder().decode(AppInfo.self, from: data) else {
-      XCTAssertNotNil(nil, "can't decode json data to swift struct")
-      return nil
-    }
-    
-    print(appInfo)
-    
-    return appInfo
+    return info
     
   }
   
   private static var testerInfo: TesterInfo? {
     
-    let relativePath = "~/Development/apps/MothershipSolution/MotherShip/.private/tester.json"
+//    let relativePath = infoPath + "tester.json"
+//
+//    let fullPath = NSString(string: relativePath).expandingTildeInPath
+//
+//    guard let data = testerString.data(using: .utf8) else {
+//      XCTAssertNotNil(nil, "can't convert json string to data")
+//      return nil
+//    }
+//
+//    guard let testerInfo = try? JSONDecoder().decode(TesterInfo.self, from: data) else {
+//      print(testerString)
+//      print(data.description)
+//      XCTAssertNotNil(nil, "can't decode json data to swift struct")
+//      return nil
+//    }
+//
+//    print(testerInfo)
+//
+//    return testerInfo
     
-    let fullPath = NSString(string: relativePath).expandingTildeInPath
-    
-    guard let testerString = try? String(contentsOfFile: fullPath, encoding: .utf8) else {
-      XCTAssertNotNil(nil, "bad path for tester info")
+    guard let info: TesterInfo = json(from: "tester.json") else {
+      XCTAssertNotNil(nil, "could not create tester info")
       return nil
     }
     
-    guard let data = testerString.data(using: .utf8) else {
-      XCTAssertNotNil(nil, "can't convert json string to data")
+    print(info)
+    
+    return info
+    
+  }
+  
+  private static var testInfo: TestInfo? {
+    
+    guard let info: TestInfo = json(from: "testInfo.json") else {
+      XCTAssertNotNil(nil, "could not create test info")
       return nil
     }
     
-    guard let testerInfo = try? JSONDecoder().decode(TesterInfo.self, from: data) else {
-      print(testerString)
-      print(data.description)
-      XCTAssertNotNil(nil, "can't decode json data to swift struct")
-      return nil
-    }
+    print(info)
     
-    print(testerInfo)
-    
-    return testerInfo
-    
+    return info
   }
   
   func testPath() {
@@ -156,21 +208,12 @@ class MotherShipTests: XCTestCase {
   }
   
   func testTestFlightGroups() {
-    
-//    guard  let creds = MotherShipTests.credentials else {
-//      XCTAssertNil(nil, "cannot read credentials file")
-//      return
-//    }
-    
+
     guard let appInfo = MotherShipTests.appInfo else {
       XCTAssertNil(nil, "cannot read app info file")
       return
     }
-    
-//    let testFlight = TestFlight()
-    
-//    testFlight.login(with: creds)
-    
+
     let groups = testFlight.groups(for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
     
     let defaultExternalGroup = groups.filter {$0.isDefaultExternalGroup == true }
@@ -183,19 +226,10 @@ class MotherShipTests: XCTestCase {
   
   func testTestFlightTesters() {
     
-//    guard  let creds = MotherShipTests.credentials else {
-//      XCTAssertNil(nil, "cannot read credentials file")
-//      return
-//    }
-    
     guard let appInfo = MotherShipTests.appInfo else {
       XCTAssertNil(nil, "cannot read app info file")
       return
     }
-    
-//    let testFlight = TestFlight()
-    
-//    testFlight.login(with: creds)
     
     let testers = testFlight.testers(for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
     
@@ -206,11 +240,6 @@ class MotherShipTests: XCTestCase {
   }
 
   func testInviteTesterToTestFlight() {
-    
-//    guard  let creds = MotherShipTests.credentials else {
-//      XCTAssertNil(nil, "cannot read credentials file")
-//      return
-//    }
     
     guard let appInfo = MotherShipTests.appInfo else {
       XCTAssertNil(nil, "cannot read app info file")
@@ -224,31 +253,18 @@ class MotherShipTests: XCTestCase {
     
     let tester = Tester(email: testerInfo.email, firstName: testerInfo.firstName, lastName: testerInfo.lastName)
     
-//    let testFlight = TestFlight()
-//
-//    testFlight.login(with: creds)
-    
     let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: appInfo.teamIdentifier)
     
-    XCTAssertEqual(code,200, "tester not added to default group")
+    XCTAssertEqual(code,HTTPStatusCode.ok, "tester not added to default group")
     
   }
   
   func testTestFlightVersions() {
     
-//    guard  let creds = MotherShipTests.credentials else {
-//      XCTAssertNil(nil, "cannot read credentials file")
-//      return
-//    }
-    
     guard let appInfo = MotherShipTests.appInfo else {
       XCTAssertNil(nil, "cannot read app info file")
       return
     }
-    
-//    let testFlight = TestFlight()
-//
-//    testFlight.login(with: creds)
     
     let trains = testFlight.versions(for: appInfo.appIdentifier, in: appInfo.teamIdentifier, on: .ios)
     
@@ -273,7 +289,7 @@ class MotherShipTests: XCTestCase {
     
   }
   
-  func testGetTestInfo() {
+  func testAppTestInfo() {
     
     guard let appInfo = MotherShipTests.appInfo else {
       XCTAssertNil(nil, "cannot read app info file")
@@ -285,6 +301,28 @@ class MotherShipTests: XCTestCase {
     print(info)
     
     XCTAssertEqual(info.details.count,1, "did not return correct number of builds for version")
+    
+//    let encoder = JSONEncoder()
+//    let data = try! encoder.encode(info)
+//    print(String(data: data, encoding: .utf8)!)
+    
+  }
+  
+  func testUpdateAppTestInfo() {
+    
+    guard let appInfo = MotherShipTests.appInfo else {
+      XCTAssertNil(nil, "cannot read app info file")
+      return
+    }
+    
+    guard let testInfo = MotherShipTests.testInfo else {
+      XCTAssertNil(nil, "cannot read test info file")
+      return
+    }
+    
+    let status = testFlight.updateTestInfo(with: testInfo, for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
+    
+    XCTAssertEqual(status,HTTPStatusCode.ok, "test info not updated")
     
   }
     

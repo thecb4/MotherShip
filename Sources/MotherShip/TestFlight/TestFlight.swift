@@ -17,7 +17,13 @@ public class TestFlight {
     mothership        = MotherShip()
     devSession        = DeveloperSession()
   }
-  
+
+  /// Allows the user to be logged in to iTunes Connect.
+  /// Under the hood, the default URLSession is used to manage cookies, etc.
+  ///
+  /// - returns: no return values
+  /// - parameter credentials: The login credentials of the iTunes Connect user
+  /// - throws: no errors thrown
   public func login(with credentials: LoginCredentials) {
     self.mothership.login(with: credentials)
     self.devSession = self.mothership.devSession
@@ -47,7 +53,7 @@ public class TestFlight {
     
   }
   
-  public func invite(tester: Tester, to appID: AppIdentifier, `for` teamID: TeamIdentifier) -> Int {
+  public func invite(tester: Tester, to appID: AppIdentifier, `for` teamID: TeamIdentifier) -> HTTPStatusCode {
     
     let appAddEndPoint = Router<TestFlightEndPoint>(at:
       .addTesterToApp(
@@ -116,7 +122,7 @@ public class TestFlight {
   public func testInfo(for appID: AppIdentifier, in teamID: TeamIdentifier) -> TestInfo {
     
     let ep = Router<TestFlightEndPoint>(at:
-      .testInfo(
+      .appTestInfo(
         serviceKey: self.mothership.olympusServiceKeyInfo,
         appID: appID,
         teamID: teamID
@@ -126,6 +132,23 @@ public class TestFlight {
     let info: TestInfos = ep.decodeJSON()!
     
     return info.data
+    
+  }
+  
+  public func updateAppTestInfo(with info: TestInfo, for appID: AppIdentifier, in teamID: TeamIdentifier) -> HTTPStatusCode {
+    
+    let ep = Router<TestFlightEndPoint>(at:
+      .updateAppTestInfo(
+        serviceKey: self.mothership.olympusServiceKeyInfo,
+        info: info,
+        appID: appID,
+        teamID: teamID
+      )
+    )
+    
+    let statusCode = ep.statusCodeOnly()
+    
+    return statusCode
     
   }
   

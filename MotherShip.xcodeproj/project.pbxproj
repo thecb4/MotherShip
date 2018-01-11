@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"MotherShip::MotherShipPackageTests::ProductTarget" /* MotherShipPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_106 /* Build configuration list for PBXAggregateTarget "MotherShipPackageTests" */;
+			buildConfigurationList = OBJ_108 /* Build configuration list for PBXAggregateTarget "MotherShipPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_109 /* PBXTargetDependency */,
+				OBJ_111 /* PBXTargetDependency */,
 			);
 			name = MotherShipPackageTests;
 			productName = MotherShipPackageTests;
@@ -21,59 +21,60 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_100 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Route.swift */; };
-		OBJ_101 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Router.swift */; };
-		OBJ_102 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Scheme.swift */; };
-		OBJ_103 /* URLSession.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* URLSession.extension.swift */; };
-		OBJ_51 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_57 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Package.swift */; };
-		OBJ_63 /* MotherShipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* MotherShipTests.swift */; };
-		OBJ_65 /* MotherShip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MotherShip::MotherShip::Product" /* MotherShip.framework */; };
-		OBJ_66 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
-		OBJ_75 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Developer.swift */; };
-		OBJ_76 /* IDMS.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* IDMS.endpoint.swift */; };
-		OBJ_77 /* IDMS.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* IDMS.json.swift */; };
-		OBJ_78 /* Mothership.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Mothership.swift */; };
-		OBJ_79 /* Olympus.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Olympus.endpoint.swift */; };
-		OBJ_80 /* Olympus.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Olympus.json.swift */; };
-		OBJ_81 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Platform.swift */; };
-		OBJ_82 /* TestFlight.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* TestFlight.endpoint.swift */; };
-		OBJ_83 /* TestFlight.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* TestFlight.json.swift */; };
-		OBJ_84 /* TestFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* TestFlight.swift */; };
-		OBJ_86 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
-		OBJ_92 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Environment.swift */; };
-		OBJ_93 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Host.swift */; };
-		OBJ_94 /* HyperSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* HyperSpace.swift */; };
-		OBJ_95 /* IP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* IP.swift */; };
-		OBJ_96 /* IPv6.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* IPv6.swift */; };
-		OBJ_97 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Method.swift */; };
-		OBJ_98 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Path.swift */; };
-		OBJ_99 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Query.swift */; };
+		OBJ_100 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Query.swift */; };
+		OBJ_101 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Route.swift */; };
+		OBJ_102 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Router.swift */; };
+		OBJ_103 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Scheme.swift */; };
+		OBJ_104 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* StatusCode.swift */; };
+		OBJ_105 /* URLSession.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* URLSession.extension.swift */; };
+		OBJ_52 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_58 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Package.swift */; };
+		OBJ_64 /* MotherShipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* MotherShipTests.swift */; };
+		OBJ_66 /* MotherShip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MotherShip::MotherShip::Product" /* MotherShip.framework */; };
+		OBJ_67 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
+		OBJ_76 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Developer.swift */; };
+		OBJ_77 /* IDMS.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* IDMS.endpoint.swift */; };
+		OBJ_78 /* IDMS.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* IDMS.json.swift */; };
+		OBJ_79 /* Mothership.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Mothership.swift */; };
+		OBJ_80 /* Olympus.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Olympus.endpoint.swift */; };
+		OBJ_81 /* Olympus.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Olympus.json.swift */; };
+		OBJ_82 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Platform.swift */; };
+		OBJ_83 /* TestFlight.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* TestFlight.endpoint.swift */; };
+		OBJ_84 /* TestFlight.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* TestFlight.json.swift */; };
+		OBJ_85 /* TestFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* TestFlight.swift */; };
+		OBJ_87 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
+		OBJ_93 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Environment.swift */; };
+		OBJ_94 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Host.swift */; };
+		OBJ_95 /* HyperSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* HyperSpace.swift */; };
+		OBJ_96 /* IP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* IP.swift */; };
+		OBJ_97 /* IPv6.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* IPv6.swift */; };
+		OBJ_98 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Method.swift */; };
+		OBJ_99 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Path.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E936840920028290009B768F /* PBXContainerItemProxy */ = {
+		E93A647320071AEC00221DF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "HyperSpace::HyperSpace";
 			remoteInfo = HyperSpace;
 		};
-		E936840A20028290009B768F /* PBXContainerItemProxy */ = {
+		E93A647420071AEC00221DF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "MotherShip::MotherShip";
 			remoteInfo = MotherShip;
 		};
-		E936840B20028290009B768F /* PBXContainerItemProxy */ = {
+		E93A647520071AEC00221DF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "HyperSpace::HyperSpace";
 			remoteInfo = HyperSpace;
 		};
-		E936840C20028291009B768F /* PBXContainerItemProxy */ = {
+		E93A647620071AEC00221DF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -83,7 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E93A646020045CEB00221DF5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E93A64772007258E00221DF5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		"HyperSpace::HyperSpace::Product" /* HyperSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HyperSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShip::Product" /* MotherShip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MotherShip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = MotherShipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,34 +109,35 @@
 		OBJ_37 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		OBJ_38 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		OBJ_39 /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
-		OBJ_40 /* URLSession.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.extension.swift; sourceTree = "<group>"; };
-		OBJ_41 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/cavellebenjamin/Development/apps/MothershipSolution/MotherShip/.build/checkouts/HyperSpace.git-8350491166860109504/Package.swift"; sourceTree = "<group>"; };
+		OBJ_40 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		OBJ_41 /* URLSession.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.extension.swift; sourceTree = "<group>"; };
+		OBJ_42 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/cavellebenjamin/Development/apps/MothershipSolution/MotherShip/.build/checkouts/HyperSpace.git-8350491166860109504/Package.swift"; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_104 /* Frameworks */ = {
+		OBJ_106 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_64 /* Frameworks */ = {
+		OBJ_65 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_65 /* MotherShip.framework in Frameworks */,
-				OBJ_66 /* HyperSpace.framework in Frameworks */,
+				OBJ_66 /* MotherShip.framework in Frameworks */,
+				OBJ_67 /* HyperSpace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_85 /* Frameworks */ = {
+		OBJ_86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_86 /* HyperSpace.framework in Frameworks */,
+				OBJ_87 /* HyperSpace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_28 /* HyperSpace */,
-				OBJ_41 /* Package.swift */,
+				OBJ_42 /* Package.swift */,
 			);
 			name = HyperSpace;
 			sourceTree = SOURCE_ROOT;
@@ -218,13 +220,14 @@
 				OBJ_37 /* Route.swift */,
 				OBJ_38 /* Router.swift */,
 				OBJ_39 /* Scheme.swift */,
-				OBJ_40 /* URLSession.extension.swift */,
+				OBJ_40 /* StatusCode.swift */,
+				OBJ_41 /* URLSession.extension.swift */,
 			);
 			name = HyperSpace;
 			path = ".build/checkouts/HyperSpace.git-8350491166860109504/Sources/HyperSpace";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_42 /* Products */ = {
+		OBJ_43 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */,
@@ -234,16 +237,17 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
-				E93A646020045CEB00221DF5 /* README.md */,
+				E93A64772007258E00221DF5 /* README.md */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_22 /* Tests */,
 				OBJ_26 /* Dependencies */,
-				OBJ_42 /* Products */,
+				OBJ_43 /* Products */,
 			);
+			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -273,10 +277,10 @@
 /* Begin PBXNativeTarget section */
 		"HyperSpace::HyperSpace" /* HyperSpace */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_88 /* Build configuration list for PBXNativeTarget "HyperSpace" */;
+			buildConfigurationList = OBJ_89 /* Build configuration list for PBXNativeTarget "HyperSpace" */;
 			buildPhases = (
-				OBJ_91 /* Sources */,
-				OBJ_104 /* Frameworks */,
+				OBJ_92 /* Sources */,
+				OBJ_106 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,9 +293,9 @@
 		};
 		"HyperSpace::SwiftPMPackageDescription" /* HyperSpacePackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_53 /* Build configuration list for PBXNativeTarget "HyperSpacePackageDescription" */;
+			buildConfigurationList = OBJ_54 /* Build configuration list for PBXNativeTarget "HyperSpacePackageDescription" */;
 			buildPhases = (
-				OBJ_56 /* Sources */,
+				OBJ_57 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -303,15 +307,15 @@
 		};
 		"MotherShip::MotherShip" /* MotherShip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_71 /* Build configuration list for PBXNativeTarget "MotherShip" */;
+			buildConfigurationList = OBJ_72 /* Build configuration list for PBXNativeTarget "MotherShip" */;
 			buildPhases = (
-				OBJ_74 /* Sources */,
-				OBJ_85 /* Frameworks */,
+				OBJ_75 /* Sources */,
+				OBJ_86 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_87 /* PBXTargetDependency */,
+				OBJ_88 /* PBXTargetDependency */,
 			);
 			name = MotherShip;
 			productName = MotherShip;
@@ -320,16 +324,16 @@
 		};
 		"MotherShip::MotherShipTests" /* MotherShipTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_59 /* Build configuration list for PBXNativeTarget "MotherShipTests" */;
+			buildConfigurationList = OBJ_60 /* Build configuration list for PBXNativeTarget "MotherShipTests" */;
 			buildPhases = (
-				OBJ_62 /* Sources */,
-				OBJ_64 /* Frameworks */,
+				OBJ_63 /* Sources */,
+				OBJ_65 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_67 /* PBXTargetDependency */,
-				OBJ_69 /* PBXTargetDependency */,
+				OBJ_68 /* PBXTargetDependency */,
+				OBJ_70 /* PBXTargetDependency */,
 			);
 			name = MotherShipTests;
 			productName = MotherShipTests;
@@ -338,9 +342,9 @@
 		};
 		"MotherShip::SwiftPMPackageDescription" /* MotherShipPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_47 /* Build configuration list for PBXNativeTarget "MotherShipPackageDescription" */;
+			buildConfigurationList = OBJ_48 /* Build configuration list for PBXNativeTarget "MotherShipPackageDescription" */;
 			buildPhases = (
-				OBJ_50 /* Sources */,
+				OBJ_51 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -365,8 +369,8 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_42 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -381,99 +385,100 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_50 /* Sources */ = {
+		OBJ_51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_51 /* Package.swift in Sources */,
+				OBJ_52 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_56 /* Sources */ = {
+		OBJ_57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_57 /* Package.swift in Sources */,
+				OBJ_58 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_62 /* Sources */ = {
+		OBJ_63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_63 /* MotherShipTests.swift in Sources */,
+				OBJ_64 /* MotherShipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_74 /* Sources */ = {
+		OBJ_75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_75 /* Developer.swift in Sources */,
-				OBJ_76 /* IDMS.endpoint.swift in Sources */,
-				OBJ_77 /* IDMS.json.swift in Sources */,
-				OBJ_78 /* Mothership.swift in Sources */,
-				OBJ_79 /* Olympus.endpoint.swift in Sources */,
-				OBJ_80 /* Olympus.json.swift in Sources */,
-				OBJ_81 /* Platform.swift in Sources */,
-				OBJ_82 /* TestFlight.endpoint.swift in Sources */,
-				OBJ_83 /* TestFlight.json.swift in Sources */,
-				OBJ_84 /* TestFlight.swift in Sources */,
+				OBJ_76 /* Developer.swift in Sources */,
+				OBJ_77 /* IDMS.endpoint.swift in Sources */,
+				OBJ_78 /* IDMS.json.swift in Sources */,
+				OBJ_79 /* Mothership.swift in Sources */,
+				OBJ_80 /* Olympus.endpoint.swift in Sources */,
+				OBJ_81 /* Olympus.json.swift in Sources */,
+				OBJ_82 /* Platform.swift in Sources */,
+				OBJ_83 /* TestFlight.endpoint.swift in Sources */,
+				OBJ_84 /* TestFlight.json.swift in Sources */,
+				OBJ_85 /* TestFlight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_91 /* Sources */ = {
+		OBJ_92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_92 /* Environment.swift in Sources */,
-				OBJ_93 /* Host.swift in Sources */,
-				OBJ_94 /* HyperSpace.swift in Sources */,
-				OBJ_95 /* IP.swift in Sources */,
-				OBJ_96 /* IPv6.swift in Sources */,
-				OBJ_97 /* Method.swift in Sources */,
-				OBJ_98 /* Path.swift in Sources */,
-				OBJ_99 /* Query.swift in Sources */,
-				OBJ_100 /* Route.swift in Sources */,
-				OBJ_101 /* Router.swift in Sources */,
-				OBJ_102 /* Scheme.swift in Sources */,
-				OBJ_103 /* URLSession.extension.swift in Sources */,
+				OBJ_93 /* Environment.swift in Sources */,
+				OBJ_94 /* Host.swift in Sources */,
+				OBJ_95 /* HyperSpace.swift in Sources */,
+				OBJ_96 /* IP.swift in Sources */,
+				OBJ_97 /* IPv6.swift in Sources */,
+				OBJ_98 /* Method.swift in Sources */,
+				OBJ_99 /* Path.swift in Sources */,
+				OBJ_100 /* Query.swift in Sources */,
+				OBJ_101 /* Route.swift in Sources */,
+				OBJ_102 /* Router.swift in Sources */,
+				OBJ_103 /* Scheme.swift in Sources */,
+				OBJ_104 /* StatusCode.swift in Sources */,
+				OBJ_105 /* URLSession.extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_109 /* PBXTargetDependency */ = {
+		OBJ_111 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "MotherShip::MotherShipTests" /* MotherShipTests */;
-			targetProxy = E936840C20028291009B768F /* PBXContainerItemProxy */;
+			targetProxy = E93A647620071AEC00221DF5 /* PBXContainerItemProxy */;
 		};
-		OBJ_67 /* PBXTargetDependency */ = {
+		OBJ_68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "MotherShip::MotherShip" /* MotherShip */;
-			targetProxy = E936840A20028290009B768F /* PBXContainerItemProxy */;
+			targetProxy = E93A647420071AEC00221DF5 /* PBXContainerItemProxy */;
 		};
-		OBJ_69 /* PBXTargetDependency */ = {
+		OBJ_70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "HyperSpace::HyperSpace" /* HyperSpace */;
-			targetProxy = E936840B20028290009B768F /* PBXContainerItemProxy */;
+			targetProxy = E93A647520071AEC00221DF5 /* PBXContainerItemProxy */;
 		};
-		OBJ_87 /* PBXTargetDependency */ = {
+		OBJ_88 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "HyperSpace::HyperSpace" /* HyperSpace */;
-			targetProxy = E936840920028290009B768F /* PBXContainerItemProxy */;
+			targetProxy = E93A647320071AEC00221DF5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_107 /* Debug */ = {
+		OBJ_109 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_108 /* Release */ = {
+		OBJ_110 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
@@ -521,7 +526,7 @@
 			};
 			name = Release;
 		};
-		OBJ_48 /* Debug */ = {
+		OBJ_49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -530,7 +535,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_49 /* Release */ = {
+		OBJ_50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -539,7 +544,7 @@
 			};
 			name = Release;
 		};
-		OBJ_54 /* Debug */ = {
+		OBJ_55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -548,7 +553,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_55 /* Release */ = {
+		OBJ_56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -557,7 +562,7 @@
 			};
 			name = Release;
 		};
-		OBJ_60 /* Debug */ = {
+		OBJ_61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -575,7 +580,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_61 /* Release */ = {
+		OBJ_62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -593,7 +598,7 @@
 			};
 			name = Release;
 		};
-		OBJ_72 /* Debug */ = {
+		OBJ_73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -615,7 +620,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_73 /* Release */ = {
+		OBJ_74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -637,7 +642,7 @@
 			};
 			name = Release;
 		};
-		OBJ_89 /* Debug */ = {
+		OBJ_90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -659,7 +664,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_90 /* Release */ = {
+		OBJ_91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -684,11 +689,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_106 /* Build configuration list for PBXAggregateTarget "MotherShipPackageTests" */ = {
+		OBJ_108 /* Build configuration list for PBXAggregateTarget "MotherShipPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_107 /* Debug */,
-				OBJ_108 /* Release */,
+				OBJ_109 /* Debug */,
+				OBJ_110 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -702,47 +707,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_47 /* Build configuration list for PBXNativeTarget "MotherShipPackageDescription" */ = {
+		OBJ_48 /* Build configuration list for PBXNativeTarget "MotherShipPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_48 /* Debug */,
-				OBJ_49 /* Release */,
+				OBJ_49 /* Debug */,
+				OBJ_50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_53 /* Build configuration list for PBXNativeTarget "HyperSpacePackageDescription" */ = {
+		OBJ_54 /* Build configuration list for PBXNativeTarget "HyperSpacePackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_54 /* Debug */,
-				OBJ_55 /* Release */,
+				OBJ_55 /* Debug */,
+				OBJ_56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_59 /* Build configuration list for PBXNativeTarget "MotherShipTests" */ = {
+		OBJ_60 /* Build configuration list for PBXNativeTarget "MotherShipTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_60 /* Debug */,
-				OBJ_61 /* Release */,
+				OBJ_61 /* Debug */,
+				OBJ_62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_71 /* Build configuration list for PBXNativeTarget "MotherShip" */ = {
+		OBJ_72 /* Build configuration list for PBXNativeTarget "MotherShip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_72 /* Debug */,
-				OBJ_73 /* Release */,
+				OBJ_73 /* Debug */,
+				OBJ_74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_88 /* Build configuration list for PBXNativeTarget "HyperSpace" */ = {
+		OBJ_89 /* Build configuration list for PBXNativeTarget "HyperSpace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_89 /* Debug */,
-				OBJ_90 /* Release */,
+				OBJ_90 /* Debug */,
+				OBJ_91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

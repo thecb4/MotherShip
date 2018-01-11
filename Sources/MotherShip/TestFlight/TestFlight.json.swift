@@ -254,11 +254,24 @@ public struct TestInfos: Codable {
   public let data: TestInfo
 }
 
+// https://stackoverflow.com/questions/47266862/encode-nil-value-as-null-with-jsonencoder
 public struct TestInfo: Codable {
   public let primaryLocale: Locale
   public let details: [TestInfoDetail]
   public let eula: String?
   public let betaReviewInfo: BetaReviewInfo
+  
+  public init(
+    primaryLocale: Locale = .enUS,
+    details: [TestInfoDetail] = [TestInfoDetail()],
+    eula:String? = nil,
+    betaReviewInfo:BetaReviewInfo = BetaReviewInfo()
+  ){
+    self.primaryLocale  = primaryLocale
+    self.details        = details
+    self.eula           = eula
+    self.betaReviewInfo = betaReviewInfo
+  }
 }
 
 public struct TestInfoDetail: Codable {
@@ -269,6 +282,22 @@ public struct TestInfoDetail: Codable {
   public let privacyPolicyUrl: String
   public let privacyPolicy: String?
   public let description: String
+  
+  public init(
+    locale: Locale = .enUS,
+    feedbackEmail: String = "",
+    marketingUrl: String = "",
+    privacyPolicyUrl: String = "",
+    privacyPolicy: String? = nil,
+    description: String = ""
+  ) {
+    self.locale           = locale
+    self.feedbackEmail    = feedbackEmail
+    self.marketingUrl     = marketingUrl
+    self.privacyPolicyUrl = privacyPolicyUrl
+    self.privacyPolicy    = privacyPolicy
+    self.description      = description
+  }
   
 }
 
@@ -282,6 +311,26 @@ public struct BetaReviewInfo: Codable {
   public let demoAccountPassword: String?
   public let demoAccountRequired: Bool
   public let notes: String?
+  
+  public init(
+    contactFirstName: String     = "",
+    contactLastName: String      = "",
+    contactPhone: String         = "",
+    contactEmail: String         = "",
+    demoAccountName: String?     = nil,
+    demoAccountPassword: String? = nil,
+    demoAccountRequired: Bool    = false,
+    notes: String?               = nil
+  ) {
+    self.contactFirstName    = contactFirstName
+    self.contactLastName     = contactLastName
+    self.contactPhone        = contactPhone
+    self.contactEmail        = contactEmail
+    self.demoAccountName     = demoAccountName
+    self.demoAccountPassword = demoAccountPassword
+    self.demoAccountRequired = demoAccountRequired
+    self.notes               = notes
+  }
   
 }
 
