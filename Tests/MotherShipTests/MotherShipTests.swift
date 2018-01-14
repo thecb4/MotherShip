@@ -100,9 +100,9 @@ class MotherShipTests: XCTestCase {
     
   }
   
-  private static var testInfo: TestInfo? {
+  private static var testInfo: AppTestInfo? {
     
-    guard let info: TestInfo = json(from: "testInfo.json") else {
+    guard let info: AppTestInfo = json(from: "testInfo.json") else {
       XCTAssertNotNil(nil, "could not create test info")
       return nil
     }
@@ -220,7 +220,7 @@ class MotherShipTests: XCTestCase {
       return
     }
     
-    let builds = testFlight.builds(version: appInfo.version, for: appInfo.appIdentifier, in: appInfo.teamIdentifier, on: .ios)
+    let builds = testFlight.builds(of: appInfo.version, for: appInfo.appIdentifier, in: appInfo.teamIdentifier, on: .ios)
     
     print(builds)
     
@@ -272,13 +272,18 @@ class MotherShipTests: XCTestCase {
       return
     }
     
-    testFlight.build(
+    guard let build = testFlight.build(
       buildNumber: appInfo.build,
       version: appInfo.version,
       for: appInfo.appIdentifier,
       in: appInfo.teamIdentifier,
       on: appInfo.platform
-    )
+      ) else {
+        XCTAssertNil(nil, "cannot get build with info \(appInfo)")
+        return
+    }
+    
+    XCTAssertEqual(build.buildVersion, appInfo.build, "did not retrieve correct build number")
     
   }
     

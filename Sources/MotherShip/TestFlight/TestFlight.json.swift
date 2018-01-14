@@ -177,13 +177,13 @@ public typealias Version = String
 //"cfBundleShortVersion" : "2.1.0",
 //"cfBundleVersion" : "140"
 
-public struct Builds: Codable {
+public struct BuildBriefs: Codable {
   
-  let data: [Build]
+  let data: [BuildBrief]
   
 }
 
-public struct Build: Codable {
+public struct BuildBrief: Codable {
   
   public let id : BuildIdentifier
   public let bundleId : String
@@ -239,7 +239,7 @@ public struct Build: Codable {
 //},
 
 
-public enum Locale: String, Codable {
+public enum LocaleIdentifier: String, Codable {
   case enUS = "en-US"
   case frFR = "fr-FR"
   case deDE = "de-DE"
@@ -253,13 +253,13 @@ public struct TestInfos: Codable {
 
 // https://stackoverflow.com/questions/47266862/encode-nil-value-as-null-with-jsonencoder
 public struct AppTestInfo: Codable {
-  public let primaryLocale: Locale
+  public let primaryLocale: LocaleIdentifier
   public let details: [TestInfoDetail]
   public let eula: String?
   public let betaReviewInfo: BetaReviewInfo
   
   public init(
-    primaryLocale: Locale = .enUS,
+    primaryLocale: LocaleIdentifier = .enUS,
     details: [TestInfoDetail] = [TestInfoDetail()],
     eula:String? = nil,
     betaReviewInfo:BetaReviewInfo = BetaReviewInfo()
@@ -273,20 +273,22 @@ public struct AppTestInfo: Codable {
 
 public struct TestInfoDetail: Codable {
   
-  public let locale: Locale
+  public let locale: LocaleIdentifier
   public let feedbackEmail: String
   public let marketingUrl: String
   public let privacyPolicyUrl: String
   public let privacyPolicy: String?
   public let description: String
+  public let whatsNew: String?
   
   public init(
-    locale: Locale = .enUS,
+    locale: LocaleIdentifier = .enUS,
     feedbackEmail: String = "",
     marketingUrl: String = "",
     privacyPolicyUrl: String = "",
     privacyPolicy: String? = nil,
-    description: String = ""
+    description: String = "",
+    whatsNew: String! = nil
   ) {
     self.locale           = locale
     self.feedbackEmail    = feedbackEmail
@@ -294,6 +296,7 @@ public struct TestInfoDetail: Codable {
     self.privacyPolicyUrl = privacyPolicyUrl
     self.privacyPolicy    = privacyPolicy
     self.description      = description
+    self.whatsNew         = whatsNew
   }
   
 }
@@ -304,17 +307,17 @@ public struct BetaReviewInfo: Codable {
   public let contactLastName: String
   public let contactPhone: String
   public let contactEmail: String
-  public let demoAccountName: String?
-  public let demoAccountPassword: String?
+  public let demoAccountName: String!
+  public let demoAccountPassword: String!
   public let demoAccountRequired: Bool
-  public let notes: String?
+  public let notes: String!
   
   public init(
     contactFirstName: String     = "",
     contactLastName: String      = "",
     contactPhone: String         = "",
     contactEmail: String         = "",
-    demoAccountName: String?     = nil,
+    demoAccountName: String?    = nil,
     demoAccountPassword: String? = nil,
     demoAccountRequired: Bool    = false,
     notes: String?               = nil

@@ -101,7 +101,7 @@ public class TestFlight {
     
   }
   
-  public func builds(version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> [Build] {
+  public func builds(of version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> [BuildBrief] {
     
     let ep = Router<TestFlightEndPoint>(at:
       .builds(
@@ -115,30 +115,48 @@ public class TestFlight {
     
     print(ep.stringResult())
     
-    let builds: Builds = ep.decodeJSON()!
+    let builds: BuildBriefs = ep.decodeJSON()!
     
     return builds.data
     
   }
   
-  public func build(buildNumber: BuildNumber, version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) {
+  public func build(buildNumber: BuildNumber, version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> Build? {
     
-    let builds = self.builds(version: version, for: appID, in: teamID, on: platform)
+    let builds = self.builds(of: version, for: appID, in: teamID, on: platform)
     
-    let build: Build = builds.filter { $0.buildVersion == buildNumber }.first!
+    guard let brief: BuildBrief = (builds.filter { $0.buildVersion == buildNumber }.first) else { return nil }
     
     let ep = Router<TestFlightEndPoint>(at:
       .build(
         serviceKey: self.mothership.olympusServiceKeyInfo,
         appID: appID,
         teamID: teamID,
-        buildID: build.id
+        buildID: brief.id
       )
     )
     
     print(ep.stringResult())
     
+    let build: BuildDetails = ep.decodeJSON()!
     
+    print(build)
+    
+    return build.data
+    
+  }
+  
+  public func latestBuild(of version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform){
+  
+    let builds = self.builds(of: version, for: appID, in: teamID, on: platform)
+    
+    // https://stackoverflow.com/questions/30417960/swift-array-sorting-error-when-sorting-by-date
+    let sortedBuilds = builds.sorted { $0.uploadDate.compare($1.uploadDate) == .orderedAscending }
+    
+    guard let latest = sortedBuilds.last else { return }
+    
+    print(latest)
+  
   }
   
   public func testInfo(for appID: AppIdentifier, in teamID: TeamIdentifier) -> AppTestInfo {

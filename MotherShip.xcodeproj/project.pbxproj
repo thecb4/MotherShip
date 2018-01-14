@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		E93A647B200B64A400221DF5 /* ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A647A200B64A400221DF5 /* ISO8601.swift */; };
+		E93A647D200B6A3C00221DF5 /* Build.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A647C200B6A3C00221DF5 /* Build.json.swift */; };
 		OBJ_100 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Query.swift */; };
 		OBJ_101 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Route.swift */; };
 		OBJ_102 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Router.swift */; };
@@ -86,6 +88,8 @@
 /* Begin PBXFileReference section */
 		E93A64772007258E00221DF5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E93A6479200B5BDE00221DF5 /* .private */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .private; sourceTree = "<group>"; };
+		E93A647A200B64A400221DF5 /* ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601.swift; sourceTree = "<group>"; };
+		E93A647C200B6A3C00221DF5 /* Build.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.json.swift; sourceTree = "<group>"; };
 		"HyperSpace::HyperSpace::Product" /* HyperSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HyperSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShip::Product" /* MotherShip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MotherShip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = MotherShipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +173,7 @@
 				OBJ_19 /* TestFlight.endpoint.swift */,
 				OBJ_20 /* TestFlight.json.swift */,
 				OBJ_21 /* TestFlight.swift */,
+				E93A647C200B6A3C00221DF5 /* Build.json.swift */,
 			);
 			path = TestFlight;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Developer.swift */,
+				E93A647A200B64A400221DF5 /* ISO8601.swift */,
 				OBJ_10 /* IDMS */,
 				OBJ_13 /* Mothership.swift */,
 				OBJ_14 /* Olympus */,
@@ -418,12 +424,14 @@
 				OBJ_76 /* Developer.swift in Sources */,
 				OBJ_77 /* IDMS.endpoint.swift in Sources */,
 				OBJ_78 /* IDMS.json.swift in Sources */,
+				E93A647D200B6A3C00221DF5 /* Build.json.swift in Sources */,
 				OBJ_79 /* Mothership.swift in Sources */,
 				OBJ_80 /* Olympus.endpoint.swift in Sources */,
 				OBJ_81 /* Olympus.json.swift in Sources */,
 				OBJ_82 /* Platform.swift in Sources */,
 				OBJ_83 /* TestFlight.endpoint.swift in Sources */,
 				OBJ_84 /* TestFlight.json.swift in Sources */,
+				E93A647B200B64A400221DF5 /* ISO8601.swift in Sources */,
 				OBJ_85 /* TestFlight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
