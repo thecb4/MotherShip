@@ -113,15 +113,13 @@ public class TestFlight {
       )
     )
     
-    print(ep.stringResult())
-    
     let builds: BuildBriefs = ep.decodeJSON()!
     
     return builds.data
     
   }
   
-  public func build(buildNumber: BuildNumber, version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> Build? {
+  public func build(buildNumber: BuildNumber, version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> BuildDetail? {
     
     let builds = self.builds(of: version, for: appID, in: teamID, on: platform)
     

@@ -254,13 +254,13 @@ public struct TestInfos: Codable {
 // https://stackoverflow.com/questions/47266862/encode-nil-value-as-null-with-jsonencoder
 public struct AppTestInfo: Codable {
   public let primaryLocale: LocaleIdentifier
-  public let details: [TestInfoDetail]
+  public let details: [TestInfo]
   public let eula: String?
   public let betaReviewInfo: BetaReviewInfo
   
   public init(
     primaryLocale: LocaleIdentifier = .enUS,
-    details: [TestInfoDetail] = [TestInfoDetail()],
+    details: [TestInfo] = [TestInfo()],
     eula:String? = nil,
     betaReviewInfo:BetaReviewInfo = BetaReviewInfo()
   ){
@@ -271,7 +271,7 @@ public struct AppTestInfo: Codable {
   }
 }
 
-public struct TestInfoDetail: Codable {
+public struct TestInfo: Codable {
   
   public let locale: LocaleIdentifier
   public let feedbackEmail: String
@@ -288,7 +288,7 @@ public struct TestInfoDetail: Codable {
     privacyPolicyUrl: String = "",
     privacyPolicy: String? = nil,
     description: String = "",
-    whatsNew: String! = nil
+    whatsNew: String? = nil
   ) {
     self.locale           = locale
     self.feedbackEmail    = feedbackEmail
