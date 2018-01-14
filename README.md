@@ -21,6 +21,8 @@ I wrote MotherShip for two reasons.
 6. Get App level Test Info
 7. Invite someone to test an app
 8. Update App level Test Information!
+9. Get Build Details
+10. Update Build Test Info
 
 ```swift
 
@@ -42,7 +44,7 @@ let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: app
 ### To Do
 
 - [ ] Documentation
-- [ ] Ability to update app info
+- [x ] Ability to update app info
 - [ ] Upload build
 - [ ] Code signing? Or just leave it up to Apple
 - [ ] Two-Factor Authentication?
