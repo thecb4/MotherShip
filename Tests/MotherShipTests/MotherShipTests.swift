@@ -3,9 +3,11 @@ import HyperSpace
 @testable import MotherShip
 
 struct AppInfo: Codable {
-  let appIdentifier: Int64
-  let teamIdentifier: Int64
-  let version: String
+  let appIdentifier: AppIdentifier
+  let teamIdentifier: TeamIdentifier
+  let version: Version
+  let build: BuildNumber
+  let platform: Platform
 }
 
 struct TesterInfo: Codable {
@@ -15,12 +17,6 @@ struct TesterInfo: Codable {
 }
 
 class MotherShipTests: XCTestCase {
-//  func testExample() {
-//      // This is an example of a functional test case.
-//      // Use XCTAssert and related functions to verify your tests produce the correct
-//      // results.
-//      XCTAssertEqual(Mothership().text, "Hello, World!")
-//  }
   
   let mothership = MotherShip()
   let testFlight = TestFlight()
@@ -67,20 +63,6 @@ class MotherShipTests: XCTestCase {
   
   private static var credentials: LoginCredentials? {
     
-//    let relativePath = infoPath + "credentials.json"
-//
-//    let fullPath = NSString(string: relativePath).expandingTildeInPath
-//
-//    guard let credentialsString = try? String(contentsOfFile: fullPath, encoding: .utf8) else {
-//      XCTAssertNotNil(nil, "bad path for credentials")
-//      return nil
-//    }
-//
-//    guard let data = credentialsString.data(using: .utf8) else {
-//      XCTAssertNotNil(nil, "can't convert json string to data")
-//      return nil
-//    }
-    
     guard let info: LoginCredentials = json(from: "credentials.json") else {
       XCTAssertNotNil(nil, "could not create credentials")
       return nil
@@ -94,29 +76,6 @@ class MotherShipTests: XCTestCase {
   
   private static var appInfo: AppInfo? {
     
-//    let relativePath = infoPath + "app.json"
-//
-//    let fullPath = NSString(string: relativePath).expandingTildeInPath
-//
-//    guard let credentialsString = try? String(contentsOfFile: fullPath, encoding: .utf8) else {
-//      XCTAssertNotNil(nil, "bad path for credentials")
-//      return nil
-//    }
-//
-//    guard let data = credentialsString.data(using: .utf8) else {
-//      XCTAssertNotNil(nil, "can't convert json string to data")
-//      return nil
-//    }
-//
-//    guard let appInfo = try? JSONDecoder().decode(AppInfo.self, from: data) else {
-//      XCTAssertNotNil(nil, "can't decode json data to swift struct")
-//      return nil
-//    }
-//
-//    print(appInfo)
-//
-//    return appInfo
-    
     guard let info: AppInfo = json(from: "app.json") else {
       XCTAssertNotNil(nil, "could not create app info")
       return nil
@@ -129,26 +88,6 @@ class MotherShipTests: XCTestCase {
   }
   
   private static var testerInfo: TesterInfo? {
-    
-//    let relativePath = infoPath + "tester.json"
-//
-//    let fullPath = NSString(string: relativePath).expandingTildeInPath
-//
-//    guard let data = testerString.data(using: .utf8) else {
-//      XCTAssertNotNil(nil, "can't convert json string to data")
-//      return nil
-//    }
-//
-//    guard let testerInfo = try? JSONDecoder().decode(TesterInfo.self, from: data) else {
-//      print(testerString)
-//      print(data.description)
-//      XCTAssertNotNil(nil, "can't decode json data to swift struct")
-//      return nil
-//    }
-//
-//    print(testerInfo)
-//
-//    return testerInfo
     
     guard let info: TesterInfo = json(from: "tester.json") else {
       XCTAssertNotNil(nil, "could not create tester info")
@@ -320,9 +259,26 @@ class MotherShipTests: XCTestCase {
       return
     }
     
-    let status = testFlight.updateTestInfo(with: testInfo, for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
+    let status = testFlight.updateAppTestInfo(with: testInfo, for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
     
     XCTAssertEqual(status,HTTPStatusCode.ok, "test info not updated")
+    
+  }
+  
+  func testGetBuild() {
+    
+    guard let appInfo = MotherShipTests.appInfo else {
+      XCTAssertNil(nil, "cannot read app info file")
+      return
+    }
+    
+    testFlight.build(
+      buildNumber: appInfo.build,
+      version: appInfo.version,
+      for: appInfo.appIdentifier,
+      in: appInfo.teamIdentifier,
+      on: appInfo.platform
+    )
     
   }
     

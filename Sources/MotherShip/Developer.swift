@@ -42,9 +42,17 @@ struct Developer: Codable {
  ]
  */
 
-public typealias TeamIdentifier = Int64
+/// Team (Provider) Identifier
+public typealias TeamIdentifier  = Int64
 
-public typealias AppIdentifier  = Int64
+/// App Identifier
+public typealias AppIdentifier   = Int64
+
+/// Build Identifier
+public typealias BuildIdentifier = Int64
+
+/// Build Number
+public typealias BuildNumber     = String
 
 extension Int64 {
   init(_ value:Int) {

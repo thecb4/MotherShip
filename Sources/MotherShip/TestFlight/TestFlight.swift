@@ -101,7 +101,7 @@ public class TestFlight {
     
   }
   
-  public func builds(version: Version, for appID: AppIdentifier, in teamID: TeamIdentifier, on platform: Platform) -> [Build] {
+  public func builds(version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> [Build] {
     
     let ep = Router<TestFlightEndPoint>(at:
       .builds(
@@ -113,13 +113,35 @@ public class TestFlight {
       )
     )
     
+    print(ep.stringResult())
+    
     let builds: Builds = ep.decodeJSON()!
     
     return builds.data
     
   }
   
-  public func testInfo(for appID: AppIdentifier, in teamID: TeamIdentifier) -> TestInfo {
+  public func build(buildNumber: BuildNumber, version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) {
+    
+    let builds = self.builds(version: version, for: appID, in: teamID, on: platform)
+    
+    let build: Build = builds.filter { $0.buildVersion == buildNumber }.first!
+    
+    let ep = Router<TestFlightEndPoint>(at:
+      .build(
+        serviceKey: self.mothership.olympusServiceKeyInfo,
+        appID: appID,
+        teamID: teamID,
+        buildID: build.id
+      )
+    )
+    
+    print(ep.stringResult())
+    
+    
+  }
+  
+  public func testInfo(for appID: AppIdentifier, in teamID: TeamIdentifier) -> AppTestInfo {
     
     let ep = Router<TestFlightEndPoint>(at:
       .appTestInfo(
@@ -135,7 +157,7 @@ public class TestFlight {
     
   }
   
-  public func updateAppTestInfo(with info: TestInfo, for appID: AppIdentifier, in teamID: TeamIdentifier) -> HTTPStatusCode {
+  public func updateAppTestInfo(with info: AppTestInfo, for appID: AppIdentifier, in teamID: TeamIdentifier) -> HTTPStatusCode {
     
     let ep = Router<TestFlightEndPoint>(at:
       .updateAppTestInfo(

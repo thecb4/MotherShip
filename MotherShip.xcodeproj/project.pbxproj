@@ -85,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		E93A64772007258E00221DF5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E93A6479200B5BDE00221DF5 /* .private */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .private; sourceTree = "<group>"; };
 		"HyperSpace::HyperSpace::Product" /* HyperSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HyperSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShip::Product" /* MotherShip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MotherShip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = MotherShipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +241,7 @@
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
+				E93A6479200B5BDE00221DF5 /* .private */,
 				E93A64772007258E00221DF5 /* README.md */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,

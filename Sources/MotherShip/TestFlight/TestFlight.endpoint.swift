@@ -31,42 +31,59 @@ struct TestFlightEndPoint: EndpointType {
     // "providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains/#{train_version}/builds"
     case builds(serviceKey: OlympusServiceKeyInfo, version: Version, appID: AppIdentifier, teamID: TeamIdentifier, platform: Platform)
     
+    // get build
+    // "providers/#{team_id}/apps/#{app_id}/builds/#{build_id}"
+    case build(serviceKey: OlympusServiceKeyInfo, appID: AppIdentifier, teamID: TeamIdentifier, buildID: BuildIdentifier)
+    
     // get test info
     // "providers/#{team_id}/apps/#{app_id}/testInfo"
     case appTestInfo(serviceKey: OlympusServiceKeyInfo, appID: AppIdentifier, teamID: TeamIdentifier)
     
-    case updateAppTestInfo(serviceKey: OlympusServiceKeyInfo, info: TestInfo, appID: AppIdentifier, teamID: TeamIdentifier)
+    case updateAppTestInfo(serviceKey: OlympusServiceKeyInfo, info: AppTestInfo, appID: AppIdentifier, teamID: TeamIdentifier)
     
 
     var route: URL.Route {
       switch self {
+        
         case .groups( _, let appID, let teamID):
           // "https://itunesconnect.apple.com/testflight/v2/providers/\(teamID)/apps/\(appID)/groups"
           return URL.Route(path: ["providers",teamID,"apps",appID,"groups"])
+        
         // "https://itunesconnect.apple.com/testflight/v2/providers/\(teamID)/apps/\(appID)/testers"
         case .testers( _, let appID, let teamID):
           return URL.Route(path: ["providers",teamID,"apps",appID,"testers"])
+        
         // providers/\(teamID)/apps/\(appID)/testers"
         case  .addTesterToApp(_, _, let appID, let teamID):
           let route = URL.Route(path: ["providers",teamID,"apps",appID,"testers"])
           return route
+        
         // providers/\(teamID)/apps/\(appID)/groups/\(groupID)/testers
         case .addTesterToTestGroup(_, _, let groupID, let appID, let teamID):
           // providers/\(teamID)/apps/\(appID)/testers"
           let route = URL.Route(path: ["providers",teamID,"apps",appID,"groups",groupID,"testers"])
           return route
+        
         // providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains
         case .versions(_, let appID, let teamID, let platform):
           let route = URL.Route(path: ["providers",teamID,"apps",appID,"platforms",platform,"trains"])
           return route
+        
         // "providers/#{team_id}/apps/#{app_id}/platforms/#{platform}/trains/#{train_version}/builds"
         case .builds(_, let version, let appID, let teamID, let platform):
           let route = URL.Route(path: ["providers",teamID,"apps",appID,"platforms",platform,"trains",version,"builds"])
           return route
+        
+        // "providers/#{team_id}/apps/#{app_id}/builds/#{build_id}"
+        case .build(_, let appID, let teamID, let buildID):
+          let route = URL.Route(path: ["providers",teamID,"apps",appID,"builds",buildID])
+          return route
+        
         // "providers/#{team_id}/apps/#{app_id}/testInfo"
         case .appTestInfo(_, let appID, let teamID):
           let route = URL.Route(path: ["providers", teamID, "apps", appID, "testInfo"])
           return route
+        
         // "providers/#{team_id}/apps/#{app_id}/testInfo"
         case .updateAppTestInfo(_, _, let appID, let teamID):
           let route = URL.Route(path: ["providers", teamID, "apps", appID, "testInfo"])
@@ -76,7 +93,7 @@ struct TestFlightEndPoint: EndpointType {
     
     var method: URL.Method {
       switch self {
-        case .groups, .testers, .versions, .builds, .appTestInfo:
+        case .groups, .testers, .versions, .builds, .build, .appTestInfo:
           return .get
         case .updateAppTestInfo:
           return .put
@@ -93,6 +110,7 @@ struct TestFlightEndPoint: EndpointType {
              .addTesterToTestGroup(let serviceKey, _, _, _, _),
              .versions(let serviceKey, _, _, _),
              .builds(let serviceKey, _, _, _, _),
+             .build(let serviceKey, _, _, _),
              .appTestInfo(let serviceKey, _, _),
              .updateAppTestInfo(let serviceKey, _, _, _):
           let headers =
@@ -108,7 +126,7 @@ struct TestFlightEndPoint: EndpointType {
     
     var body: Data? {
       switch self {
-      case .groups,.testers, .versions, .builds, .appTestInfo:
+      case .groups,.testers, .versions, .builds, .build, .appTestInfo:
         return nil
       case .addTesterToApp(_, let tester, _, _):
         return try? JSONEncoder().encode(tester)
@@ -132,6 +150,8 @@ struct TestFlightEndPoint: EndpointType {
       case .versions:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       case .builds:
+        return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
+      case .build:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       case .appTestInfo:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!

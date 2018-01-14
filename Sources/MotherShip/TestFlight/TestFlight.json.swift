@@ -214,9 +214,6 @@ public struct Build: Codable {
   
 }
 
-public typealias BuildIdentifier = Int64
-public typealias BuildNumber     = String
-
 //"data" :
 //{
 //  "primaryLocale" : "en-US",
@@ -251,11 +248,11 @@ public enum Locale: String, Codable {
 }
 
 public struct TestInfos: Codable {
-  public let data: TestInfo
+  public let data: AppTestInfo
 }
 
 // https://stackoverflow.com/questions/47266862/encode-nil-value-as-null-with-jsonencoder
-public struct TestInfo: Codable {
+public struct AppTestInfo: Codable {
   public let primaryLocale: Locale
   public let details: [TestInfoDetail]
   public let eula: String?
