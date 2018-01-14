@@ -8,10 +8,10 @@
 import Foundation
 
 public struct BuildDetails: Codable {
-  public let data: BuildDetail
+  public let data: BuildTestInfo
 }
 
-public struct BuildDetail: Codable {
+public struct BuildTestInfo: Codable {
   public let id: BuildIdentifier
   public let bundleId: String
   public let trainVersion: Version
@@ -100,7 +100,7 @@ public struct BuildDetail: Codable {
     public let codeValue: String?
   }
   
-  public let exportCompliance: ExportCompliance
+  public var exportCompliance: ExportCompliance
   
 //  public struct BuildTestInfo: Codable {
 //    public let locale: LocaleIdentifier
@@ -112,7 +112,7 @@ public struct BuildDetail: Codable {
 //    public let whatsNew: String
 //  }
   
-  public let testInfo: [TestInfo]
+  public var testInfo: [TestInfo]
 //  public struct BetaReviewInfo: Codable {
 //    public let contactFirstName: String
 //    public let contactLastName: String
@@ -123,7 +123,7 @@ public struct BuildDetail: Codable {
 //    public let demoAccountRequired: Bool
 //    public let notes: Any?
 //  }
-  public let betaReviewInfo: BetaReviewInfo
+  public var betaReviewInfo: BetaReviewInfo
   public let eula: String?
   public let fileName: String
   public let buildSdk: String

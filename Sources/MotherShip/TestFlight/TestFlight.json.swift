@@ -273,13 +273,13 @@ public struct AppTestInfo: Codable {
 
 public struct TestInfo: Codable {
   
-  public let locale: LocaleIdentifier
-  public let feedbackEmail: String
-  public let marketingUrl: String
-  public let privacyPolicyUrl: String
-  public let privacyPolicy: String?
-  public let description: String
-  public let whatsNew: String?
+  public var locale: LocaleIdentifier
+  public var feedbackEmail: String
+  public var marketingUrl: String
+  public var privacyPolicyUrl: String
+  public var privacyPolicy: String?
+  public var description: String
+  public var whatsNew: String?
   
   public init(
     locale: LocaleIdentifier = .enUS,
@@ -303,14 +303,14 @@ public struct TestInfo: Codable {
 
 public struct BetaReviewInfo: Codable {
   
-  public let contactFirstName: String
-  public let contactLastName: String
-  public let contactPhone: String
-  public let contactEmail: String
-  public let demoAccountName: String!
-  public let demoAccountPassword: String!
-  public let demoAccountRequired: Bool
-  public let notes: String!
+  public var contactFirstName: String
+  public var contactLastName: String
+  public var contactPhone: String
+  public var contactEmail: String
+  public var demoAccountName: String!
+  public var demoAccountPassword: String!
+  public var demoAccountRequired: Bool
+  public var notes: String!
   
   public init(
     contactFirstName: String     = "",

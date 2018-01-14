@@ -112,6 +112,17 @@ class MotherShipTests: XCTestCase {
     return info
   }
   
+  private static var buildInfo: BuildTestInfo? {
+    guard let info: BuildTestInfo = json(from: "build.json") else {
+      XCTAssertNotNil(nil, "could not create build info")
+      return nil
+    }
+    
+    print(info)
+    
+    return info
+  }
+  
   func testPath() {
     let path = FileManager.default.currentDirectoryPath
     print(path)
@@ -260,6 +271,26 @@ class MotherShipTests: XCTestCase {
     }
     
     let status = testFlight.updateAppTestInfo(with: testInfo, for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
+    
+    XCTAssertEqual(status,HTTPStatusCode.ok, "test info not updated")
+    
+  }
+  
+  func testUpdateBuildTestInfo() {
+    
+    guard let appInfo = MotherShipTests.appInfo else {
+      XCTAssertNil(nil, "cannot read app info file")
+      return
+    }
+    
+    guard var buildInfo = MotherShipTests.buildInfo else {
+      XCTAssertNil(nil, "cannot read test info file")
+      return
+    }
+    
+    buildInfo.testInfo[0].whatsNew = "test feature number \(arc4random())"
+    
+    let status = testFlight.updateBuildTestInfo(with: buildInfo, for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
     
     XCTAssertEqual(status,HTTPStatusCode.ok, "test info not updated")
     

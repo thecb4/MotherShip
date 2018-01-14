@@ -119,7 +119,7 @@ public class TestFlight {
     
   }
   
-  public func build(buildNumber: BuildNumber, version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> BuildDetail? {
+  public func build(buildNumber: BuildNumber, version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> BuildTestInfo? {
     
     let builds = self.builds(of: version, for: appID, in: teamID, on: platform)
     
@@ -177,6 +177,23 @@ public class TestFlight {
     
     let ep = Router<TestFlightEndPoint>(at:
       .updateAppTestInfo(
+        serviceKey: self.mothership.olympusServiceKeyInfo,
+        info: info,
+        appID: appID,
+        teamID: teamID
+      )
+    )
+    
+    let statusCode = ep.statusCodeOnly()
+    
+    return statusCode
+    
+  }
+  
+  public func updateBuildTestInfo(with info: BuildTestInfo, for appID: AppIdentifier, in teamID: TeamIdentifier) -> HTTPStatusCode {
+    
+    let ep = Router<TestFlightEndPoint>(at:
+      .updateBuildTestInfo(
         serviceKey: self.mothership.olympusServiceKeyInfo,
         info: info,
         appID: appID,

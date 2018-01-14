@@ -41,8 +41,11 @@ struct TestFlightEndPoint: EndpointType {
     
     case updateAppTestInfo(serviceKey: OlympusServiceKeyInfo, info: AppTestInfo, appID: AppIdentifier, teamID: TeamIdentifier)
     
+    case updateBuildTestInfo(serviceKey: OlympusServiceKeyInfo, info: BuildTestInfo, appID: AppIdentifier, teamID: TeamIdentifier)
+    
 
     var route: URL.Route {
+      
       switch self {
         
         case .groups( _, let appID, let teamID):
@@ -88,6 +91,11 @@ struct TestFlightEndPoint: EndpointType {
         case .updateAppTestInfo(_, _, let appID, let teamID):
           let route = URL.Route(path: ["providers", teamID, "apps", appID, "testInfo"])
           return route
+        
+        // providers/#{team_id}/apps/#{app_id}/builds/#{build_id}
+        case .updateBuildTestInfo(_, let info, let appID, let teamID):
+          let route = URL.Route(path: ["providers",teamID,"apps",appID,"builds",info.id])
+          return route
       }
     }
     
@@ -95,7 +103,7 @@ struct TestFlightEndPoint: EndpointType {
       switch self {
         case .groups, .testers, .versions, .builds, .build, .appTestInfo:
           return .get
-        case .updateAppTestInfo:
+        case .updateAppTestInfo, .updateBuildTestInfo:
           return .put
         case .addTesterToApp, .addTesterToTestGroup:
           return .post
@@ -112,7 +120,8 @@ struct TestFlightEndPoint: EndpointType {
              .builds(let serviceKey, _, _, _, _),
              .build(let serviceKey, _, _, _),
              .appTestInfo(let serviceKey, _, _),
-             .updateAppTestInfo(let serviceKey, _, _, _):
+             .updateAppTestInfo(let serviceKey, _, _, _),
+             .updateBuildTestInfo(let serviceKey, _, _, _):
           let headers =
             [
               HTTPHeader(field:"Content-Type", value:"application/json"),
@@ -133,6 +142,8 @@ struct TestFlightEndPoint: EndpointType {
       case .addTesterToTestGroup(_, let tester, _, _, _):
         return try? JSONEncoder().encode([tester])
       case .updateAppTestInfo(_, let info, _, _):
+        return try? JSONEncoder().encode(info)
+      case .updateBuildTestInfo(_, let info, _, _):
         return try? JSONEncoder().encode(info)
       }
     }
@@ -156,6 +167,8 @@ struct TestFlightEndPoint: EndpointType {
       case .appTestInfo:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       case .updateAppTestInfo:
+        return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
+      case .updateBuildTestInfo:
         return "{\"status\": \"success\"}".data(using: String.Encoding.utf8)!
       }
     }
