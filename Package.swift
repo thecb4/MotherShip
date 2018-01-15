@@ -15,15 +15,16 @@ let package = Package(
       // Dependencies declare other packages that this package depends on.
       // .package(url: /* package url */, from: "1.0.0"),
     .package(url: "https://github.com/thecb4/HyperSpace.git", .branch("master")),
+    .package(url: "https://github.com/thecb4/Result.git", .upToNextMinor(from: "0.1.2"))
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
     // Targets can depend on other targets in this package, and on products in packages which this package depends on.
     .target(
         name: "MotherShip",
-        dependencies: ["HyperSpace"]),
+        dependencies: ["Result", "HyperSpace"]),
     .testTarget(
         name: "MotherShipTests",
-        dependencies: ["MotherShip", "HyperSpace"]),
+        dependencies: ["MotherShip", "HyperSpace", "Result"]),
   ]
 )
