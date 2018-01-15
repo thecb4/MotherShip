@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"MotherShip::MotherShipPackageTests::ProductTarget" /* MotherShipPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_108 /* Build configuration list for PBXAggregateTarget "MotherShipPackageTests" */;
+			buildConfigurationList = OBJ_219 /* Build configuration list for PBXAggregateTarget "MotherShipPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_111 /* PBXTargetDependency */,
+				OBJ_222 /* PBXTargetDependency */,
 			);
 			name = MotherShipPackageTests;
 			productName = MotherShipPackageTests;
@@ -21,62 +21,144 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		E93A647B200B64A400221DF5 /* ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A647A200B64A400221DF5 /* ISO8601.swift */; };
-		E93A647D200B6A3C00221DF5 /* Build.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A647C200B6A3C00221DF5 /* Build.json.swift */; };
-		OBJ_100 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Query.swift */; };
-		OBJ_101 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Route.swift */; };
-		OBJ_102 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Router.swift */; };
-		OBJ_103 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Scheme.swift */; };
-		OBJ_104 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* StatusCode.swift */; };
-		OBJ_105 /* URLSession.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* URLSession.extension.swift */; };
-		OBJ_52 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_58 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Package.swift */; };
-		OBJ_64 /* MotherShipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* MotherShipTests.swift */; };
-		OBJ_66 /* MotherShip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MotherShip::MotherShip::Product" /* MotherShip.framework */; };
-		OBJ_67 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
-		OBJ_76 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Developer.swift */; };
-		OBJ_77 /* IDMS.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* IDMS.endpoint.swift */; };
-		OBJ_78 /* IDMS.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* IDMS.json.swift */; };
-		OBJ_79 /* Mothership.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Mothership.swift */; };
-		OBJ_80 /* Olympus.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Olympus.endpoint.swift */; };
-		OBJ_81 /* Olympus.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Olympus.json.swift */; };
-		OBJ_82 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Platform.swift */; };
-		OBJ_83 /* TestFlight.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* TestFlight.endpoint.swift */; };
-		OBJ_84 /* TestFlight.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* TestFlight.json.swift */; };
-		OBJ_85 /* TestFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* TestFlight.swift */; };
-		OBJ_87 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
-		OBJ_93 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Environment.swift */; };
-		OBJ_94 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Host.swift */; };
-		OBJ_95 /* HyperSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* HyperSpace.swift */; };
-		OBJ_96 /* IP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* IP.swift */; };
-		OBJ_97 /* IPv6.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* IPv6.swift */; };
-		OBJ_98 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Method.swift */; };
-		OBJ_99 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Path.swift */; };
+		OBJ_105 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Package.swift */; };
+		OBJ_111 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Package.swift */; };
+		OBJ_117 /* MotherShipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* MotherShipTests.swift */; };
+		OBJ_119 /* MotherShip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MotherShip::MotherShip::Product" /* MotherShip.framework */; };
+		OBJ_120 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
+		OBJ_121 /* then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "then::then::Product" /* then.framework */; };
+		OBJ_122 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_135 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Developer.swift */; };
+		OBJ_136 /* IDMS.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* IDMS.endpoint.swift */; };
+		OBJ_137 /* IDMS.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* IDMS.json.swift */; };
+		OBJ_138 /* ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ISO8601.swift */; };
+		OBJ_139 /* Mothership.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Mothership.swift */; };
+		OBJ_140 /* Olympus.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Olympus.endpoint.swift */; };
+		OBJ_141 /* Olympus.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Olympus.json.swift */; };
+		OBJ_142 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Platform.swift */; };
+		OBJ_143 /* Build.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Build.json.swift */; };
+		OBJ_144 /* TestFlight.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* TestFlight.endpoint.swift */; };
+		OBJ_145 /* TestFlight.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* TestFlight.json.swift */; };
+		OBJ_146 /* TestFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* TestFlight.swift */; };
+		OBJ_148 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HyperSpace::HyperSpace::Product" /* HyperSpace.framework */; };
+		OBJ_149 /* then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "then::then::Product" /* then.framework */; };
+		OBJ_150 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_158 /* EndPointResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* EndPointResult.swift */; };
+		OBJ_159 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Environment.swift */; };
+		OBJ_160 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Host.swift */; };
+		OBJ_161 /* HyperSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* HyperSpace.swift */; };
+		OBJ_162 /* IP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* IP.swift */; };
+		OBJ_163 /* IPv6.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* IPv6.swift */; };
+		OBJ_164 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Method.swift */; };
+		OBJ_165 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Path.swift */; };
+		OBJ_166 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Query.swift */; };
+		OBJ_167 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Route.swift */; };
+		OBJ_168 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Router.swift */; };
+		OBJ_169 /* RouterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* RouterError.swift */; };
+		OBJ_170 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Scheme.swift */; };
+		OBJ_171 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* StatusCode.swift */; };
+		OBJ_172 /* URLSession.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* URLSession.extension.swift */; };
+		OBJ_174 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_175 /* then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "then::then::Product" /* then.framework */; };
+		OBJ_182 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Async.swift */; };
+		OBJ_183 /* Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Await.swift */; };
+		OBJ_184 /* Promise+Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Promise+Aliases.swift */; };
+		OBJ_185 /* Promise+BridgeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Promise+BridgeError.swift */; };
+		OBJ_186 /* Promise+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Promise+Chain.swift */; };
+		OBJ_187 /* Promise+Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Promise+Delay.swift */; };
+		OBJ_188 /* Promise+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Promise+Error.swift */; };
+		OBJ_189 /* Promise+Finally.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Promise+Finally.swift */; };
+		OBJ_190 /* Promise+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* Promise+Helpers.swift */; };
+		OBJ_191 /* Promise+NoMatterWhat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Promise+NoMatterWhat.swift */; };
+		OBJ_192 /* Promise+Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Promise+Progress.swift */; };
+		OBJ_193 /* Promise+Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Promise+Race.swift */; };
+		OBJ_194 /* Promise+Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Promise+Recover.swift */; };
+		OBJ_195 /* Promise+Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Promise+Retry.swift */; };
+		OBJ_196 /* Promise+Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* Promise+Then.swift */; };
+		OBJ_197 /* Promise+Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* Promise+Timeout.swift */; };
+		OBJ_198 /* Promise+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Promise+Unwrap.swift */; };
+		OBJ_199 /* Promise+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* Promise+Validate.swift */; };
+		OBJ_200 /* Promise+Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Promise+Zip.swift */; };
+		OBJ_201 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* Promise.swift */; };
+		OBJ_202 /* PromiseBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* PromiseBlocks.swift */; };
+		OBJ_203 /* PromiseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* PromiseError.swift */; };
+		OBJ_204 /* PromiseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* PromiseState.swift */; };
+		OBJ_205 /* VoidPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* VoidPromise.swift */; };
+		OBJ_206 /* WhenAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* WhenAll.swift */; };
+		OBJ_212 /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* AnyError.swift */; };
+		OBJ_213 /* NoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* NoError.swift */; };
+		OBJ_214 /* Result.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* Result.ext.swift */; };
+		OBJ_215 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* Result.swift */; };
+		OBJ_216 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* ResultProtocol.swift */; };
+		OBJ_93 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_99 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E93A647320071AEC00221DF5 /* PBXContainerItemProxy */ = {
+		E93A64B6200D0C5300221DF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "HyperSpace::HyperSpace";
 			remoteInfo = HyperSpace;
 		};
-		E93A647420071AEC00221DF5 /* PBXContainerItemProxy */ = {
+		E93A64B7200D0C5300221DF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Result::Result";
+			remoteInfo = Result;
+		};
+		E93A64B8200D0C5300221DF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "then::then";
+			remoteInfo = then;
+		};
+		E93A64B9200D0C5300221DF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "then::then";
+			remoteInfo = then;
+		};
+		E93A64BA200D0C5300221DF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Result::Result";
+			remoteInfo = Result;
+		};
+		E93A64BB200D0C5300221DF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "MotherShip::MotherShip";
 			remoteInfo = MotherShip;
 		};
-		E93A647520071AEC00221DF5 /* PBXContainerItemProxy */ = {
+		E93A64BC200D0C5300221DF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "HyperSpace::HyperSpace";
 			remoteInfo = HyperSpace;
 		};
-		E93A647620071AEC00221DF5 /* PBXContainerItemProxy */ = {
+		E93A64BD200D0C5300221DF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "then::then";
+			remoteInfo = then;
+		};
+		E93A64BE200D0C5300221DF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Result::Result";
+			remoteInfo = Result;
+		};
+		E93A64BF200D0C5300221DF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -86,63 +168,118 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E93A64772007258E00221DF5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E93A6479200B5BDE00221DF5 /* .private */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .private; sourceTree = "<group>"; };
-		E93A647A200B64A400221DF5 /* ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601.swift; sourceTree = "<group>"; };
-		E93A647C200B6A3C00221DF5 /* Build.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.json.swift; sourceTree = "<group>"; };
 		"HyperSpace::HyperSpace::Product" /* HyperSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HyperSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShip::Product" /* MotherShip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MotherShip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = MotherShipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_11 /* IDMS.endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDMS.endpoint.swift; sourceTree = "<group>"; };
 		OBJ_12 /* IDMS.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDMS.json.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Mothership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mothership.swift; sourceTree = "<group>"; };
-		OBJ_15 /* Olympus.endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympus.endpoint.swift; sourceTree = "<group>"; };
-		OBJ_16 /* Olympus.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympus.json.swift; sourceTree = "<group>"; };
-		OBJ_17 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
-		OBJ_19 /* TestFlight.endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.endpoint.swift; sourceTree = "<group>"; };
-		OBJ_20 /* TestFlight.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.json.swift; sourceTree = "<group>"; };
-		OBJ_21 /* TestFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.swift; sourceTree = "<group>"; };
-		OBJ_24 /* MotherShipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherShipTests.swift; sourceTree = "<group>"; };
-		OBJ_29 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		OBJ_30 /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
-		OBJ_31 /* HyperSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperSpace.swift; sourceTree = "<group>"; };
-		OBJ_32 /* IP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP.swift; sourceTree = "<group>"; };
-		OBJ_33 /* IPv6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPv6.swift; sourceTree = "<group>"; };
-		OBJ_34 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
-		OBJ_35 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		OBJ_36 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
-		OBJ_37 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		OBJ_38 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		OBJ_39 /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
-		OBJ_40 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
-		OBJ_41 /* URLSession.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.extension.swift; sourceTree = "<group>"; };
-		OBJ_42 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/cavellebenjamin/Development/apps/MothershipSolution/MotherShip/.build/checkouts/HyperSpace.git-8350491166860109504/Package.swift"; sourceTree = "<group>"; };
+		OBJ_13 /* ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Mothership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mothership.swift; sourceTree = "<group>"; };
+		OBJ_16 /* Olympus.endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympus.endpoint.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Olympus.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympus.json.swift; sourceTree = "<group>"; };
+		OBJ_18 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Build.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.json.swift; sourceTree = "<group>"; };
+		OBJ_21 /* TestFlight.endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.endpoint.swift; sourceTree = "<group>"; };
+		OBJ_22 /* TestFlight.json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.json.swift; sourceTree = "<group>"; };
+		OBJ_23 /* TestFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlight.swift; sourceTree = "<group>"; };
+		OBJ_26 /* MotherShipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherShipTests.swift; sourceTree = "<group>"; };
+		OBJ_27 /* DerivedData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DerivedData; sourceTree = SOURCE_ROOT; };
+		OBJ_31 /* EndPointResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointResult.swift; sourceTree = "<group>"; };
+		OBJ_32 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		OBJ_34 /* HyperSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperSpace.swift; sourceTree = "<group>"; };
+		OBJ_35 /* IP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP.swift; sourceTree = "<group>"; };
+		OBJ_36 /* IPv6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPv6.swift; sourceTree = "<group>"; };
+		OBJ_37 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		OBJ_38 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		OBJ_39 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		OBJ_40 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		OBJ_41 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		OBJ_42 /* RouterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterError.swift; sourceTree = "<group>"; };
+		OBJ_43 /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
+		OBJ_44 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		OBJ_45 /* URLSession.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.extension.swift; sourceTree = "<group>"; };
+		OBJ_46 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/cavellebenjamin/Development/apps/MothershipSolution/MotherShip/.build/checkouts/HyperSpace.git-8350491166860109504/Package.swift"; sourceTree = "<group>"; };
+		OBJ_48 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/cavellebenjamin/Development/apps/MothershipSolution/MotherShip/.build/checkouts/then.git--569073275694509842/Package.swift"; sourceTree = "<group>"; };
+		OBJ_49 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		OBJ_50 /* Await.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Await.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Promise+Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Aliases.swift"; sourceTree = "<group>"; };
+		OBJ_52 /* Promise+BridgeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+BridgeError.swift"; sourceTree = "<group>"; };
+		OBJ_53 /* Promise+Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Chain.swift"; sourceTree = "<group>"; };
+		OBJ_54 /* Promise+Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Delay.swift"; sourceTree = "<group>"; };
+		OBJ_55 /* Promise+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Error.swift"; sourceTree = "<group>"; };
+		OBJ_56 /* Promise+Finally.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Finally.swift"; sourceTree = "<group>"; };
+		OBJ_57 /* Promise+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Helpers.swift"; sourceTree = "<group>"; };
+		OBJ_58 /* Promise+NoMatterWhat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+NoMatterWhat.swift"; sourceTree = "<group>"; };
+		OBJ_59 /* Promise+Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Progress.swift"; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* Promise+Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Race.swift"; sourceTree = "<group>"; };
+		OBJ_61 /* Promise+Recover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Recover.swift"; sourceTree = "<group>"; };
+		OBJ_62 /* Promise+Retry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Retry.swift"; sourceTree = "<group>"; };
+		OBJ_63 /* Promise+Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Then.swift"; sourceTree = "<group>"; };
+		OBJ_64 /* Promise+Timeout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Timeout.swift"; sourceTree = "<group>"; };
+		OBJ_65 /* Promise+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Unwrap.swift"; sourceTree = "<group>"; };
+		OBJ_66 /* Promise+Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Validate.swift"; sourceTree = "<group>"; };
+		OBJ_67 /* Promise+Zip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Zip.swift"; sourceTree = "<group>"; };
+		OBJ_68 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		OBJ_69 /* PromiseBlocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseBlocks.swift; sourceTree = "<group>"; };
+		OBJ_70 /* PromiseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseError.swift; sourceTree = "<group>"; };
+		OBJ_71 /* PromiseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseState.swift; sourceTree = "<group>"; };
+		OBJ_72 /* VoidPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidPromise.swift; sourceTree = "<group>"; };
+		OBJ_73 /* WhenAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenAll.swift; sourceTree = "<group>"; };
+		OBJ_76 /* AnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
+		OBJ_77 /* NoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoError.swift; sourceTree = "<group>"; };
+		OBJ_78 /* Result.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.ext.swift; sourceTree = "<group>"; };
+		OBJ_79 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		OBJ_80 /* ResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
+		OBJ_81 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/cavellebenjamin/Development/apps/MothershipSolution/MotherShip/.build/checkouts/Result.git--3192226916450554167/Package.swift"; sourceTree = "<group>"; };
 		OBJ_9 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		"Result::Result::Product" /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"then::then::Product" /* then.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = then.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_106 /* Frameworks */ = {
+		OBJ_118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_119 /* MotherShip.framework in Frameworks */,
+				OBJ_120 /* HyperSpace.framework in Frameworks */,
+				OBJ_121 /* then.framework in Frameworks */,
+				OBJ_122 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_147 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_148 /* HyperSpace.framework in Frameworks */,
+				OBJ_149 /* then.framework in Frameworks */,
+				OBJ_150 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_173 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_174 /* Result.framework in Frameworks */,
+				OBJ_175 /* then.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_207 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_65 /* Frameworks */ = {
+		OBJ_217 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_66 /* MotherShip.framework in Frameworks */,
-				OBJ_67 /* HyperSpace.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_86 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_87 /* HyperSpace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,101 +295,128 @@
 			path = IDMS;
 			sourceTree = "<group>";
 		};
-		OBJ_14 /* Olympus */ = {
+		OBJ_15 /* Olympus */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_15 /* Olympus.endpoint.swift */,
-				OBJ_16 /* Olympus.json.swift */,
+				OBJ_16 /* Olympus.endpoint.swift */,
+				OBJ_17 /* Olympus.json.swift */,
 			);
 			path = Olympus;
 			sourceTree = "<group>";
 		};
-		OBJ_18 /* TestFlight */ = {
+		OBJ_19 /* TestFlight */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_19 /* TestFlight.endpoint.swift */,
-				OBJ_20 /* TestFlight.json.swift */,
-				OBJ_21 /* TestFlight.swift */,
-				E93A647C200B6A3C00221DF5 /* Build.json.swift */,
+				OBJ_20 /* Build.json.swift */,
+				OBJ_21 /* TestFlight.endpoint.swift */,
+				OBJ_22 /* TestFlight.json.swift */,
+				OBJ_23 /* TestFlight.swift */,
 			);
 			path = TestFlight;
 			sourceTree = "<group>";
 		};
-		OBJ_22 /* Tests */ = {
+		OBJ_24 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_23 /* MotherShipTests */,
+				OBJ_25 /* MotherShipTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_23 /* MotherShipTests */ = {
+		OBJ_25 /* MotherShipTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_24 /* MotherShipTests.swift */,
+				OBJ_26 /* MotherShipTests.swift */,
 			);
 			name = MotherShipTests;
 			path = Tests/MotherShipTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_26 /* Dependencies */ = {
+		OBJ_28 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_27 /* HyperSpace */,
+				OBJ_29 /* HyperSpace */,
+				OBJ_47 /* then 3.0.2 */,
+				OBJ_74 /* Result 0.1.2 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_27 /* HyperSpace */ = {
+		OBJ_29 /* HyperSpace */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_28 /* HyperSpace */,
-				OBJ_42 /* Package.swift */,
+				OBJ_30 /* HyperSpace */,
+				OBJ_46 /* Package.swift */,
 			);
 			name = HyperSpace;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_28 /* HyperSpace */ = {
+		OBJ_30 /* HyperSpace */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_29 /* Environment.swift */,
-				OBJ_30 /* Host.swift */,
-				OBJ_31 /* HyperSpace.swift */,
-				OBJ_32 /* IP.swift */,
-				OBJ_33 /* IPv6.swift */,
-				OBJ_34 /* Method.swift */,
-				OBJ_35 /* Path.swift */,
-				OBJ_36 /* Query.swift */,
-				OBJ_37 /* Route.swift */,
-				OBJ_38 /* Router.swift */,
-				OBJ_39 /* Scheme.swift */,
-				OBJ_40 /* StatusCode.swift */,
-				OBJ_41 /* URLSession.extension.swift */,
+				OBJ_31 /* EndPointResult.swift */,
+				OBJ_32 /* Environment.swift */,
+				OBJ_33 /* Host.swift */,
+				OBJ_34 /* HyperSpace.swift */,
+				OBJ_35 /* IP.swift */,
+				OBJ_36 /* IPv6.swift */,
+				OBJ_37 /* Method.swift */,
+				OBJ_38 /* Path.swift */,
+				OBJ_39 /* Query.swift */,
+				OBJ_40 /* Route.swift */,
+				OBJ_41 /* Router.swift */,
+				OBJ_42 /* RouterError.swift */,
+				OBJ_43 /* Scheme.swift */,
+				OBJ_44 /* StatusCode.swift */,
+				OBJ_45 /* URLSession.extension.swift */,
 			);
 			name = HyperSpace;
 			path = ".build/checkouts/HyperSpace.git-8350491166860109504/Sources/HyperSpace";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_43 /* Products */ = {
+		OBJ_47 /* then 3.0.2 */ = {
 			isa = PBXGroup;
 			children = (
-				"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */,
-				"MotherShip::MotherShip::Product" /* MotherShip.framework */,
-				"HyperSpace::HyperSpace::Product" /* HyperSpace.framework */,
+				OBJ_48 /* Package.swift */,
+				OBJ_49 /* Async.swift */,
+				OBJ_50 /* Await.swift */,
+				OBJ_51 /* Promise+Aliases.swift */,
+				OBJ_52 /* Promise+BridgeError.swift */,
+				OBJ_53 /* Promise+Chain.swift */,
+				OBJ_54 /* Promise+Delay.swift */,
+				OBJ_55 /* Promise+Error.swift */,
+				OBJ_56 /* Promise+Finally.swift */,
+				OBJ_57 /* Promise+Helpers.swift */,
+				OBJ_58 /* Promise+NoMatterWhat.swift */,
+				OBJ_59 /* Promise+Progress.swift */,
+				OBJ_60 /* Promise+Race.swift */,
+				OBJ_61 /* Promise+Recover.swift */,
+				OBJ_62 /* Promise+Retry.swift */,
+				OBJ_63 /* Promise+Then.swift */,
+				OBJ_64 /* Promise+Timeout.swift */,
+				OBJ_65 /* Promise+Unwrap.swift */,
+				OBJ_66 /* Promise+Validate.swift */,
+				OBJ_67 /* Promise+Zip.swift */,
+				OBJ_68 /* Promise.swift */,
+				OBJ_69 /* PromiseBlocks.swift */,
+				OBJ_70 /* PromiseError.swift */,
+				OBJ_71 /* PromiseState.swift */,
+				OBJ_72 /* VoidPromise.swift */,
+				OBJ_73 /* WhenAll.swift */,
 			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
+			name = "then 3.0.2";
+			path = ".build/checkouts/then.git--569073275694509842/Source";
+			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
-				E93A6479200B5BDE00221DF5 /* .private */,
-				E93A64772007258E00221DF5 /* README.md */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_22 /* Tests */,
-				OBJ_26 /* Dependencies */,
-				OBJ_43 /* Products */,
+				OBJ_24 /* Tests */,
+				OBJ_27 /* DerivedData */,
+				OBJ_28 /* Dependencies */,
+				OBJ_82 /* Products */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -265,34 +429,70 @@
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
+		OBJ_74 /* Result 0.1.2 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_75 /* Result */,
+				OBJ_81 /* Package.swift */,
+			);
+			name = "Result 0.1.2";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_75 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_76 /* AnyError.swift */,
+				OBJ_77 /* NoError.swift */,
+				OBJ_78 /* Result.ext.swift */,
+				OBJ_79 /* Result.swift */,
+				OBJ_80 /* ResultProtocol.swift */,
+			);
+			name = Result;
+			path = ".build/checkouts/Result.git--3192226916450554167/Sources/Result";
+			sourceTree = SOURCE_ROOT;
+		};
 		OBJ_8 /* MotherShip */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Developer.swift */,
-				E93A647A200B64A400221DF5 /* ISO8601.swift */,
 				OBJ_10 /* IDMS */,
-				OBJ_13 /* Mothership.swift */,
-				OBJ_14 /* Olympus */,
-				OBJ_17 /* Platform.swift */,
-				OBJ_18 /* TestFlight */,
+				OBJ_13 /* ISO8601.swift */,
+				OBJ_14 /* Mothership.swift */,
+				OBJ_15 /* Olympus */,
+				OBJ_18 /* Platform.swift */,
+				OBJ_19 /* TestFlight */,
 			);
 			name = MotherShip;
 			path = Sources/MotherShip;
 			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"MotherShip::MotherShipTests::Product" /* MotherShipTests.xctest */,
+				"MotherShip::MotherShip::Product" /* MotherShip.framework */,
+				"HyperSpace::HyperSpace::Product" /* HyperSpace.framework */,
+				"then::then::Product" /* then.framework */,
+				"Result::Result::Product" /* Result.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		"HyperSpace::HyperSpace" /* HyperSpace */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_89 /* Build configuration list for PBXNativeTarget "HyperSpace" */;
+			buildConfigurationList = OBJ_154 /* Build configuration list for PBXNativeTarget "HyperSpace" */;
 			buildPhases = (
-				OBJ_92 /* Sources */,
-				OBJ_106 /* Frameworks */,
+				OBJ_157 /* Sources */,
+				OBJ_173 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_176 /* PBXTargetDependency */,
+				OBJ_177 /* PBXTargetDependency */,
 			);
 			name = HyperSpace;
 			productName = HyperSpace;
@@ -301,9 +501,9 @@
 		};
 		"HyperSpace::SwiftPMPackageDescription" /* HyperSpacePackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_54 /* Build configuration list for PBXNativeTarget "HyperSpacePackageDescription" */;
+			buildConfigurationList = OBJ_95 /* Build configuration list for PBXNativeTarget "HyperSpacePackageDescription" */;
 			buildPhases = (
-				OBJ_57 /* Sources */,
+				OBJ_98 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -315,15 +515,17 @@
 		};
 		"MotherShip::MotherShip" /* MotherShip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_72 /* Build configuration list for PBXNativeTarget "MotherShip" */;
+			buildConfigurationList = OBJ_131 /* Build configuration list for PBXNativeTarget "MotherShip" */;
 			buildPhases = (
-				OBJ_75 /* Sources */,
-				OBJ_86 /* Frameworks */,
+				OBJ_134 /* Sources */,
+				OBJ_147 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_88 /* PBXTargetDependency */,
+				OBJ_151 /* PBXTargetDependency */,
+				OBJ_152 /* PBXTargetDependency */,
+				OBJ_153 /* PBXTargetDependency */,
 			);
 			name = MotherShip;
 			productName = MotherShip;
@@ -332,16 +534,18 @@
 		};
 		"MotherShip::MotherShipTests" /* MotherShipTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_60 /* Build configuration list for PBXNativeTarget "MotherShipTests" */;
+			buildConfigurationList = OBJ_113 /* Build configuration list for PBXNativeTarget "MotherShipTests" */;
 			buildPhases = (
-				OBJ_63 /* Sources */,
-				OBJ_65 /* Frameworks */,
+				OBJ_116 /* Sources */,
+				OBJ_118 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_68 /* PBXTargetDependency */,
-				OBJ_70 /* PBXTargetDependency */,
+				OBJ_123 /* PBXTargetDependency */,
+				OBJ_125 /* PBXTargetDependency */,
+				OBJ_127 /* PBXTargetDependency */,
+				OBJ_129 /* PBXTargetDependency */,
 			);
 			name = MotherShipTests;
 			productName = MotherShipTests;
@@ -350,9 +554,9 @@
 		};
 		"MotherShip::SwiftPMPackageDescription" /* MotherShipPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_48 /* Build configuration list for PBXNativeTarget "MotherShipPackageDescription" */;
+			buildConfigurationList = OBJ_89 /* Build configuration list for PBXNativeTarget "MotherShipPackageDescription" */;
 			buildPhases = (
-				OBJ_51 /* Sources */,
+				OBJ_92 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -360,6 +564,66 @@
 			);
 			name = MotherShipPackageDescription;
 			productName = MotherShipPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Result::Result" /* Result */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_208 /* Build configuration list for PBXNativeTarget "Result" */;
+			buildPhases = (
+				OBJ_211 /* Sources */,
+				OBJ_217 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Result;
+			productName = Result;
+			productReference = "Result::Result::Product" /* Result.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Result::SwiftPMPackageDescription" /* ResultPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_107 /* Build configuration list for PBXNativeTarget "ResultPackageDescription" */;
+			buildPhases = (
+				OBJ_110 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ResultPackageDescription;
+			productName = ResultPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"then::SwiftPMPackageDescription" /* thenPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_101 /* Build configuration list for PBXNativeTarget "thenPackageDescription" */;
+			buildPhases = (
+				OBJ_104 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = thenPackageDescription;
+			productName = thenPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"then::then" /* then */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_178 /* Build configuration list for PBXNativeTarget "then" */;
+			buildPhases = (
+				OBJ_181 /* Sources */,
+				OBJ_207 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = then;
+			productName = then;
+			productReference = "then::then::Product" /* then.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -378,61 +642,131 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_43 /* Products */;
+			productRefGroup = OBJ_82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				"MotherShip::SwiftPMPackageDescription" /* MotherShipPackageDescription */,
 				"HyperSpace::SwiftPMPackageDescription" /* HyperSpacePackageDescription */,
+				"then::SwiftPMPackageDescription" /* thenPackageDescription */,
+				"Result::SwiftPMPackageDescription" /* ResultPackageDescription */,
 				"MotherShip::MotherShipTests" /* MotherShipTests */,
 				"MotherShip::MotherShip" /* MotherShip */,
 				"HyperSpace::HyperSpace" /* HyperSpace */,
+				"then::then" /* then */,
+				"Result::Result" /* Result */,
 				"MotherShip::MotherShipPackageTests::ProductTarget" /* MotherShipPackageTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_51 /* Sources */ = {
+		OBJ_104 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_52 /* Package.swift in Sources */,
+				OBJ_105 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_57 /* Sources */ = {
+		OBJ_110 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_58 /* Package.swift in Sources */,
+				OBJ_111 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_63 /* Sources */ = {
+		OBJ_116 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_64 /* MotherShipTests.swift in Sources */,
+				OBJ_117 /* MotherShipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_75 /* Sources */ = {
+		OBJ_134 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_76 /* Developer.swift in Sources */,
-				OBJ_77 /* IDMS.endpoint.swift in Sources */,
-				OBJ_78 /* IDMS.json.swift in Sources */,
-				E93A647D200B6A3C00221DF5 /* Build.json.swift in Sources */,
-				OBJ_79 /* Mothership.swift in Sources */,
-				OBJ_80 /* Olympus.endpoint.swift in Sources */,
-				OBJ_81 /* Olympus.json.swift in Sources */,
-				OBJ_82 /* Platform.swift in Sources */,
-				OBJ_83 /* TestFlight.endpoint.swift in Sources */,
-				OBJ_84 /* TestFlight.json.swift in Sources */,
-				E93A647B200B64A400221DF5 /* ISO8601.swift in Sources */,
-				OBJ_85 /* TestFlight.swift in Sources */,
+				OBJ_135 /* Developer.swift in Sources */,
+				OBJ_136 /* IDMS.endpoint.swift in Sources */,
+				OBJ_137 /* IDMS.json.swift in Sources */,
+				OBJ_138 /* ISO8601.swift in Sources */,
+				OBJ_139 /* Mothership.swift in Sources */,
+				OBJ_140 /* Olympus.endpoint.swift in Sources */,
+				OBJ_141 /* Olympus.json.swift in Sources */,
+				OBJ_142 /* Platform.swift in Sources */,
+				OBJ_143 /* Build.json.swift in Sources */,
+				OBJ_144 /* TestFlight.endpoint.swift in Sources */,
+				OBJ_145 /* TestFlight.json.swift in Sources */,
+				OBJ_146 /* TestFlight.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_157 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_158 /* EndPointResult.swift in Sources */,
+				OBJ_159 /* Environment.swift in Sources */,
+				OBJ_160 /* Host.swift in Sources */,
+				OBJ_161 /* HyperSpace.swift in Sources */,
+				OBJ_162 /* IP.swift in Sources */,
+				OBJ_163 /* IPv6.swift in Sources */,
+				OBJ_164 /* Method.swift in Sources */,
+				OBJ_165 /* Path.swift in Sources */,
+				OBJ_166 /* Query.swift in Sources */,
+				OBJ_167 /* Route.swift in Sources */,
+				OBJ_168 /* Router.swift in Sources */,
+				OBJ_169 /* RouterError.swift in Sources */,
+				OBJ_170 /* Scheme.swift in Sources */,
+				OBJ_171 /* StatusCode.swift in Sources */,
+				OBJ_172 /* URLSession.extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_182 /* Async.swift in Sources */,
+				OBJ_183 /* Await.swift in Sources */,
+				OBJ_184 /* Promise+Aliases.swift in Sources */,
+				OBJ_185 /* Promise+BridgeError.swift in Sources */,
+				OBJ_186 /* Promise+Chain.swift in Sources */,
+				OBJ_187 /* Promise+Delay.swift in Sources */,
+				OBJ_188 /* Promise+Error.swift in Sources */,
+				OBJ_189 /* Promise+Finally.swift in Sources */,
+				OBJ_190 /* Promise+Helpers.swift in Sources */,
+				OBJ_191 /* Promise+NoMatterWhat.swift in Sources */,
+				OBJ_192 /* Promise+Progress.swift in Sources */,
+				OBJ_193 /* Promise+Race.swift in Sources */,
+				OBJ_194 /* Promise+Recover.swift in Sources */,
+				OBJ_195 /* Promise+Retry.swift in Sources */,
+				OBJ_196 /* Promise+Then.swift in Sources */,
+				OBJ_197 /* Promise+Timeout.swift in Sources */,
+				OBJ_198 /* Promise+Unwrap.swift in Sources */,
+				OBJ_199 /* Promise+Validate.swift in Sources */,
+				OBJ_200 /* Promise+Zip.swift in Sources */,
+				OBJ_201 /* Promise.swift in Sources */,
+				OBJ_202 /* PromiseBlocks.swift in Sources */,
+				OBJ_203 /* PromiseError.swift in Sources */,
+				OBJ_204 /* PromiseState.swift in Sources */,
+				OBJ_205 /* VoidPromise.swift in Sources */,
+				OBJ_206 /* WhenAll.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_212 /* AnyError.swift in Sources */,
+				OBJ_213 /* NoError.swift in Sources */,
+				OBJ_214 /* Result.ext.swift in Sources */,
+				OBJ_215 /* Result.swift in Sources */,
+				OBJ_216 /* ResultProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,55 +774,329 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_93 /* Environment.swift in Sources */,
-				OBJ_94 /* Host.swift in Sources */,
-				OBJ_95 /* HyperSpace.swift in Sources */,
-				OBJ_96 /* IP.swift in Sources */,
-				OBJ_97 /* IPv6.swift in Sources */,
-				OBJ_98 /* Method.swift in Sources */,
-				OBJ_99 /* Path.swift in Sources */,
-				OBJ_100 /* Query.swift in Sources */,
-				OBJ_101 /* Route.swift in Sources */,
-				OBJ_102 /* Router.swift in Sources */,
-				OBJ_103 /* Scheme.swift in Sources */,
-				OBJ_104 /* StatusCode.swift in Sources */,
-				OBJ_105 /* URLSession.extension.swift in Sources */,
+				OBJ_93 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_99 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_111 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "MotherShip::MotherShipTests" /* MotherShipTests */;
-			targetProxy = E93A647620071AEC00221DF5 /* PBXContainerItemProxy */;
-		};
-		OBJ_68 /* PBXTargetDependency */ = {
+		OBJ_123 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "MotherShip::MotherShip" /* MotherShip */;
-			targetProxy = E93A647420071AEC00221DF5 /* PBXContainerItemProxy */;
+			targetProxy = E93A64BB200D0C5300221DF5 /* PBXContainerItemProxy */;
 		};
-		OBJ_70 /* PBXTargetDependency */ = {
+		OBJ_125 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "HyperSpace::HyperSpace" /* HyperSpace */;
-			targetProxy = E93A647520071AEC00221DF5 /* PBXContainerItemProxy */;
+			targetProxy = E93A64BC200D0C5300221DF5 /* PBXContainerItemProxy */;
 		};
-		OBJ_88 /* PBXTargetDependency */ = {
+		OBJ_127 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "then::then" /* then */;
+			targetProxy = E93A64BD200D0C5300221DF5 /* PBXContainerItemProxy */;
+		};
+		OBJ_129 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Result::Result" /* Result */;
+			targetProxy = E93A64BE200D0C5300221DF5 /* PBXContainerItemProxy */;
+		};
+		OBJ_151 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "HyperSpace::HyperSpace" /* HyperSpace */;
-			targetProxy = E93A647320071AEC00221DF5 /* PBXContainerItemProxy */;
+			targetProxy = E93A64B6200D0C5300221DF5 /* PBXContainerItemProxy */;
+		};
+		OBJ_152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "then::then" /* then */;
+			targetProxy = E93A64B9200D0C5300221DF5 /* PBXContainerItemProxy */;
+		};
+		OBJ_153 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Result::Result" /* Result */;
+			targetProxy = E93A64BA200D0C5300221DF5 /* PBXContainerItemProxy */;
+		};
+		OBJ_176 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Result::Result" /* Result */;
+			targetProxy = E93A64B7200D0C5300221DF5 /* PBXContainerItemProxy */;
+		};
+		OBJ_177 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "then::then" /* then */;
+			targetProxy = E93A64B8200D0C5300221DF5 /* PBXContainerItemProxy */;
+		};
+		OBJ_222 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "MotherShip::MotherShipTests" /* MotherShipTests */;
+			targetProxy = E93A64BF200D0C5300221DF5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_109 /* Debug */ = {
+		OBJ_102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		OBJ_103 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		OBJ_108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShipTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = MotherShipTests;
+			};
+			name = Debug;
+		};
+		OBJ_115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShipTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = MotherShipTests;
+			};
+			name = Release;
+		};
+		OBJ_132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShip_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = MotherShip;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = MotherShip;
+			};
+			name = Debug;
+		};
+		OBJ_133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShip_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = MotherShip;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = MotherShip;
+			};
+			name = Release;
+		};
+		OBJ_155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/HyperSpace_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = HyperSpace;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = HyperSpace;
+			};
+			name = Debug;
+		};
+		OBJ_156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/HyperSpace_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = HyperSpace;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = HyperSpace;
+			};
+			name = Release;
+		};
+		OBJ_179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/then_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = then;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = then;
+			};
+			name = Debug;
+		};
+		OBJ_180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/then_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = then;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = then;
+			};
+			name = Release;
+		};
+		OBJ_209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/Result_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Result;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Result;
+			};
+			name = Debug;
+		};
+		OBJ_210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MotherShip.xcodeproj/Result_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Result;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Result;
+			};
+			name = Release;
+		};
+		OBJ_220 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_110 /* Release */ = {
+		OBJ_221 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
@@ -536,174 +1144,95 @@
 			};
 			name = Release;
 		};
-		OBJ_49 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_50 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		OBJ_55 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_56 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		OBJ_61 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShipTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = MotherShipTests;
-			};
-			name = Debug;
-		};
-		OBJ_62 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShipTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = MotherShipTests;
-			};
-			name = Release;
-		};
-		OBJ_73 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShip_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = MotherShip;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = MotherShip;
-			};
-			name = Debug;
-		};
-		OBJ_74 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MotherShip.xcodeproj/MotherShip_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = MotherShip;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = MotherShip;
-			};
-			name = Release;
-		};
 		OBJ_90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MotherShip.xcodeproj/HyperSpace_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HyperSpace;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
 				SWIFT_VERSION = 4.0;
-				TARGET_NAME = HyperSpace;
 			};
 			name = Debug;
 		};
 		OBJ_91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MotherShip.xcodeproj/HyperSpace_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HyperSpace;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
 				SWIFT_VERSION = 4.0;
-				TARGET_NAME = HyperSpace;
+			};
+			name = Release;
+		};
+		OBJ_96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_108 /* Build configuration list for PBXAggregateTarget "MotherShipPackageTests" */ = {
+		OBJ_101 /* Build configuration list for PBXNativeTarget "thenPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_109 /* Debug */,
-				OBJ_110 /* Release */,
+				OBJ_102 /* Debug */,
+				OBJ_103 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_107 /* Build configuration list for PBXNativeTarget "ResultPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_108 /* Debug */,
+				OBJ_109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_113 /* Build configuration list for PBXNativeTarget "MotherShipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_114 /* Debug */,
+				OBJ_115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_131 /* Build configuration list for PBXNativeTarget "MotherShip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_132 /* Debug */,
+				OBJ_133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_154 /* Build configuration list for PBXNativeTarget "HyperSpace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_155 /* Debug */,
+				OBJ_156 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_178 /* Build configuration list for PBXNativeTarget "then" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_179 /* Debug */,
+				OBJ_180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -717,47 +1246,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_48 /* Build configuration list for PBXNativeTarget "MotherShipPackageDescription" */ = {
+		OBJ_208 /* Build configuration list for PBXNativeTarget "Result" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_49 /* Debug */,
-				OBJ_50 /* Release */,
+				OBJ_209 /* Debug */,
+				OBJ_210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_54 /* Build configuration list for PBXNativeTarget "HyperSpacePackageDescription" */ = {
+		OBJ_219 /* Build configuration list for PBXAggregateTarget "MotherShipPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_55 /* Debug */,
-				OBJ_56 /* Release */,
+				OBJ_220 /* Debug */,
+				OBJ_221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_60 /* Build configuration list for PBXNativeTarget "MotherShipTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_61 /* Debug */,
-				OBJ_62 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_72 /* Build configuration list for PBXNativeTarget "MotherShip" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_73 /* Debug */,
-				OBJ_74 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_89 /* Build configuration list for PBXNativeTarget "HyperSpace" */ = {
+		OBJ_89 /* Build configuration list for PBXNativeTarget "MotherShipPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_90 /* Debug */,
 				OBJ_91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_95 /* Build configuration list for PBXNativeTarget "HyperSpacePackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_96 /* Debug */,
+				OBJ_97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

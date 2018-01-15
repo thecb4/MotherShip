@@ -7,15 +7,18 @@
 
 import Foundation
 import HyperSpace
+import Result
+
+typealias ResponseValue<T> = Result<T,URL.ResponseError>
 
 public class TestFlight {
   
   let mothership: MotherShip
-  var devSession: DeveloperSession
+//  var devSession: DeveloperSession
   
   public init() {
     mothership        = MotherShip()
-    devSession        = DeveloperSession()
+//    devSession        = DeveloperSession()
   }
 
   /// Allows the user to be logged in to iTunes Connect.
@@ -24,32 +27,55 @@ public class TestFlight {
   /// - returns: no return values
   /// - parameter credentials: The login credentials of the iTunes Connect user
   /// - throws: no errors thrown
-  public func login(with credentials: LoginCredentials) {
-    self.mothership.login(with: credentials)
-    self.devSession = self.mothership.devSession
+  public func login(with credentials: LoginCredentials) throws {
+    
+    try self.mothership.login(with: credentials)
+//    self.devSession = self.mothership.devSession
   }
   
   public func groups(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier) -> [Group] {
     
-    let endPoint = Router<TestFlightEndPoint>(at:
-      .groups(serviceKey: self.mothership.olympusServiceKeyInfo, appID: appID, teamID: teamID)
+    let router = Router<TestFlightEndPoint>(at:
+      .groups(
+        serviceKey: self.mothership.olympusServiceKeyInfo,
+        appID: appID,
+        teamID: teamID
+      )
     )
     
-    let groups: Groups = endPoint.decodeJSON()!
+    let resolve = router.resolve()
     
-    return groups.data
+    let result: ResponseValue<Groups> = resolve.json()
+    
+    switch result {
+      case .success( let value ):
+        return value.data
+      case .failure( _ ):
+        return []
+    }
     
   }
   
   public func testers(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier) -> [Tester] {
     
-    let endPoint = Router<TestFlightEndPoint>(at:
-      .testers(serviceKey: self.mothership.olympusServiceKeyInfo, appID: appID, teamID: teamID)
+    let router = Router<TestFlightEndPoint>(at:
+      .testers(
+        serviceKey: self.mothership.olympusServiceKeyInfo,
+        appID: appID,
+        teamID: teamID
+      )
     )
     
-    let testers: Testers = endPoint.decodeJSON()!
+    let resolve = router.resolve()
     
-    return testers.data
+    let result: ResponseValue<Testers> = resolve.json()
+    
+    switch result {
+    case .success( let value ):
+      return value.data
+    case .failure( _ ):
+      return []
+    }
     
   }
   
@@ -64,9 +90,8 @@ public class TestFlight {
       )
     )
     
+    // should be safe. Only ever one default group
     let group = self.groups(for: appID, in: teamID).filter {$0.isDefaultExternalGroup == true }.first!
-    
-    let _ = appAddEndPoint.statusCodeOnly()
  
     let groupAddEndPoint = Router<TestFlightEndPoint>(at:
       .addTesterToTestGroup(
@@ -78,15 +103,45 @@ public class TestFlight {
       )
     )
     
-    let bStatusCode = groupAddEndPoint.statusCodeOnly()
+    let appAddResolve    = appAddEndPoint.resolve()
+    var statusCodeResult = appAddResolve.httpStatusCode
     
-    return bStatusCode
-    
+    switch statusCodeResult {
+      
+      // if I add to the app successfully, then add to the group
+      case .success(let appCode):
+        
+        if appCode == .ok {
+          
+          let groupAddResolve = groupAddEndPoint.resolve()
+          statusCodeResult    = groupAddResolve.httpStatusCode
+          
+          switch statusCodeResult {
+            
+            case .success(let groupCode):
+              return groupCode
+            
+            case .failure(_):
+              return HTTPStatusCode(0)
+          }
+          
+        } else {
+          
+          return appCode
+        
+      }
+      
+      case .failure(_):
+        
+        return HTTPStatusCode(0)
+      
+    }
+
   }
   
   public func versions(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> [Version] {
     
-    let ep = Router<TestFlightEndPoint>(at:
+    let router = Router<TestFlightEndPoint>(at:
       .versions(
         serviceKey: self.mothership.olympusServiceKeyInfo,
         appID: appID,
@@ -95,15 +150,22 @@ public class TestFlight {
       )
     )
     
-    let versions: Versions = ep.decodeJSON()!
+    let resolve = router.resolve()
     
-    return versions.data
+    let result: ResponseValue<Versions> = resolve.json()
+    
+    switch result {
+    case .success( let value ):
+      return value.data
+    case .failure( _ ):
+      return []
+    }
     
   }
   
   public func builds(of version: Version, `for` appID: AppIdentifier, `in` teamID: TeamIdentifier, on platform: Platform) -> [BuildBrief] {
     
-    let ep = Router<TestFlightEndPoint>(at:
+    let router = Router<TestFlightEndPoint>(at:
       .builds(
         serviceKey: self.mothership.olympusServiceKeyInfo,
         version: version,
@@ -113,9 +175,16 @@ public class TestFlight {
       )
     )
     
-    let builds: BuildBriefs = ep.decodeJSON()!
+    let resolve = router.resolve()
     
-    return builds.data
+    let result: ResponseValue<BuildBriefs> = resolve.json()
+    
+    switch result {
+    case .success( let value ):
+      return value.data
+    case .failure( _ ):
+      return []
+    }
     
   }
   
@@ -125,7 +194,7 @@ public class TestFlight {
     
     guard let brief: BuildBrief = (builds.filter { $0.buildVersion == buildNumber }.first) else { return nil }
     
-    let ep = Router<TestFlightEndPoint>(at:
+    let router = Router<TestFlightEndPoint>(at:
       .build(
         serviceKey: self.mothership.olympusServiceKeyInfo,
         appID: appID,
@@ -134,13 +203,16 @@ public class TestFlight {
       )
     )
     
-    print(ep.stringResult())
+    let resolve = router.resolve()
     
-    let build: BuildDetails = ep.decodeJSON()!
+    let result: ResponseValue<BuildDetails> = resolve.json()
     
-    print(build)
-    
-    return build.data
+    switch result {
+    case .success( let value ):
+      return value.data
+    case .failure( _ ):
+      return nil
+    }
     
   }
   
@@ -157,9 +229,9 @@ public class TestFlight {
   
   }
   
-  public func testInfo(for appID: AppIdentifier, in teamID: TeamIdentifier) -> AppTestInfo {
+  public func testInfo(for appID: AppIdentifier, in teamID: TeamIdentifier) -> AppTestInfo? {
     
-    let ep = Router<TestFlightEndPoint>(at:
+    let router = Router<TestFlightEndPoint>(at:
       .appTestInfo(
         serviceKey: self.mothership.olympusServiceKeyInfo,
         appID: appID,
@@ -167,15 +239,22 @@ public class TestFlight {
       )
     )
     
-    let info: TestInfos = ep.decodeJSON()!
+    let resolve = router.resolve()
     
-    return info.data
+    let result: ResponseValue<TestInfos> = resolve.json()
+    
+    switch result {
+    case .success( let value ):
+      return value.data
+    case .failure( _ ):
+      return nil
+    }
     
   }
   
   public func updateAppTestInfo(with info: AppTestInfo, for appID: AppIdentifier, in teamID: TeamIdentifier) -> HTTPStatusCode {
     
-    let ep = Router<TestFlightEndPoint>(at:
+    let router = Router<TestFlightEndPoint>(at:
       .updateAppTestInfo(
         serviceKey: self.mothership.olympusServiceKeyInfo,
         info: info,
@@ -184,15 +263,22 @@ public class TestFlight {
       )
     )
     
-    let statusCode = ep.statusCodeOnly()
+    let resolve = router.resolve()
     
-    return statusCode
+    let result = resolve.httpStatusCode
+    
+    switch result {
+    case .success( let code ):
+      return code
+    case .failure( _ ):
+      return HTTPStatusCode(0)
+    }
     
   }
   
   public func updateBuildTestInfo(with info: BuildTestInfo, for appID: AppIdentifier, in teamID: TeamIdentifier) -> HTTPStatusCode {
     
-    let ep = Router<TestFlightEndPoint>(at:
+    let router = Router<TestFlightEndPoint>(at:
       .updateBuildTestInfo(
         serviceKey: self.mothership.olympusServiceKeyInfo,
         info: info,
@@ -201,9 +287,16 @@ public class TestFlight {
       )
     )
     
-    let statusCode = ep.statusCodeOnly()
+    let resolve = router.resolve()
     
-    return statusCode
+    let result = resolve.httpStatusCode
+    
+    switch result {
+    case .success( let code ):
+      return code
+    case .failure( _ ):
+      return HTTPStatusCode(0)
+    }
     
   }
   

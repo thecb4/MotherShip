@@ -6,8 +6,26 @@
         "repositoryURL": "https://github.com/thecb4/HyperSpace.git",
         "state": {
           "branch": "master",
-          "revision": "b6ce13ae49dbcfae0c32b65881a34fcf73a38545",
+          "revision": "a5c0798cea3b64aae868b018b44005f4ce668f9a",
           "version": null
+        }
+      },
+      {
+        "package": "Result",
+        "repositoryURL": "https://github.com/thecb4/Result.git",
+        "state": {
+          "branch": null,
+          "revision": "214bb4ce368acef76d4220a80be0b525d8f36173",
+          "version": "0.1.2"
+        }
+      },
+      {
+        "package": "then",
+        "repositoryURL": "https://github.com/freshOS/then.git",
+        "state": {
+          "branch": null,
+          "revision": "77831b62ddaeaa44b0090a9ba8ec8d032efee87d",
+          "version": "3.0.2"
         }
       }
     ]

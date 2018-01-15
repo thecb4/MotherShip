@@ -32,8 +32,12 @@ class MotherShipTests: XCTestCase {
       return
     }
     
-    testFlight.login(with: creds)
-    
+    do {
+      try testFlight.login(with: creds)
+    } catch  {
+      XCTAssert(true, "login failed")
+    }
+  
   }
   
   private static func json<T: Codable>(from file:String) -> T? {
@@ -141,20 +145,46 @@ class MotherShipTests: XCTestCase {
       return
     }
     
-    let keyInfo:OlympusServiceKeyInfo  = olympusServiceKeyEndPoint.decodeJSON()!
+    do {
+      
+      // given
+      let serviceKeyResolve = olympusServiceKeyEndPoint.resolve()
+      
+      // when
+      let olympusServiceKeyInfo: OlympusServiceKeyInfo = try serviceKeyResolve.json().dematerialize()
+      
+      // then
+      XCTAssertNotEqual(olympusServiceKeyInfo.authServiceKey, nil)
+      
+      // -----
+      
+      // given
+      let authResolve = Router<IDMSEndPoint>(at: .signIn(credentials: creds, serviceKey: olympusServiceKeyInfo)).resolve()
+      
+      // when
+      let authInfo: AuthenticationInfo = try authResolve.json().dematerialize()
+      
+      // then
+      XCTAssertNotEqual(authInfo.authType, nil)
+      
+      // -----
+      
+      // given
+      let sessionResolve = olympusSessionEndPoint.resolve()
+      
+      // when
+      let sessionInfo: DeveloperSession = try sessionResolve.json().dematerialize()
+      
+      // then
+      XCTAssertNotEqual(sessionInfo.developer.prsId, nil)
+      
+    } catch {
+      
+      // finally
+      XCTAssert(true, error.localizedDescription)
     
-    XCTAssertNotEqual(keyInfo.authServiceKey, nil)
-    
-    let idmsEndPoint = Router<IDMSEndPoint>(at: .signIn(credentials: creds, serviceKey: keyInfo))
-    
-    let authInfo: AuthenticationInfo = idmsEndPoint.decodeJSON()!
-    
-    XCTAssertNotEqual(authInfo.authType, nil)
-    
-    let sessionInfo: DeveloperSession = olympusSessionEndPoint.decodeJSON()!
-    
-    XCTAssertNotEqual(sessionInfo.developer.prsId, nil)
-    
+    }
+
   }
   
   func testTestFlightGroups() {
@@ -246,7 +276,10 @@ class MotherShipTests: XCTestCase {
       return
     }
     
-    let info = testFlight.testInfo(for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
+    guard let info = testFlight.testInfo(for: appInfo.appIdentifier, in: appInfo.teamIdentifier) else {
+      XCTAssert(true,"app test info not available")
+      return
+    }
     
     print(info)
     
