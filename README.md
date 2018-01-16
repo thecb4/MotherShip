@@ -2,7 +2,7 @@
 
 iTunes Connect Library inspired by [FastLane](https://github.com/fastlane/fastlane)
 
-[![https://github.com/thecb4/MotherShip/tree/0.1.4](https://img.shields.io/badge/version-0.1.4-green.svg)]()
+![https://github.com/thecb4/MotherShip/tree/0.1.6](https://img.shields.io/badge/version-0.1.6-green.svg)
 ![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
 [![Build Status](https://travis-ci.org/thecb4/HyperSpace.svg?branch=master)](https://travis-ci.org/thecb4/HyperSpace)
 ![Platforms](https://img.shields.io/badge/platform-%20Linux%20|%20macOS%20-red.svg)
