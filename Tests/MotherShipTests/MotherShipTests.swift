@@ -219,25 +219,25 @@ class MotherShipTests: XCTestCase {
     
   }
 
-  func testInviteTesterToTestFlight() {
-    
-    guard let appInfo = MotherShipTests.appInfo else {
-      XCTAssertNil(nil, "cannot read app info file")
-      return
-    }
-    
-    guard let testerInfo = MotherShipTests.testerInfo else {
-      XCTAssertNil(nil, "cannot read tester info file")
-      return
-    }
-    
-    let tester = Tester(email: testerInfo.email, firstName: testerInfo.firstName, lastName: testerInfo.lastName)
-    
-    let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: appInfo.teamIdentifier)
-    
-    XCTAssertEqual(code,HTTPStatusCode.ok, "tester not added to default group")
-    
-  }
+//  func testInviteTesterToTestFlight() {
+//    
+//    guard let appInfo = MotherShipTests.appInfo else {
+//      XCTAssertNil(nil, "cannot read app info file")
+//      return
+//    }
+//    
+//    guard let testerInfo = MotherShipTests.testerInfo else {
+//      XCTAssertNil(nil, "cannot read tester info file")
+//      return
+//    }
+//    
+//    let tester = Tester(email: testerInfo.email, firstName: testerInfo.firstName, lastName: testerInfo.lastName)
+//    
+//    let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: appInfo.teamIdentifier)
+//    
+//    XCTAssertEqual(code,HTTPStatusCode.ok, "tester not added to default group")
+//    
+//  }
   
   func testTestFlightVersions() {
     
