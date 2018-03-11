@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/thecb4/HyperSpace.git",
         "state": {
           "branch": null,
-          "revision": "8f40dababebe20be3593a39389bd893e4111898e",
-          "version": "0.2.0"
+          "revision": "5025a88fa05fc10c197942c685c5ac2f10ee50cb",
+          "version": "0.8.12"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/thecb4/Result.git",
         "state": {
           "branch": null,
-          "revision": "214bb4ce368acef76d4220a80be0b525d8f36173",
-          "version": "0.1.2"
+          "revision": "8be4d61285ef0fa28ea05425f3e25be2e2677b06",
+          "version": "0.6.0"
         }
       }
     ]

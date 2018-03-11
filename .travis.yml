@@ -1,41 +1,64 @@
+# safelist
+branches:
+  only:
+  - master
+
+language: generic
+
+env:
+  global:
+    - PROJECT=MotherShip
+
 matrix:
   include:
-  - os: osx
-    osx_image: xcode9.2
-    language: objective-c
-    env:
-      - JOB="macOS + Xcode"
-      - ACTION=build  PLATFORM=Mac     DESTINATION='platform=OS X'
-      - ACTION=build  PLATFORM=iOS     DESTINATION='platform=iOS Simulator,name=iPhone 8'
-      - ACTION=build  PLATFORM=watchOS DESTINATION='platform=watchOS Simulator,name=Apple Watch - 38mm'
-      - ACTION=build  PLATFORM=tvOS    DESTINATION='platform=tvOS Simulator,name=Apple TV'
-    script:
-      - swift package update
-      - xcodebuild clean $ACTION -project MotherShip.xcodeproj -scheme MotherShip-Package -destination "$DESTINATION"
+    - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=macOS'   }
+    - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=iOS'     }
+    - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=watchOS' }
+    - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=tvOS'    }
+    - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=SwiftPM' }
+    - { os: linux, language: generic,       dist: trusty,          env:  'DEPMGT=SwiftPM SWIFT_VERSION=4.0', sudo: required }
+    # - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=macOS     DESTINATION="platform=OS X"' }
+    # - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=iOS       DESTINATION="platform=iOS Simulator,name=iPhone 8"' }
+    # - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=watchOS   DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm"'}
+    # - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=tvOS      DESTINATION="platform=tvOS Simulator,name=Apple TV"' }
+    # - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=SwiftPM' }
+    # - { os: linux,    dist: trusty,   sudo: required,   language: generic,    env:  'DEPMGT=SwiftPM SWIFT_VERSION=4.0'}
 
-  - os: osx
-    osx_image: xcode9.2
-    language: objective-c
-    env:
-      - JOB="macOS + Swift Package Manager"
-    script:
-      - swift build
+before_install:
+  - case $DEPMGT in
+    Carthage)
+      brew update;
+      brew outdated carthage || brew upgrade carthage;
+      brew tap xcodeswift/sake https://github.com/xcodeswift/sake.git;
+      brew install sake;;
+    SwiftPM)
+      if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+          eval "$(curl -sL https://swiftenv.fuller.li/install.sh)";
+      fi;
+      swift package --enable-prefetching update;;
+    *)
+      ;;
+    esac;
 
-  - os: linux
-    dist: trusty
-    sudo: required
-    language: generic
-    env:
-      - JOB="Linux + Swift Package Manager"
-    script:
-      - "export SWIFT_VERSION=4.0.3"
-      - "eval \"$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)\""
-      - export LD_LIBRARY_PATH=$HOME/.swiftenv/versions/$SWIFT_VERSION/usr/lib/swift/linux:$LD_LIBRARY_PATH
-      - swift build
+script:
+  - case $DEPMGT in
+    Carthage)
+      sake task carthage-build-platform-dependencies;
+      sake task xcode-build-platform;
+      sake task xcode-test-platform;;
+    SwiftPM)
+      swift test;;
+    *)
+      ;;
+    esac;
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - case $DEPMGT in
+    Carthage)
+      bash <(curl -s https://codecov.io/bash);;
+    *)
+      ;;
+    esac;
 
 notifications:
   email: true
-
