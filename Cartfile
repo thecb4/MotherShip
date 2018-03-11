@@ -1,1 +1,2 @@
-github "https://github.com/thecb4/HyperSpace.git" "master"
+github "thecb4/HyperSpace" ~> 0.8.12
+github "thecb4/Result" ~> 0.6.0
