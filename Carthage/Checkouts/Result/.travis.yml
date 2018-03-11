@@ -7,7 +7,7 @@ language: generic
 
 env:
   global:
-    - PROJECT=MotherShip
+    - PROJECT=Result
 
 matrix:
   include:
@@ -43,7 +43,6 @@ before_install:
 script:
   - case $DEPMGT in
     Carthage)
-      sake task carthage-build-platform-dependencies;
       sake task xcode-build-platform;
       sake task xcode-test-platform;;
     SwiftPM)

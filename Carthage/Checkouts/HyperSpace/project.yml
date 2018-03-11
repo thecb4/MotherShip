@@ -1,0 +1,60 @@
+# https://github.com/yonaskolb/XcodeGen/blob/master/Docs/ProjectSpec.md
+
+name: HyperSpace
+options:
+  usesTabs: false
+  indentWidth: 2
+  createIntermediateGroups: true
+  bundleIdPrefix: io.thecb4
+  settingPresets: all
+  carthageCopyScript: true
+configs:
+  Debug: debug
+  Release: release
+fileGroups:
+  - Sources
+  - Tests
+targets:
+  HyperSpace:
+    type: framework
+    platformSuffix: -$platform
+    platform: [macOS, iOS, tvOS, watchOS]
+    settings:
+      INFOPLIST_FILE: Resources/HyperSpace/Core/Info.plist
+    sources:
+      - Sources/HyperSpace/Core
+      - Sources/HyperSpace/$platform
+    scheme:
+      testTargets:
+        - HyperSpaceUnitTests-$platform
+      gatherCoverageData: true
+      #commandLineArguments:
+    dependencies:
+      - carthage: Result
+        embed: true
+  HyperSpaceUnitTests:
+    type: bundle.unit-test
+    platformSuffix: -$platform
+    platform: [macOS, iOS, tvOS, watchOS]
+    settings:
+      INFOPLIST_FILE: Tests/Resources/HyperSpace/Core/Info.plist
+    sources:
+      - Tests/HyperSpaceUnitTests/Core
+      - Tests/HyperSpaceUnitTests/$platform
+    dependencies:
+      # - carthage: RxSwift
+      # - carthage: Dwifft
+      - carthage: Result
+        embed: true
+      - target: HyperSpace-$platform
+  # GenKitUITests:
+  #   type: bundle.ui-testing
+  #   platform: [macOS, iOS, tvOS, watchOS]
+  #   sources:
+  #     - Framework/Tests/UI/Core
+  #     - Framework/Tests/UI/Core/$platform
+  #   dependencies:
+  #     # - carthage: RxSwift
+  #     # - carthage: Dwifft
+  #     # - carthage: SwiftCheck
+  #     - target: GenKit_$platform

@@ -1,0 +1,57 @@
+# https://github.com/yonaskolb/XcodeGen/blob/master/Docs/ProjectSpec.md
+
+name: Result
+options:
+  usesTabs: false
+  indentWidth: 2
+  createIntermediateGroups: true
+  bundleIdPrefix: io.thecb4
+  settingPresets: all
+configs:
+  Debug: debug
+  Release: release
+fileGroups:
+  - Resources
+  - Sources
+  - Tests
+targets:
+  Result:
+    type: framework
+    platformSuffix: -$platform
+    platform: [macOS, iOS, tvOS, watchOS]
+    settings:
+      INFOPLIST_FILE: Resources/Result/Core/Info.plist
+    sources:
+      # - Resources/Result/Core
+      - Sources/Result/Core
+      - Sources/Result/$platform
+    scheme:
+      testTargets:
+        - ResultUnitTests-$platform
+      gatherCoverageData: true
+      #commandLineArguments:
+  ResultUnitTests:
+    type: bundle.unit-test
+    platformSuffix: -$platform
+    platform: [macOS, iOS, tvOS, watchOS]
+    settings:
+      INFOPLIST_FILE: Tests/Resources/Result/Core/Info.plist
+    sources:
+      - Tests/ResultUnitTests/Core
+      - Tests/ResultUnitTests/$platform
+    dependencies:
+      # - carthage: RxSwift
+      # - carthage: Dwifft
+      # - carthage: SwiftCheck
+      - target: Result-$platform
+  # GenKitUITests:
+  #   type: bundle.ui-testing
+  #   platform: [macOS, iOS, tvOS, watchOS]
+  #   sources:
+  #     - Framework/Tests/UI/Core
+  #     - Framework/Tests/UI/Core/$platform
+  #   dependencies:
+  #     # - carthage: RxSwift
+  #     # - carthage: Dwifft
+  #     # - carthage: SwiftCheck
+  #     - target: GenKit_$platform
