@@ -44,9 +44,9 @@ script:
   - case $DEPMGT in
     Carthage)
       sake task carthage-build-platform-dependencies;
-      sake task xcode-build-platform;
+      sake task xcode-build-platform;;
     SwiftPM)
-      swift test;;
+      swift build;;
     *)
       ;;
     esac;
