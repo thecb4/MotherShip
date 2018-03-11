@@ -45,7 +45,6 @@ script:
     Carthage)
       sake task carthage-build-platform-dependencies;
       sake task xcode-build-platform;
-      sake task xcode-test-platform;;
     SwiftPM)
       swift test;;
     *)
