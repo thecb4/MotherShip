@@ -11,12 +11,12 @@ env:
 
 matrix:
   include:
-    - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=macOS'   }
-    - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=iOS'     }
-    - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=watchOS' }
-    - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=tvOS'    }
-    - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=SwiftPM' }
-    - { os: linux, language: generic,       dist: trusty,          env:  'DEPMGT=SwiftPM SWIFT_VERSION=4.0', sudo: required }
+    - { os: osx,   language: objective-c,   osx_image: xcode9.3,   env: 'DEPMGT=Carthage   PLATFORM=macOS'   }
+    - { os: osx,   language: objective-c,   osx_image: xcode9.3,   env: 'DEPMGT=Carthage   PLATFORM=iOS'     }
+    - { os: osx,   language: objective-c,   osx_image: xcode9.3,   env: 'DEPMGT=Carthage   PLATFORM=watchOS' }
+    - { os: osx,   language: objective-c,   osx_image: xcode9.3,   env: 'DEPMGT=Carthage   PLATFORM=tvOS'    }
+    - { os: osx,   language: objective-c,   osx_image: xcode9.3,   env: 'DEPMGT=SwiftPM' }
+    - { os: linux, language: generic,       dist: trusty,          env: 'DEPMGT=SwiftPM SWIFT_VERSION=4.1', sudo: required }
     # - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=macOS     DESTINATION="platform=OS X"' }
     # - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=iOS       DESTINATION="platform=iOS Simulator,name=iPhone 8"' }
     # - { os: osx,   language: objective-c,   osx_image: xcode9.2,   env: 'DEPMGT=Carthage   PLATFORM=watchOS   DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm"'}
@@ -29,13 +29,13 @@ before_install:
     Carthage)
       brew update;
       brew outdated carthage || brew upgrade carthage;
-      brew tap xcodeswift/sake https://github.com/xcodeswift/sake.git;
-      brew install sake;;
+      brew tap yonaskolb/Beak https://github.com/yonaskolb/Beak.git;
+      brew install mint Beak;;
     SwiftPM)
       if [ "$TRAVIS_OS_NAME" == "linux" ]; then
           eval "$(curl -sL https://swiftenv.fuller.li/install.sh)";
       fi;
-      swift package --enable-prefetching update;;
+      swift package update;;
     *)
       ;;
     esac;
@@ -43,10 +43,11 @@ before_install:
 script:
   - case $DEPMGT in
     Carthage)
-      sake task carthage-build-platform-dependencies;
-      sake task xcode-build-platform;;
+      mint run yonaskolb/beak@master beak run build_carthage_dependencies --platform .$PLATFORM;
+      mint run yonaskolb/beak@master beak run xcode_build --platform .$PLATFORM;
+      mint run yonaskolb/beak@master beak run xcode_test --platform .$PLATFORM;;
     SwiftPM)
-      swift build;;
+      swift test;;
     *)
       ;;
     esac;
