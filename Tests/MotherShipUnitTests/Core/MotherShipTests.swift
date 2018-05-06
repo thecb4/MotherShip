@@ -320,12 +320,14 @@ class MotherShipTests: XCTestCase {
       XCTAssertNil(nil, "cannot read test info file")
       return
     }
+    
+    
 
     #if os(Linux)
       srandom(UInt32(time(nil)))
-      randomString = String(format: "%04d", UInt32(random() % 10000))
+      var randomString = String(format: "%04d", UInt32(random() % 10000))
     #else
-      randomString = String(format: "%04d", Int(arc4random_uniform(9999)))
+      var randomString = String(format: "%04d", Int(arc4random_uniform(9999)))
     #endif
 
     buildInfo.testInfo[0].whatsNew = "test feature number \(randomString)"
