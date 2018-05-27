@@ -106,19 +106,25 @@ public class TestFlight {
     )
     
     let appAddResolve    = appAddEndPoint.resolve()
-    var statusCodeResult = appAddResolve.httpStatusCode
+    let appStatusCodeResult = appAddResolve.httpStatusCode
+
+    print("app add resolve = \(appAddResolve)")
+    print("app add status = \(appStatusCodeResult)")
     
-    switch statusCodeResult {
+    switch appStatusCodeResult {
       
       // if I add to the app successfully, then add to the group
       case .success(let appCode):
         
         if appCode == .ok {
           
-          let groupAddResolve = groupAddEndPoint.resolve()
-          statusCodeResult    = groupAddResolve.httpStatusCode
+          let groupAddResolve       = groupAddEndPoint.resolve()
+          let groupStatusCodeResult = groupAddResolve.httpStatusCode
+
+          print("group add resolve = \(groupAddResolve)")
+          print("group add status = \(groupStatusCodeResult)")
           
-          switch statusCodeResult {
+          switch groupStatusCodeResult {
             
             case .success(let groupCode):
               return groupCode
