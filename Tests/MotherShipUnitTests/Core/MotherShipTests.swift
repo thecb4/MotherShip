@@ -21,11 +21,13 @@ class MotherShipTests: XCTestCase {
   let mothership = MotherShip()
   let testFlight = TestFlight()
 
-  static let infoPath = "~/Development/apps/MothershipSolution/MotherShip/.private/"
+  static let infoPath = ".private/"
 
   override func setUp() {
 
     print("logging in")
+    
+//    MotherShipTests.bundlePathInfo()
 
     guard  let creds = MotherShipTests.credentials else {
       XCTAssertNil(nil, "cannot read credentials file")
@@ -41,12 +43,12 @@ class MotherShipTests: XCTestCase {
   }
 
   private static func json<T: Codable>(from file:String) -> T? {
+    
+    let fileInfo = file.components(separatedBy: ".")
+    
+    let resource = Resource(name: fileInfo[0], type: fileInfo[1])
 
-    let relativePath = infoPath + file
-
-    let fullPath = NSString(string: relativePath).expandingTildeInPath
-
-    guard let string = try? String(contentsOfFile: fullPath, encoding: .utf8) else {
+    guard let string = try? String(contentsOfFile: resource.path, encoding: .utf8) else {
       XCTAssertNotNil(nil, "could not read contents of file \(file)")
       return nil
     }
@@ -72,8 +74,6 @@ class MotherShipTests: XCTestCase {
       return nil
     }
 
-    print(info)
-
     return info
 
   }
@@ -84,8 +84,6 @@ class MotherShipTests: XCTestCase {
       XCTAssertNotNil(nil, "could not create app info")
       return nil
     }
-
-    print(info)
 
     return info
 
@@ -98,8 +96,6 @@ class MotherShipTests: XCTestCase {
       return nil
     }
 
-    print(info)
-
     return info
 
   }
@@ -110,10 +106,9 @@ class MotherShipTests: XCTestCase {
       XCTAssertNotNil(nil, "could not create test info")
       return nil
     }
-
-    print(info)
-
+    
     return info
+    
   }
 
   private static var buildInfo: BuildTestInfo? {
@@ -122,14 +117,12 @@ class MotherShipTests: XCTestCase {
       return nil
     }
 
-    print(info)
-
     return info
   }
 
   func testPath() {
     let path = FileManager.default.currentDirectoryPath
-    print(path)
+    
     XCTAssertNotNil(path)
   }
 
@@ -198,7 +191,7 @@ class MotherShipTests: XCTestCase {
 
     let defaultExternalGroup = groups.filter {$0.isDefaultExternalGroup == true }
 
-    print(defaultExternalGroup)
+//    print(defaultExternalGroup)
 
     XCTAssertNotNil(defaultExternalGroup)
 
@@ -213,7 +206,7 @@ class MotherShipTests: XCTestCase {
 
     let testers = testFlight.testers(for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
 
-    print(testers)
+//    print(testers)
 
     XCTAssertNotEqual(testers.count, 0)
 
@@ -247,10 +240,10 @@ class MotherShipTests: XCTestCase {
     }
 
     let trains = testFlight.versions(for: appInfo.appIdentifier, in: appInfo.teamIdentifier, on: .ios)
+    
+    let expectedTrainCount = 0
 
-    print(trains)
-
-    XCTAssertEqual(trains.count,1, "did not return correct number of versions")
+    XCTAssertEqual(trains.count,expectedTrainCount, "did not return correct number of versions")
 
   }
 
@@ -263,9 +256,9 @@ class MotherShipTests: XCTestCase {
 
     let builds = testFlight.builds(of: appInfo.version, for: appInfo.appIdentifier, in: appInfo.teamIdentifier, on: .ios)
 
-    print(builds)
+    let expectedBuildCount = 0
 
-    XCTAssertEqual(builds.count,1, "did not return correct number of builds for version")
+    XCTAssertEqual(builds.count,expectedBuildCount, "did not return correct number of builds for version")
 
   }
 
@@ -280,8 +273,6 @@ class MotherShipTests: XCTestCase {
       XCTAssert(true,"app test info not available")
       return
     }
-
-    print(info)
 
     XCTAssertEqual(info.details.count,1, "did not return correct number of builds for version")
 
@@ -320,8 +311,8 @@ class MotherShipTests: XCTestCase {
       XCTAssertNil(nil, "cannot read test info file")
       return
     }
-    
-    
+
+
 
     #if os(Linux)
       srandom(UInt32(time(nil)))

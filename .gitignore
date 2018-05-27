@@ -89,7 +89,9 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
-.private/
+**/private/
+
+private.tar.gz
 
 #!! ERROR: tvos is undefined. Use list command to see defined gitignore types !!#
 
