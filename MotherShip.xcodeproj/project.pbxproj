@@ -54,7 +54,6 @@
 		BF_531490489015 /* Mothership.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_471793513913 /* Mothership.swift */; };
 		BF_537412202138 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_172914594096 /* Developer.swift */; };
 		BF_546558794766 /* IDMS.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_146574734432 /* IDMS.json.swift */; };
-		BF_568537391609 /* HyperSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_519308365626 /* HyperSpace.framework */; };
 		BF_580067724932 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_335912993931 /* Platform.swift */; };
 		BF_602638416642 /* IDMS.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_582738271939 /* IDMS.endpoint.swift */; };
 		BF_622386496798 /* TestFlight.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_680070477192 /* TestFlight.json.swift */; };
@@ -83,6 +82,15 @@
 		BF_911117931576 /* MotherShipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_436717717377 /* MotherShipTests.swift */; };
 		BF_916018717894 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_172914594096 /* Developer.swift */; };
 		BF_919775824160 /* IDMS.endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_582738271939 /* IDMS.endpoint.swift */; };
+		E923693520A12519006342B4 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923693420A12519006342B4 /* Resource.swift */; };
+		E923693620A12519006342B4 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923693420A12519006342B4 /* Resource.swift */; };
+		E923693720A12519006342B4 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923693420A12519006342B4 /* Resource.swift */; };
+		E923693820A12519006342B4 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923693420A12519006342B4 /* Resource.swift */; };
+		E923693F20A12809006342B4 /* app.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = E923693A20A127E3006342B4 /* app.json */; };
+		E923694020A12809006342B4 /* testInfo.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = E923693B20A127E3006342B4 /* testInfo.json */; };
+		E923694120A12809006342B4 /* tester.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = E923693C20A127E3006342B4 /* tester.json */; };
+		E923694220A12809006342B4 /* credentials.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = E923693D20A127E3006342B4 /* credentials.json */; };
+		E923694320A12809006342B4 /* build.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = E923693E20A127E3006342B4 /* build.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,9 +147,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E923691120A00206006342B4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				E923693F20A12809006342B4 /* app.json in CopyFiles */,
+				E923694020A12809006342B4 /* testInfo.json in CopyFiles */,
+				E923694120A12809006342B4 /* tester.json in CopyFiles */,
+				E923694220A12809006342B4 /* credentials.json in CopyFiles */,
+				E923694320A12809006342B4 /* build.json in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E923693420A12519006342B4 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		E923693A20A127E3006342B4 /* app.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = app.json; sourceTree = "<group>"; };
+		E923693B20A127E3006342B4 /* testInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testInfo.json; sourceTree = "<group>"; };
+		E923693C20A127E3006342B4 /* tester.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tester.json; sourceTree = "<group>"; };
+		E923693D20A127E3006342B4 /* credentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = credentials.json; sourceTree = "<group>"; };
+		E923693E20A127E3006342B4 /* build.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = build.json; sourceTree = "<group>"; };
 		FR_108142956645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_131384036341 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
 		FR_133347289739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -209,7 +237,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_568537391609 /* HyperSpace.framework in Frameworks */,
 				BF_797237872514 /* Result.framework in Frameworks */,
 				BF_881016911814 /* MotherShip.framework in Frameworks */,
 			);
@@ -256,9 +283,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E923693320A12519006342B4 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				E923693420A12519006342B4 /* Resource.swift */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		E923693920A127E3006342B4 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				E923693A20A127E3006342B4 /* app.json */,
+				E923693B20A127E3006342B4 /* testInfo.json */,
+				E923693C20A127E3006342B4 /* tester.json */,
+				E923693D20A127E3006342B4 /* credentials.json */,
+				E923693E20A127E3006342B4 /* build.json */,
+			);
+			name = private;
+			path = Tests/Resources/private;
+			sourceTree = "<group>";
+		};
 		G_1402359540137 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E923693320A12519006342B4 /* tools */,
 				FR_436717717377 /* MotherShipTests.swift */,
 			);
 			path = Core;
@@ -474,6 +523,7 @@
 		G_8448771205358 = {
 			isa = PBXGroup;
 			children = (
+				E923693920A127E3006342B4 /* private */,
 				G_1952740716080 /* Frameworks */,
 				G_8620238527590 /* Products */,
 				G_7189434949822 /* Resources */,
@@ -599,6 +649,7 @@
 				SBP_51220555908 /* Sources */,
 				FBP_51220555908 /* Frameworks */,
 				SSBP_6470997674 /* Carthage */,
+				E923691120A00206006342B4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -686,7 +737,7 @@
 		P_2241704958637 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = CL_224170495863 /* Build configuration list for PBXProject "MotherShip" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -871,6 +922,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E923693620A12519006342B4 /* Resource.swift in Sources */,
 				BF_773443191504 /* MotherShipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -879,6 +931,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E923693520A12519006342B4 /* Resource.swift in Sources */,
 				BF_869265935661 /* MotherShipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -887,6 +940,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E923693820A12519006342B4 /* Resource.swift in Sources */,
 				BF_911117931576 /* MotherShipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -895,6 +949,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E923693720A12519006342B4 /* Resource.swift in Sources */,
 				BF_854500926293 /* MotherShipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1019,6 +1074,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1026,6 +1082,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1326,6 +1383,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1333,6 +1391,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
