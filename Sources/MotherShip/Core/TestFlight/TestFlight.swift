@@ -93,7 +93,7 @@ public class TestFlight {
     // should be safe. Only ever one default group
     let group = self.groups(for: appID, in: teamID).filter {$0.name == groupName }.first!
 
-    print("adding \(tester.name) to group \(group.name)")
+    print("adding \(tester.firstName) to group \(group.name)")
  
     let groupAddEndPoint = Router<TestFlightEndPoint>(at:
       .addTesterToTestGroup(
