@@ -133,7 +133,7 @@ class MotherShipTests: XCTestCase {
 //    HyperSpace.debug = true
 
     let olympusServiceKeyEndPoint = Router<OlympusEndPoint>(at: .serviceKey)
-    let olympusSessionEndPoint    = Router<OlympusEndPoint>(at: .session)
+    // let olympusSessionEndPoint    = Router<OlympusEndPoint>(at: .session)
 
     guard  let creds = MotherShipTests.credentials else {
       XCTAssertNotNil(nil)
@@ -164,14 +164,14 @@ class MotherShipTests: XCTestCase {
 
       // -----
 
-      // given
-      let sessionResolve = olympusSessionEndPoint.resolve()
+      // // given
+      // let sessionResolve = olympusSessionEndPoint.resolve()
 
-      // when
-      let sessionInfo: DeveloperSession = try sessionResolve.json().dematerialize()
+      // // when
+      // let sessionInfo: DeveloperSession = try sessionResolve.json().dematerialize()
 
-      // then
-      XCTAssertNotEqual(sessionInfo.developer.prsId, nil)
+      // // then
+      // XCTAssertNotEqual(sessionInfo.developer.prsId, nil)
 
     } catch {
 

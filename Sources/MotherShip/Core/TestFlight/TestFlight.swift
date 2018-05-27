@@ -14,11 +14,9 @@ typealias ResponseValue<T> = Result<T,URL.ResponseError>
 public class TestFlight {
   
   let mothership: MotherShip
-//  var devSession: DeveloperSession
   
   public init() {
     mothership        = MotherShip()
-//    devSession        = DeveloperSession()
   }
 
   /// Allows the user to be logged in to iTunes Connect.
@@ -30,7 +28,6 @@ public class TestFlight {
   public func login(with credentials: LoginCredentials) throws {
     
     try self.mothership.login(with: credentials)
-//    self.devSession = self.mothership.devSession
   }
   
   public func groups(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier) -> [Group] {
