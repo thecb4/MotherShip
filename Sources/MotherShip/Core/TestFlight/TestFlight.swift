@@ -30,6 +30,11 @@ public class TestFlight {
   public func login(with credentials: LoginCredentials) throws {
     
     try self.mothership.login(with: credentials)
+
+    if(self.debug) {
+      print("self.mothership.olympusServiceKeyInfo")
+    }
+
   }
   
   public func groups(`for` appID: AppIdentifier, `in` teamID: TeamIdentifier) -> [Group] {
@@ -48,6 +53,9 @@ public class TestFlight {
     
     switch result {
       case .success( let value ):
+        if(self.debug) {
+          print("groups = \(value.data)")
+        }
         return value.data
       case .failure( _ ):
         return []
