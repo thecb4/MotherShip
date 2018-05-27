@@ -5,6 +5,7 @@ import HyperSpace
 struct AppInfo: Codable {
   let appIdentifier: AppIdentifier
   let teamIdentifier: TeamIdentifier
+  let testGroup: String
   let version: Version
   let build: BuildNumber
   let platform: Platform
@@ -36,6 +37,7 @@ class MotherShipTests: XCTestCase {
 
     do {
       try testFlight.login(with: creds)
+      print("login success")
     } catch  {
       XCTAssert(true, "login failed")
     }
@@ -187,13 +189,17 @@ class MotherShipTests: XCTestCase {
       return
     }
 
+    print(appInfo)
+
     let groups = testFlight.groups(for: appInfo.appIdentifier, in: appInfo.teamIdentifier)
 
-    let defaultExternalGroup = groups.filter {$0.isDefaultExternalGroup == true }
+    print(groups)
+
+    let externalGroups = groups.filter {$0.name == appInfo.testGroup }
 
 //    print(defaultExternalGroup)
 
-    XCTAssertNotNil(defaultExternalGroup)
+    XCTAssertEqual(externalGroups.count, 1)
 
   }
 
