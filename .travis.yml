@@ -37,7 +37,8 @@ before_install:
       fi;
       swift package update;;
     *)
-      ;;
+      openssl aes-256-cbc -K $encrypted_bf5e3f5c6e1c_key -iv $encrypted_bf5e3f5c6e1c_iv -in private.tar.gz.enc -out private.tar.gz -d;
+      tar -zxvf private.tar.gz .private;;
     esac;
 
 script:
