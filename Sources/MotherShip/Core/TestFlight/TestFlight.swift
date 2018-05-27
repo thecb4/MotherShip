@@ -92,8 +92,6 @@ public class TestFlight {
     
     // should be safe. Only ever one default group
     let group = self.groups(for: appID, in: teamID).filter {$0.name == groupName }.first!
-
-    print("adding \(tester.firstName) to group \(group.name)")
  
     let groupAddEndPoint = Router<TestFlightEndPoint>(at:
       .addTesterToTestGroup(
@@ -107,22 +105,17 @@ public class TestFlight {
     
     let appAddResolve    = appAddEndPoint.resolve()
     let appStatusCodeResult = appAddResolve.httpStatusCode
-
-    print("app add resolve = \(appAddResolve)")
-    print("app add status = \(appStatusCodeResult)")
     
     switch appStatusCodeResult {
       
       // if I add to the app successfully, then add to the group
       case .success(let appCode):
         
-        if appCode == .ok {
+        // We want a 201 code, not 200
+        if appCode == HTTPStatusCode(201) {
           
           let groupAddResolve       = groupAddEndPoint.resolve()
           let groupStatusCodeResult = groupAddResolve.httpStatusCode
-
-          print("group add resolve = \(groupAddResolve)")
-          print("group add status = \(groupStatusCodeResult)")
           
           switch groupStatusCodeResult {
             
