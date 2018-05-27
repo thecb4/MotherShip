@@ -40,13 +40,13 @@ let testFlight = TestFlight()
 
 testFlight.login(with: creds)
 
-let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: appInfo.teamIdentifier)
+let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: appInfo.teamIdentifier, groupName: appInfo.testGroup)
 
 ```
 ### To Do
 
 - [ ] Documentation
-- [x ] Ability to update app info
+- [x] Ability to update app info
 - [ ] Upload build
 - [ ] Code signing? Or just leave it up to Apple
 - [ ] Two-Factor Authentication?

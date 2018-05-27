@@ -79,7 +79,7 @@ public class TestFlight {
     
   }
   
-  public func invite(tester: Tester, to appID: AppIdentifier, `for` teamID: TeamIdentifier) -> HTTPStatusCode {
+  public func invite(tester: Tester, to appID: AppIdentifier, `for` teamID: TeamIdentifier, groupName: String) -> HTTPStatusCode {
     
     let appAddEndPoint = Router<TestFlightEndPoint>(at:
       .addTesterToApp(
@@ -91,7 +91,7 @@ public class TestFlight {
     )
     
     // should be safe. Only ever one default group
-    let group = self.groups(for: appID, in: teamID).filter {$0.isDefaultExternalGroup == true }.first!
+    let group = self.groups(for: appID, in: teamID).filter {$0.name == groupName }.first!
  
     let groupAddEndPoint = Router<TestFlightEndPoint>(at:
       .addTesterToTestGroup(
