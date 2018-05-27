@@ -90,7 +90,7 @@ public class TestFlight {
     )
     
     // should be safe. Only ever one default group
-    guard let group = self.groups(for: appID, in: teamID).filter {$0.name == groupName }.first else {
+    guard let group = (self.groups(for: appID, in: teamID).filter{ $0.name == groupName }).first else {
       print("failed to get the group")
       return HTTPStatusCode(400)
     }
