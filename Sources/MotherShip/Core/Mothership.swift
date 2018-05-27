@@ -20,10 +20,10 @@ public class MotherShip {
   
   /// EndPoint for obtaining the iTunes Connect Session information
   /// This information is stored in the default URLSession
-  let olympusSessionEndPoint    = Router<OlympusEndPoint>(at: .session)
+  // let olympusSessionEndPoint    = Router<OlympusEndPoint>(at: .session)
 
   /// Developer Session struct. Unused as all data sits in URLSession
-  var devSession:DeveloperSession
+  // var devSession:DeveloperSession
   
   
   /// Allows the user to be logged in to iTunes Connect.
@@ -40,8 +40,8 @@ public class MotherShip {
     
     let _ = Router<IDMSEndPoint>(at: .signIn(credentials: credentials, serviceKey: olympusServiceKeyInfo)).resolve()
     
-    let sessionResolve = olympusSessionEndPoint.resolve()
-    devSession = try sessionResolve.json().dematerialize()
+    // let sessionResolve = olympusSessionEndPoint.resolve()
+    // devSession = try sessionResolve.json().dematerialize()
 
   }
   
@@ -49,7 +49,7 @@ public class MotherShip {
   public init() {
     
     olympusServiceKeyInfo = OlympusServiceKeyInfo()
-    devSession            = DeveloperSession()
+    // devSession            = DeveloperSession()
     
   }
   
