@@ -32,7 +32,7 @@ public class TestFlight {
     try self.mothership.login(with: credentials)
 
     if(self.debug) {
-      print("self.mothership.olympusServiceKeyInfo")
+      print("serviceKeyInfo = \(self.mothership.olympusServiceKeyInfo)")
     }
 
   }
