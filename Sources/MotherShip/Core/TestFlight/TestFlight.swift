@@ -102,6 +102,9 @@ public class TestFlight {
     
     let appAddResolve    = appAddEndPoint.resolve()
     let appStatusCodeResult = appAddResolve.httpStatusCode
+
+    print(appAddResolve)
+    print(appStatusCodeResult)
     
     switch appStatusCodeResult {
       
@@ -113,6 +116,9 @@ public class TestFlight {
           
           let groupAddResolve       = groupAddEndPoint.resolve()
           let groupStatusCodeResult = groupAddResolve.httpStatusCode
+
+          print(groupAddResolve)
+          print(groupStatusCodeResult)
           
           switch groupStatusCodeResult {
             
