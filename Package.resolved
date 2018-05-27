@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "HyperSpace",
+        "repositoryURL": "https://github.com/thecb4/HyperSpace.git",
+        "state": {
+          "branch": null,
+          "revision": "5025a88fa05fc10c197942c685c5ac2f10ee50cb",
+          "version": "0.8.12"
+        }
+      },
+      {
+        "package": "Result",
+        "repositoryURL": "https://github.com/thecb4/Result.git",
+        "state": {
+          "branch": null,
+          "revision": "8be4d61285ef0fa28ea05425f3e25be2e2677b06",
+          "version": "0.6.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
