@@ -12,6 +12,8 @@ import Result
 typealias ResponseValue<T> = Result<T,URL.ResponseError>
 
 public class TestFlight {
+
+  public var debug = false
   
   let mothership: MotherShip
   
@@ -89,6 +91,10 @@ public class TestFlight {
     
     // should be safe. Only ever one default group
     let group = self.groups(for: appID, in: teamID).filter {$0.name == groupName }.first!
+
+    if(self.debug) {
+      print("adding \(tester.firstName) to group \(group.name)")
+    }
  
     let groupAddEndPoint = Router<TestFlightEndPoint>(at:
       .addTesterToTestGroup(
@@ -103,8 +109,10 @@ public class TestFlight {
     let appAddResolve    = appAddEndPoint.resolve()
     let appStatusCodeResult = appAddResolve.httpStatusCode
 
-    print(appAddResolve)
-    print(appStatusCodeResult)
+    if(self.debug) {
+      print(appAddResolve)
+      print(appStatusCodeResult)
+    }
     
     switch appStatusCodeResult {
       
@@ -117,8 +125,11 @@ public class TestFlight {
           let groupAddResolve       = groupAddEndPoint.resolve()
           let groupStatusCodeResult = groupAddResolve.httpStatusCode
 
-          print(groupAddResolve)
-          print(groupStatusCodeResult)
+          if(self.debug) {
+            print(groupAddResolve)
+            print(groupStatusCodeResult)
+          }
+
           
           switch groupStatusCodeResult {
             
