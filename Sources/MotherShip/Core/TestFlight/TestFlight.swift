@@ -52,12 +52,12 @@ public class TestFlight {
     )
     
     print("shared cookies before group resolve = \(String(describing: HTTPCookieStorage.shared.cookies))")
-    print("session cookies = \(String(describing: itcSession.configuration.HTTPCookieStorage?.cookies))")
+    print("session cookies = \(String(describing: self.mothership.itcSession.configuration.httpCookieStorage?.cookies))")
     
     let resolve = router.resolve(with: self.mothership.itcSession)
     
     print("shared cookies after group resolve = \(String(describing: HTTPCookieStorage.shared.cookies))")
-    print("session cookies = \(String(describing: itcSession.configuration.HTTPCookieStorage?.cookies))")
+    print("session cookies = \(String(describing: self.mothership.itcSession.configuration.httpCookieStorage?.cookies))")
 
     if (self.debug) {
       print(resolve)
