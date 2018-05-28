@@ -13,7 +13,11 @@ typealias ResponseValue<T> = Result<T,URL.ResponseError>
 
 public class TestFlight {
 
-  public var debug = false
+  public var debug = false {
+    didSet {
+      self.mothership.debug = true
+    }
+  }
   
   let mothership: MotherShip
   
