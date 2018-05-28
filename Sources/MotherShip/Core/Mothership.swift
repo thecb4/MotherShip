@@ -80,7 +80,9 @@ public class MotherShip {
         print("name: \(cookie.name) value: \(cookie.value)")
 
       }
-    }    
+    }
+
+    itcSession.configuration.httpCookieStorage? = HTTPCookieStorage.shared    
 
     if(self.debug) {
       
