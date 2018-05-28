@@ -39,7 +39,7 @@ public class MotherShip {
   public func login(with credentials: LoginCredentials) throws {
 
       
-    let serviceKeyResolve = olympusServiceKeyEndPoint.resolve()
+    let serviceKeyResolve = olympusServiceKeyEndPoint.resolve(with: self.itcSession)
     olympusServiceKeyInfo = try serviceKeyResolve.json().dematerialize()
     
     let resolve = Router<IDMSEndPoint>(at: .signIn(credentials: credentials, serviceKey: olympusServiceKeyInfo)).resolve(with: self.itcSession)
@@ -74,6 +74,7 @@ public class MotherShip {
       let newCookie = HTTPCookie(properties: cookieProperties)
 
       HTTPCookieStorage.shared.setCookie(newCookie!)
+      self.itcSession.configuration.httpCookieStorage?.setCookie(newCookie!)
 
       if(self.debug) {
 
