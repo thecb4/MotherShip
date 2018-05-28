@@ -92,7 +92,7 @@ public class MotherShip {
 // jar.setCookies(cookies, forURL: url, mainDocumentURL: url)
       
       print("shared cookies = \(String(describing: HTTPCookieStorage.shared.cookies))")
-      print("session cookies = \(String(describing: itcSession.configuration.HTTPCookieStorage?.cookies))")
+      print("session cookies = \(String(describing: itcSession.configuration.httpCookieStorage?.cookies))")
       
 //      guard let response = resolve.response as? HTTPURLResponse else {
 //        return
