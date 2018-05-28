@@ -53,7 +53,7 @@ public class TestFlight {
     
     print("shared cookies before group resolve = \(String(describing: HTTPCookieStorage.shared.cookies))")
     
-    let resolve = router.resolve(with: self.mothership.itcSession)
+    let resolve = router.resolve()
     
     print("shared cookies after group resolve = \(String(describing: HTTPCookieStorage.shared.cookies))")
 
@@ -133,7 +133,7 @@ public class TestFlight {
       )
     )
     
-    let appAddResolve    = appAddEndPoint.resolve(with: self.mothership.itcSession)
+    let appAddResolve    = appAddEndPoint.resolve()
     let appStatusCodeResult = appAddResolve.httpStatusCode
 
     if(self.debug) {
@@ -149,7 +149,7 @@ public class TestFlight {
         // We want a 201 code, not 200
         if appCode == HTTPStatusCode(201) {
           
-          let groupAddResolve       = groupAddEndPoint.resolve(with: self.mothership.itcSession)
+          let groupAddResolve       = groupAddEndPoint.resolve()
           let groupStatusCodeResult = groupAddResolve.httpStatusCode
 
           if(self.debug) {
