@@ -42,7 +42,7 @@ public class MotherShip {
     let serviceKeyResolve = olympusServiceKeyEndPoint.resolve()
     olympusServiceKeyInfo = try serviceKeyResolve.json().dematerialize()
     
-    let resolve = Router<IDMSEndPoint>(at: .signIn(credentials: credentials, serviceKey: olympusServiceKeyInfo)).resolve()
+    let resolve = Router<IDMSEndPoint>(at: .signIn(credentials: credentials, serviceKey: olympusServiceKeyInfo)).resolve(with: self.itcSession)
 
     if(self.debug) {
       print("\(resolve)")
