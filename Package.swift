@@ -14,8 +14,8 @@ let package = Package(
   dependencies: [
       // Dependencies declare other packages that this package depends on.
       // .package(url: /* package url */, from: "1.0.0"),
-    .package(url: "https://github.com/thecb4/HyperSpace.git", .upToNextMinor(from: "0.8.12")),
-    .package(url: "https://github.com/thecb4/Result.git", .upToNextMinor(from: "0.6.0"))
+    .package(url: "https://github.com/thecb4/HyperSpace.git", .upToNextMinor(from: "1.2.3")),
+    .package(url: "https://github.com/thecb4/Result.git", .upToNextMinor(from: "0.7.14"))
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.

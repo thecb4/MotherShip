@@ -13,6 +13,10 @@ import HyperSpace
 struct IDMSEndPoint: EndpointType {
   
   enum Route: RouteType {
+    func mockHTTPResponse(url: URL, statusCode: HTTPStatusCode) -> HTTPURLResponse? {
+      return nil
+    }
+    
     
     // https://idmsa.apple.com/appleauth/auth/signin
     /// Route case for sign in. Must include Service Key information

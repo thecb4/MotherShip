@@ -11,6 +11,10 @@ import HyperSpace
 struct TestFlightEndPoint: EndpointType {
   
   enum Route: RouteType {
+    func mockHTTPResponse(url: URL, statusCode: HTTPStatusCode) -> HTTPURLResponse? {
+      return nil
+    }
+    
     
     // get list of groups for app in team
     case groups(serviceKey: OlympusServiceKeyInfo, appID: AppIdentifier, teamID: TeamIdentifier)
