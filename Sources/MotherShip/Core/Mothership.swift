@@ -44,6 +44,12 @@ public class MotherShip {
     
     let resolve = Router<IDMSEndPoint>(at: .signIn(credentials: credentials, serviceKey: olympusServiceKeyInfo)).resolve(with: self.itcSession)
 
+    if (self.itcSession.configuration.httpCookieStorage! != HTTPCookieStorage.shared) {
+      exit(0)
+    }
+
+
+
     guard let response = resolve.response as? HTTPURLResponse else {
       return
     }
