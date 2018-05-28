@@ -38,16 +38,16 @@ public class MotherShip {
   /// - throws: throws errors for attempting to login. Users of the library should handle
   public func login(with credentials: LoginCredentials) throws {
 
+    self.itcSession.configuration.httpShouldSetCookies = true
+    self.itcSession.configuration.httpCookieAcceptPolicy = .always
+    self.itcSession.configuration.httpMaximumConnectionsPerHost = 6
+    self.itcSession.configuration.httpCookieStorage = HTTPCookieStorage.shared
+
       
     let serviceKeyResolve = olympusServiceKeyEndPoint.resolve(with: self.itcSession)
     olympusServiceKeyInfo = try serviceKeyResolve.json().dematerialize()
     
     let resolve = Router<IDMSEndPoint>(at: .signIn(credentials: credentials, serviceKey: olympusServiceKeyInfo)).resolve(with: self.itcSession)
-
-    if (self.itcSession.configuration.httpCookieStorage! != HTTPCookieStorage.shared) {
-      exit(0)
-    }
-
 
 
     guard let response = resolve.response as? HTTPURLResponse else {
@@ -80,7 +80,7 @@ public class MotherShip {
       let newCookie = HTTPCookie(properties: cookieProperties)
 
       HTTPCookieStorage.shared.setCookie(newCookie!)
-      self.itcSession.configuration.httpCookieStorage?.setCookie(newCookie!)
+      // self.itcSession.configuration.httpCookieStorage?.setCookie(newCookie!)
 
       if(self.debug) {
 
