@@ -14,7 +14,7 @@ public class MotherShip {
 
   public var debug = false
 
-  public let itcSession = URLSession(configuration: .default)
+  public let itcSession = URLSession(configuration: .ephemeral)
   
   /// EndPoint for obtaining the iTunes Connect Service Key
   let olympusServiceKeyEndPoint = Router<OlympusEndPoint>(at: .serviceKey)
@@ -47,6 +47,11 @@ public class MotherShip {
     if(self.debug) {
       
       print("\(resolve)")
+
+//       let jar = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+// let cookieHeaderField = ["Set-Cookie": "key=value"] // Or ["Set-Cookie": "key=value, key2=value2"] for multiple cookies
+// let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(cookieHeaderField, forURL: url)
+// jar.setCookies(cookies, forURL: url, mainDocumentURL: url)
       
       print("shared cookies = \(String(describing: HTTPCookieStorage.shared.cookies))")
       
