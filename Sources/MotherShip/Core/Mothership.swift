@@ -64,10 +64,6 @@ public class MotherShip {
 
     let cookies = HTTPCookie.cookies(withResponseHeaderFields: headers, for: url)
 
-    if(self.debug) { 
-      print(cookies)
-    }
-
     for cookie in cookies {
       var cookieProperties = [HTTPCookiePropertyKey:Any]()
       cookieProperties[.name]    = cookie.name
