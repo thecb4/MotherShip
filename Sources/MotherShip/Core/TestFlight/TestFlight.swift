@@ -48,8 +48,16 @@ public class TestFlight {
     )
     
     let resolve = router.resolve()
+
+    if (self.debug) {
+      print(resolve)
+    }
     
     let result: ResponseValue<Groups> = resolve.json()
+
+    if (self.debug) {
+      print(result)
+    }
     
     switch result {
       case .success( let value ):
