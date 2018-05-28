@@ -14,6 +14,10 @@ import HyperSpace
 struct OlympusEndPoint: EndpointType {
   
   enum Route: RouteType {
+    func mockHTTPResponse(url: URL, statusCode: HTTPStatusCode) -> HTTPURLResponse? {
+      return nil
+    }
+    
     
     // https://olympus.itunes.apple.com/v1/app/config?hostname=itunesconnect.apple.com
     /// Route for obtaining service key information from Apple

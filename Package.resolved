@@ -2,12 +2,21 @@
   "object": {
     "pins": [
       {
+        "package": "BrightFutures",
+        "repositoryURL": "https://github.com/thecb4/BrightFutures.git",
+        "state": {
+          "branch": null,
+          "revision": "e25006574e03615e3221939ce0e005aab21b00e5",
+          "version": "6.1.13"
+        }
+      },
+      {
         "package": "HyperSpace",
         "repositoryURL": "https://github.com/thecb4/HyperSpace.git",
         "state": {
           "branch": null,
-          "revision": "5025a88fa05fc10c197942c685c5ac2f10ee50cb",
-          "version": "0.8.12"
+          "revision": "e3a8eceeab4be60c9e01d3e76b30945120c430e4",
+          "version": "1.2.3"
         }
       },
       {
@@ -15,8 +24,8 @@
         "repositoryURL": "https://github.com/thecb4/Result.git",
         "state": {
           "branch": null,
-          "revision": "8be4d61285ef0fa28ea05425f3e25be2e2677b06",
-          "version": "0.6.0"
+          "revision": "6cf66cf1ca4ebd07c0d3943784b0fd747da2430b",
+          "version": "0.7.14"
         }
       }
     ]
