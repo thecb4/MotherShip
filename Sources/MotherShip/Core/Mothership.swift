@@ -45,7 +45,27 @@ public class MotherShip {
     let resolve = Router<IDMSEndPoint>(at: .signIn(credentials: credentials, serviceKey: olympusServiceKeyInfo)).resolve(with: self.itcSession)
 
     if(self.debug) {
+      
       print("\(resolve)")
+      
+      print("shared cookies = \(String(describing: HTTPCookieStorage.shared.cookies))")
+      
+//      guard let response = resolve.response as? HTTPURLResponse else {
+//        return
+//      }
+//
+//      guard let headers = response.allHeaderFields as? [String:String] else {
+//        return
+//      }
+//
+//      guard let url = response.url else {
+//        return
+//      }
+//
+//      let cookies = HTTPCookie.cookies(withResponseHeaderFields: headers, for: url)
+//
+//      print(cookies)
+      
     }
     
     // let sessionResolve = olympusSessionEndPoint.resolve()
