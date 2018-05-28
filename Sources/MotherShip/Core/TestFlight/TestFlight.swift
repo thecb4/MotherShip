@@ -50,6 +50,8 @@ public class TestFlight {
         teamID: teamID
       )
     )
+
+    HTTPCookieStorage.shared.setCookies(HTTPCookieStorage.shared.cookies!, for: router.url, mainDocumentURL: nil)
     
     print("shared cookies before group resolve = \(String(describing: HTTPCookieStorage.shared.cookies))")
     print("session cookies = \(String(describing: self.mothership.itcSession.configuration.httpCookieStorage?.cookies))")
@@ -105,15 +107,6 @@ public class TestFlight {
   }
   
   public func invite(tester: Tester, to appID: AppIdentifier, `for` teamID: TeamIdentifier, groupName: String) -> HTTPStatusCode {
-
-    let appAddEndPoint = Router<TestFlightEndPoint>(at:
-      .addTesterToApp(
-        serviceKey: self.mothership.olympusServiceKeyInfo,
-        tester: tester,
-        appID: appID,
-        teamID: teamID
-      )
-    )
     
     // should be safe. Only ever one default group
     guard let group = (self.groups(for: appID, in: teamID).filter{ $0.name == groupName }).first else {
@@ -134,6 +127,19 @@ public class TestFlight {
         teamID: teamID
       )
     )
+
+    HTTPCookieStorage.shared.setCookies(HTTPCookieStorage.shared.cookies!, for: groupAddEndPoint.url, mainDocumentURL: nil)
+
+    let appAddEndPoint = Router<TestFlightEndPoint>(at:
+      .addTesterToApp(
+        serviceKey: self.mothership.olympusServiceKeyInfo,
+        tester: tester,
+        appID: appID,
+        teamID: teamID
+      )
+    )
+
+    HTTPCookieStorage.shared.setCookies(HTTPCookieStorage.shared.cookies!, for: appAddEndPoint.url, mainDocumentURL: nil)
     
     let appAddResolve    = appAddEndPoint.resolve(with: self.mothership.itcSession)
     let appStatusCodeResult = appAddResolve.httpStatusCode
