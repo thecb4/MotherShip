@@ -83,7 +83,7 @@ public class MotherShip {
       }
     }
 
-    itcSession.configuration.httpCookieStorage? = HTTPCookieStorage.shared    
+    // itcSession.configuration.httpCookieStorage? = HTTPCookieStorage.shared    
 
     if(self.debug) {
       
