@@ -44,6 +44,44 @@ public class MotherShip {
     
     let resolve = Router<IDMSEndPoint>(at: .signIn(credentials: credentials, serviceKey: olympusServiceKeyInfo)).resolve()
 
+    guard let response = resolve.response as? HTTPURLResponse else {
+      return
+    }
+
+    guard let headers = response.allHeaderFields as? [String:String] else {
+      return
+    }
+
+    guard let url = response.url else {
+      return
+    }
+
+    let cookies = HTTPCookie.cookies(withResponseHeaderFields: headers, for: url)
+
+    if(self.debug) { 
+      print(cookies)
+    }
+
+    for cookie in cookies {
+      var cookieProperties = [HTTPCookiePropertyKey:Any]()
+      cookieProperties[.name]    = cookie.name
+      cookieProperties[.value]   = cookie.value
+      cookieProperties[.domain]  = cookie.domain
+      cookieProperties[.path]    = cookie.path
+      cookieProperties[.version] = NSNumber(value: cookie.version)
+      cookieProperties[.expires] = Date().addingTimeInterval(31536000)
+
+      let newCookie = HTTPCookie(properties: cookieProperties)
+
+      HTTPCookieStorage.shared.setCookie(newCookie!)
+
+      if(self.debug) {
+
+        print("name: \(cookie.name) value: \(cookie.value)")
+
+      }
+    }    
+
     if(self.debug) {
       
       print("\(resolve)")
