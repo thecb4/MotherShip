@@ -13,6 +13,8 @@ import Result
 public class MotherShip {
 
   public var debug = false
+
+  public let itcSession = URLSession(configuration: .default)
   
   /// EndPoint for obtaining the iTunes Connect Service Key
   let olympusServiceKeyEndPoint = Router<OlympusEndPoint>(at: .serviceKey)
