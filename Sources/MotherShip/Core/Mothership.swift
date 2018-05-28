@@ -11,6 +11,8 @@ import Result
 
 /// Top 
 public class MotherShip {
+
+  public var debug = false
   
   /// EndPoint for obtaining the iTunes Connect Service Key
   let olympusServiceKeyEndPoint = Router<OlympusEndPoint>(at: .serviceKey)
@@ -38,7 +40,11 @@ public class MotherShip {
     let serviceKeyResolve = olympusServiceKeyEndPoint.resolve()
     olympusServiceKeyInfo = try serviceKeyResolve.json().dematerialize()
     
-    let _ = Router<IDMSEndPoint>(at: .signIn(credentials: credentials, serviceKey: olympusServiceKeyInfo)).resolve()
+    let resolve = Router<IDMSEndPoint>(at: .signIn(credentials: credentials, serviceKey: olympusServiceKeyInfo)).resolve()
+
+    if(self.debug) {
+      print("\(resolve)")
+    }
     
     // let sessionResolve = olympusSessionEndPoint.resolve()
     // devSession = try sessionResolve.json().dematerialize()
