@@ -51,7 +51,7 @@ public class TestFlight {
       )
     )
     
-    let resolve = router.resolve()
+    let resolve = router.resolve(with: self.mothership.itcSession)
 
     if (self.debug) {
       print(resolve)
@@ -129,7 +129,7 @@ public class TestFlight {
       )
     )
     
-    let appAddResolve    = appAddEndPoint.resolve()
+    let appAddResolve    = appAddEndPoint.resolve(with: self.mothership.itcSession)
     let appStatusCodeResult = appAddResolve.httpStatusCode
 
     if(self.debug) {
@@ -145,7 +145,7 @@ public class TestFlight {
         // We want a 201 code, not 200
         if appCode == HTTPStatusCode(201) {
           
-          let groupAddResolve       = groupAddEndPoint.resolve()
+          let groupAddResolve       = groupAddEndPoint.resolve(with: self.mothership.itcSession)
           let groupStatusCodeResult = groupAddResolve.httpStatusCode
 
           if(self.debug) {
