@@ -14,7 +14,7 @@ let package = Package(
   dependencies: [
       // Dependencies declare other packages that this package depends on.
       // .package(url: /* package url */, from: "1.0.0"),
-    .package(url: "https://github.com/thecb4/HyperSpace.git", .upToNextMinor(from: "1.2.6")),
+    .package(url: "https://github.com/thecb4/HyperSpace.git", .upToNextMinor(from: "1.2.7")),
     .package(url: "https://github.com/thecb4/Result.git", .upToNextMinor(from: "0.7.14"))
   ],
   targets: [
