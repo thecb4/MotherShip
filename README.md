@@ -59,3 +59,6 @@ let code = testFlight.invite(tester: tester, to: appInfo.appIdentifier, for: app
 $ mothership login <user> <password>
 $ mothership testflight invite <email> <first-name> <last-name> <app-id> <team-id>
 ```
+
+## NOTE
+I've been working to get MotherShip to work on Linux, but there are open issues with URLSession using cookies that need to be resolved first [PR1542](https://github.com/apple/swift-corelibs-foundation/pull/1542)
